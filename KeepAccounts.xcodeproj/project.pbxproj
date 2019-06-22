@@ -16,6 +16,8 @@
 		8DD77F5022BDFD6D00768106 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F4C22BDFD6C00768106 /* DateHeader.swift */; };
 		8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F4D22BDFD6D00768106 /* FormViewController.swift */; };
 		8DD77F5222BDFD6D00768106 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F4E22BDFD6D00768106 /* DateCell.swift */; };
+		8DD77F5522BE0CFC00768106 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F5422BE0CFC00768106 /* DataCell.swift */; };
+		8DD77F5722BE0F2D00768106 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F5622BE0F2D00768106 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8DD77F4C22BDFD6C00768106 /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
 		8DD77F4D22BDFD6D00768106 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		8DD77F4E22BDFD6D00768106 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		8DD77F5422BE0CFC00768106 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+		8DD77F5622BE0F2D00768106 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A8CDE5FF2BD167C5720B89E2 /* Pods-KeepAccounts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.release.xcconfig"; path = "Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.release.xcconfig"; sourceTree = "<group>"; };
 		F45127EF9FC767E738FDC633 /* Pods-KeepAccounts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.debug.xcconfig"; path = "Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +89,8 @@
 				8DD77F4122BDFA9400768106 /* Assets.xcassets */,
 				8DD77F4322BDFA9400768106 /* LaunchScreen.storyboard */,
 				8DD77F4622BDFA9400768106 /* Info.plist */,
+				8DD77F5422BE0CFC00768106 /* DataCell.swift */,
+				8DD77F5622BE0F2D00768106 /* Data.swift */,
 			);
 			path = KeepAccounts;
 			sourceTree = "<group>";
@@ -217,7 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD77F5722BE0F2D00768106 /* Data.swift in Sources */,
 				8DD77F5022BDFD6D00768106 /* DateHeader.swift in Sources */,
+				8DD77F5522BE0CFC00768106 /* DataCell.swift in Sources */,
 				8DD77F5222BDFD6D00768106 /* DateCell.swift in Sources */,
 				8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */,
 				8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */,

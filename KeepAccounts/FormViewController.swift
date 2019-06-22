@@ -3,10 +3,14 @@ import UIKit
 protocol UIFormViewControllerDeletage : class{
     
     func upDateCalendar (datePicker:UIDatePicker)
+
+    func upDateData (data : Data)
     
 }
 
 class FormViewController: UIViewController {
+    
+    let allData = Data()
   
     var date : Date?
     
@@ -148,6 +152,15 @@ class FormViewController: UIViewController {
         
         else {
             
+            self.allData.date = self.dateformatter.string(from: self.dateDataPicker.date)
+            
+            self.allData.project = self.projectTxt.text!
+            
+            self.allData.price = self.priceTxt.text!
+            
+            self.delegate?.upDateData(data: self.allData)
+            
+            self.navigationController?.popViewController(animated: true)
             
         }
         

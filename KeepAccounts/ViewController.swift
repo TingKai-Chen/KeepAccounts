@@ -4,13 +4,13 @@ import JTAppleCalendar
 
 class ViewController: UIViewController {
     
+    var dataArray : [Data] = []
+    
     @IBOutlet var calendarView: JTAppleCalendarView!
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var startAccountBtn: UIButton!
-    
-    var array : [String] = ["xx"]
     
     var date = Date()
     
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         calendarView.scrollingMode = .stopAtEachCalendarFrame
         
         calendarView.showsHorizontalScrollIndicator = false
+        
         
     }
     
@@ -200,13 +201,19 @@ extension ViewController : UIFormViewControllerDeletage {
         
     }
     
+    func upDateData(data: Data) {
+        
+        self.dataArray.append(data)
+        
+        self.tableView.reloadData()
+        
+    }
+    
 }
 
 extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
         
     }
     
@@ -216,21 +223,22 @@ extension ViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 1
+        return dataArray.count
 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    
-        cell.textLabel?.text = self.array[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
+        
+        cell.projectLab.text = self.dataArray[indexPath.row].project
+        
+        cell.priceLab.text = self.dataArray[indexPath.row].price
+        
+        cell.dateLab.text = self.dataArray[indexPath.row].date
         
         return cell
 
     }
-
-
-
 
 }
