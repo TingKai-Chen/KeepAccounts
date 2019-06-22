@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  KeepAccounts
 //
-//  Created by 陳劭任 on 2019/6/22.
-//  Copyright © 2019 TingKai. All rights reserved.
+//  Created by student36_1 on 2019/6/10.
+//  Copyright © 2019 student36_1. All rights reserved.
 //
 
 import UIKit
