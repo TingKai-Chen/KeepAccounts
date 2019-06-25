@@ -10,4 +10,6 @@ class Data {
     
     var price = String()
     
+    var incomeExpend = String()
+    
 }

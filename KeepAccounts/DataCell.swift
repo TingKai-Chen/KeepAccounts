@@ -11,10 +11,12 @@ import Foundation
 
 class Cell : UITableViewCell {
     
-    @IBOutlet var dateLab: UILabel!
+    @IBOutlet weak var dateLab: UILabel!
     
-    @IBOutlet var projectLab: UILabel!
+    @IBOutlet weak var projectLab: UILabel!
     
-    @IBOutlet var priceLab: UILabel!
-
+    @IBOutlet weak var priceLab: UILabel!
+    
+    @IBOutlet weak var incomeExpendLab: UILabel!
+    
 }

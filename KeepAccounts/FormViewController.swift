@@ -155,8 +155,10 @@ class FormViewController: UIViewController {
             self.allData.date = self.dateformatter.string(from: self.dateDataPicker.date)
             
             self.allData.project = self.projectTxt.text!
-            
+                
             self.allData.price = self.priceTxt.text!
+            
+            self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
             
             self.delegate?.upDateData(data: self.allData)
             

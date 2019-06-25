@@ -105,6 +105,10 @@ class ViewController: UIViewController {
             
             cell.selectedView.isHidden = false
             
+            self.dataArray = []
+            
+            self.tableView.reloadData()
+            
         }
         
         else {
@@ -233,9 +237,25 @@ extension ViewController : UITableViewDataSource {
         
         cell.projectLab.text = self.dataArray[indexPath.row].project
         
-        cell.priceLab.text = self.dataArray[indexPath.row].price
-        
         cell.dateLab.text = self.dataArray[indexPath.row].date
+        
+        cell.incomeExpendLab.text = self.dataArray[indexPath.row].incomeExpend
+        
+        if cell.incomeExpendLab.text == "支出" {
+            
+            cell.priceLab.textColor = UIColor.red
+            
+            cell.priceLab.text = "-" + "\(self.dataArray[indexPath.row].price)"
+            
+        }
+        
+        else {
+            
+            cell.priceLab.textColor = UIColor.blue
+            
+            cell.priceLab.text = "+" + "\(self.dataArray[indexPath.row].price)"
+            
+        }
         
         return cell
 
