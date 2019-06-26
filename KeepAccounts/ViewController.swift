@@ -6,6 +6,12 @@ class ViewController: UIViewController {
     
     var dataArray : [Data] = []
     
+    var n = 1
+    
+    var c = -1
+
+    @IBOutlet weak var dateLab: UILabel!
+    
     @IBOutlet var calendarView: JTAppleCalendarView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -49,7 +55,6 @@ class ViewController: UIViewController {
         calendarView.scrollingMode = .stopAtEachCalendarFrame
         
         calendarView.showsHorizontalScrollIndicator = false
-        
         
     }
     
@@ -101,7 +106,7 @@ class ViewController: UIViewController {
         
         if cellState.isSelected {
             
-            cell.selectedView.layer.cornerRadius =  5
+            //cell.selectedView.layer.cornerRadius =  5
             
             cell.selectedView.isHidden = false
             
@@ -183,6 +188,14 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         self.date = date
         
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy年MM月dd日"
+        
+        formatter.locale = Locale(identifier: "zh_TW")
+        
+        self.dateLab.text = formatter.string(from: self.date)
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
@@ -202,6 +215,14 @@ extension ViewController : UIFormViewControllerDeletage {
         self.calendarView.selectDates([self.date])
         
         self.calendarView.scrollToDate(self.date,animateScroll:false)
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy年MM月dd日"
+        
+        formatter.locale = Locale(identifier: "zh_TW")
+        
+        self.dateLab.text = formatter.string(from: self.date)
         
     }
     
@@ -236,24 +257,34 @@ extension ViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
         
         cell.projectLab.text = self.dataArray[indexPath.row].project
-        
-        cell.dateLab.text = self.dataArray[indexPath.row].date
-        
+    
         cell.incomeExpendLab.text = self.dataArray[indexPath.row].incomeExpend
         
         if cell.incomeExpendLab.text == "支出" {
             
             cell.priceLab.textColor = UIColor.red
             
-            cell.priceLab.text = "-" + "\(self.dataArray[indexPath.row].price)"
-            
+            if let intPrice = Int(self.dataArray[indexPath.row].price) {
+                
+                let allIntPrice = intPrice * self.c
+                
+                cell.priceLab.text = "\(allIntPrice)" + "$"
+                
+            }
+          
         }
         
         else {
             
             cell.priceLab.textColor = UIColor.blue
             
-            cell.priceLab.text = "+" + "\(self.dataArray[indexPath.row].price)"
+            if let intPrice = Int(self.dataArray[indexPath.row].price) {
+                
+                let allIntPrice = intPrice * self.n
+                
+                cell.priceLab.text = "+" + "\(allIntPrice)" + "$"
+                
+            }
             
         }
         

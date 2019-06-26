@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58EC5A0C7ACBE4D60E9D8C0C /* Pods_KeepAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654614D9C7067CBADB279C70 /* Pods_KeepAccounts.framework */; };
+		71F4C1985F1BC49F07E5AC1D /* Pods_KeepAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A736988DB78244EFB0871CC7 /* Pods_KeepAccounts.framework */; };
 		8DD77F3B22BDFA9400768106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F3A22BDFA9400768106 /* AppDelegate.swift */; };
 		8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F3C22BDFA9400768106 /* ViewController.swift */; };
 		8DD77F4022BDFA9400768106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD77F3E22BDFA9400768106 /* Main.storyboard */; };
@@ -21,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		654614D9C7067CBADB279C70 /* Pods_KeepAccounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepAccounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD77F3722BDFA9400768106 /* KeepAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD77F3A22BDFA9400768106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD77F3C22BDFA9400768106 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,8 +33,9 @@
 		8DD77F4E22BDFD6D00768106 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		8DD77F5422BE0CFC00768106 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 		8DD77F5622BE0F2D00768106 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		A8CDE5FF2BD167C5720B89E2 /* Pods-KeepAccounts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.release.xcconfig"; path = "Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.release.xcconfig"; sourceTree = "<group>"; };
-		F45127EF9FC767E738FDC633 /* Pods-KeepAccounts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.debug.xcconfig"; path = "Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.debug.xcconfig"; sourceTree = "<group>"; };
+		A736988DB78244EFB0871CC7 /* Pods_KeepAccounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepAccounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E5F54EEAD9D057882EF30C /* Pods-KeepAccounts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.release.xcconfig"; path = "Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.release.xcconfig"; sourceTree = "<group>"; };
+		DD59EA9F46224E82F584318B /* Pods-KeepAccounts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.debug.xcconfig"; path = "Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58EC5A0C7ACBE4D60E9D8C0C /* Pods_KeepAccounts.framework in Frameworks */,
+				71F4C1985F1BC49F07E5AC1D /* Pods_KeepAccounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +53,8 @@
 		1F33998A03EBB46A2866795A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F45127EF9FC767E738FDC633 /* Pods-KeepAccounts.debug.xcconfig */,
-				A8CDE5FF2BD167C5720B89E2 /* Pods-KeepAccounts.release.xcconfig */,
+				DD59EA9F46224E82F584318B /* Pods-KeepAccounts.debug.xcconfig */,
+				B5E5F54EEAD9D057882EF30C /* Pods-KeepAccounts.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 				8DD77F3922BDFA9400768106 /* KeepAccounts */,
 				8DD77F3822BDFA9400768106 /* Products */,
 				1F33998A03EBB46A2866795A /* Pods */,
-				C1A00982B0E19C0A12732A0A /* Frameworks */,
+				F16C4478EAD0AC28B75BEEDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,10 +95,10 @@
 			path = KeepAccounts;
 			sourceTree = "<group>";
 		};
-		C1A00982B0E19C0A12732A0A /* Frameworks */ = {
+		F16C4478EAD0AC28B75BEEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				654614D9C7067CBADB279C70 /* Pods_KeepAccounts.framework */,
+				A736988DB78244EFB0871CC7 /* Pods_KeepAccounts.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,11 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DD77F4922BDFA9400768106 /* Build configuration list for PBXNativeTarget "KeepAccounts" */;
 			buildPhases = (
-				9E34ADAD873371AA607943FF /* [CP] Check Pods Manifest.lock */,
+				8BD2DD3D4AF116A861B64CDB /* [CP] Check Pods Manifest.lock */,
 				8DD77F3322BDFA9400768106 /* Sources */,
 				8DD77F3422BDFA9400768106 /* Frameworks */,
 				8DD77F3522BDFA9400768106 /* Resources */,
-				C7787823A05715F03786CD31 /* [CP] Embed Pods Frameworks */,
+				875B9045A6CCF416789964C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,7 +172,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9E34ADAD873371AA607943FF /* [CP] Check Pods Manifest.lock */ = {
+		875B9045A6CCF416789964C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BD2DD3D4AF116A861B64CDB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,23 +214,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C7787823A05715F03786CD31 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -368,7 +373,7 @@
 		};
 		8DD77F4A22BDFA9400768106 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F45127EF9FC767E738FDC633 /* Pods-KeepAccounts.debug.xcconfig */;
+			baseConfigurationReference = DD59EA9F46224E82F584318B /* Pods-KeepAccounts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,7 +384,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.TingKai.KeepAccounts;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.TingKai.KeepAccounts1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,7 +393,7 @@
 		};
 		8DD77F4B22BDFA9400768106 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8CDE5FF2BD167C5720B89E2 /* Pods-KeepAccounts.release.xcconfig */;
+			baseConfigurationReference = B5E5F54EEAD9D057882EF30C /* Pods-KeepAccounts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,7 +404,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.TingKai.KeepAccounts;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.TingKai.KeepAccounts1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

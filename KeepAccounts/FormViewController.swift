@@ -152,8 +152,6 @@ class FormViewController: UIViewController {
         
         else {
             
-            self.allData.date = self.dateformatter.string(from: self.dateDataPicker.date)
-            
             self.allData.project = self.projectTxt.text!
                 
             self.allData.price = self.priceTxt.text!
