@@ -40,6 +40,8 @@ class ViewController: UIViewController {
         
         self.tableView.dataSource = self
         
+        self.navigationItem.rightBarButtonItem = editButtonItem
+        
         self.startAccountBtn.clipsToBounds = true
         
         self.startAccountBtn.layer.cornerRadius = 10
@@ -55,6 +57,28 @@ class ViewController: UIViewController {
         calendarView.scrollingMode = .stopAtEachCalendarFrame
         
         calendarView.showsHorizontalScrollIndicator = false
+        
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        
+        super.setEditing(editing, animated: true)
+        
+        self.tableView.setEditing(editing, animated: true)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let deleteDataArray = self.dataArray.remove(at: indexPath.row)
+            
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        }
+        
+        
         
     }
     
@@ -239,6 +263,8 @@ extension ViewController : UIFormViewControllerDeletage {
 extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
         
     }
     

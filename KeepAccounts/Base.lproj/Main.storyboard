@@ -153,7 +153,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="GK8-zm-ctI">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="Qdc-ON-eeh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="fat-Vp-O26"/>
                     </navigationItem>
                     <connections>
                         <outlet property="calendarView" destination="tal-Tl-MsR" id="afT-7m-eM3"/>
