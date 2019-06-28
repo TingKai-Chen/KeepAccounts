@@ -9,6 +9,10 @@ protocol UIFormViewControllerDeletage : class{
 }
 
 class FormViewController: UIViewController {
+
+    var n = 1
+    
+    var c = -1
     
     let allData = Data()
   
@@ -154,7 +158,21 @@ class FormViewController: UIViewController {
             
             self.allData.project = self.projectTxt.text!
                 
-            self.allData.price = self.priceTxt.text!
+            if self.incomeExpendPickerTxt.text == "支出" {
+                
+                let intPrice = Int(self.priceTxt.text!)! * self.c
+                
+                self.allData.price = String(intPrice)
+                
+            }
+            
+            else {
+                
+                let intPrice = Int(self.priceTxt.text!)! * self.n
+                
+                self.allData.price = String(intPrice)
+                
+            }
             
             self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
             

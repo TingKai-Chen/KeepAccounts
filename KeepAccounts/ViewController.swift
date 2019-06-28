@@ -6,10 +6,16 @@ class ViewController: UIViewController {
     
     var dataArray : [Data] = []
     
+    var totalPriceArray : [Int] = [0]
+    
     var n = 1
     
     var c = -1
-
+    
+    var totalPrice = 0
+    
+    @IBOutlet weak var totalPriceLab: UILabel!
+    
     @IBOutlet weak var dateLab: UILabel!
     
     @IBOutlet var calendarView: JTAppleCalendarView!
@@ -52,11 +58,13 @@ class ViewController: UIViewController {
         
         self.calendarView.calendarDataSource = self
         
-        calendarView.scrollDirection = .horizontal
+        self.calendarView.scrollDirection = .horizontal
         
-        calendarView.scrollingMode = .stopAtEachCalendarFrame
+        self.calendarView.scrollingMode = .stopAtEachCalendarFrame
         
-        calendarView.showsHorizontalScrollIndicator = false
+        self.calendarView.showsHorizontalScrollIndicator = false
+        
+        self.totalPriceLab.text = String(self.totalPrice)
         
     }
     
@@ -253,7 +261,7 @@ extension ViewController : UIFormViewControllerDeletage {
     func upDateData(data: Data) {
         
         self.dataArray.append(data)
-        
+    
         self.tableView.reloadData()
         
     }
@@ -283,34 +291,20 @@ extension ViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
         
         cell.projectLab.text = self.dataArray[indexPath.row].project
-    
-        cell.incomeExpendLab.text = self.dataArray[indexPath.row].incomeExpend
         
-        if cell.incomeExpendLab.text == "支出" {
+        if self.dataArray[indexPath.row].incomeExpend == "支出" {
             
             cell.priceLab.textColor = UIColor.red
             
-            if let intPrice = Int(self.dataArray[indexPath.row].price) {
-                
-                let allIntPrice = intPrice * self.c
-                
-                cell.priceLab.text = "\(allIntPrice)" + "$"
-                
-            }
-          
+            cell.priceLab.text = self.dataArray[indexPath.row].price + "$"
+            
         }
         
-        else {
+        if self.dataArray[indexPath.row].incomeExpend == "收入" {
             
             cell.priceLab.textColor = UIColor.blue
-            
-            if let intPrice = Int(self.dataArray[indexPath.row].price) {
                 
-                let allIntPrice = intPrice * self.n
-                
-                cell.priceLab.text = "+" + "\(allIntPrice)" + "$"
-                
-            }
+            cell.priceLab.text = "+" + self.dataArray[indexPath.row].price + "$"
             
         }
         

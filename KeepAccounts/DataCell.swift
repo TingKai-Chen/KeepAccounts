@@ -8,6 +8,4 @@ class Cell : UITableViewCell {
     
     @IBOutlet weak var priceLab: UILabel!
     
-    @IBOutlet weak var incomeExpendLab: UILabel!
-    
 }
