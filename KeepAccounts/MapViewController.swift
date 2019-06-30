@@ -7,7 +7,7 @@ import CoreLocation
 class MapViewController: UIViewController {
     
     var myLocationManager :CLLocationManager!
-    
+
     @IBOutlet weak var mainMapView: MKMapView!
     
     override func viewDidLoad() {
@@ -27,19 +27,6 @@ class MapViewController: UIViewController {
         self.mainMapView.showsUserLocation = true
         
         self.mainMapView.isZoomEnabled = true
-        
-        let latDelta = 0.05
-        
-        let longDelta = 0.05
-        
-        let currentLocationSpan:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
-        
-        let center:CLLocation = CLLocation(latitude: 25.05, longitude: 121.515)
-        
-        let currentRegion:MKCoordinateRegion = MKCoordinateRegion(center:center.coordinate,
-        span: currentLocationSpan)
-        
-        self.mainMapView.setRegion(currentRegion, animated: true)
         
     }
     
@@ -89,11 +76,17 @@ extension MapViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let currentLocation : CLLocation = locations[0] as CLLocation
+        let currentLocation = locations[0]
+        
+        let currentLocationSpan:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        
+        let currentRegion  = MKCoordinateRegion(center:currentLocation.coordinate, span: currentLocationSpan)
+        
+        self.mainMapView.setRegion(currentRegion, animated: true)
         
         print("\(currentLocation.coordinate.latitude)")
         
-        print(", \(currentLocation.coordinate.longitude)")
+        print(",\(currentLocation.coordinate.longitude)")
         
     }
     

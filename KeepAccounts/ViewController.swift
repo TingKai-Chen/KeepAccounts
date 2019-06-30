@@ -4,16 +4,6 @@ import JTAppleCalendar
 
 class ViewController: UIViewController {
     
-    var dataArray : [Data] = []
-    
-    var totalPriceArray : [Int] = [0]
-    
-    var n = 1
-    
-    var c = -1
-    
-    var totalPrice = 0
-    
     @IBOutlet weak var totalPriceLab: UILabel!
     
     @IBOutlet weak var dateLab: UILabel!
@@ -24,10 +14,52 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startAccountBtn: UIButton!
     
+    var dataArray : [Data] = [] {
+        
+        didSet {
+            
+            let totalPrice = self.dataArray.compactMap({Int($0.price)}).reduce(0, {$0 + $1})
+            
+            if totalPrice < 0 {
+                
+                self.totalPriceLab.textColor = UIColor.red
+                
+                self.totalPriceLab.text = String(totalPrice) + "$"
+                
+            }
+            
+            else if totalPrice == 0 {
+                
+                self.totalPriceLab.textColor = UIColor.black
+                
+                self.totalPriceLab.text = String(totalPrice) + "$"
+                
+            }
+            
+            else {
+                
+                self.totalPriceLab.textColor = UIColor.blue
+                
+                self.totalPriceLab.text = String(totalPrice) + "$"
+                
+            }
+            
+        }
+        
+    }
+    
+    var n = 1
+    
+    var c = -1
+    
+    var totalPrice = 0
+    
     var date = Date()
     
     var startDate = Date()
-
+    
+    var endDate = Date()
+    
     var formatter: DateFormatter {
         
         let formatter = DateFormatter()
@@ -66,6 +98,8 @@ class ViewController: UIViewController {
         
         self.totalPriceLab.text = String(self.totalPrice)
         
+        self.calendarView.selectDates([self.endDate])
+        
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
@@ -85,8 +119,6 @@ class ViewController: UIViewController {
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         
         }
-        
-        
         
     }
     
@@ -162,13 +194,13 @@ extension ViewController: JTAppleCalendarViewDataSource {
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
-        startDate = formatter.date(from: "01-jan-1970")!
+        self.startDate = self.formatter.date(from: "01-jan-1970")!
         
-        let endDate = Date()
+        self.endDate = Date()
         
-        self.calendarView.scrollToDate(endDate, animateScroll: false)
+        self.calendarView.scrollToDate(self.endDate, animateScroll: false)
         
-        return ConfigurationParameters(startDate: startDate, endDate: endDate)
+        return ConfigurationParameters(startDate: self.startDate, endDate: self.endDate)
         
     }
     
@@ -296,7 +328,7 @@ extension ViewController : UITableViewDataSource {
             
             cell.priceLab.textColor = UIColor.red
             
-            cell.priceLab.text = self.dataArray[indexPath.row].price + "$"
+            cell.priceLab.text = self.dataArray[indexPath.row].price + "$ "
             
         }
         
@@ -304,7 +336,7 @@ extension ViewController : UITableViewDataSource {
             
             cell.priceLab.textColor = UIColor.blue
                 
-            cell.priceLab.text = "+" + self.dataArray[indexPath.row].price + "$"
+            cell.priceLab.text = "+" + self.dataArray[indexPath.row].price + "$ "
             
         }
         

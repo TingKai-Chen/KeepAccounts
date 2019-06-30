@@ -32,6 +32,8 @@ class FormViewController: UIViewController {
     
     @IBOutlet weak var incomeExpendPickerTxt: UITextField!
     
+    @IBOutlet weak var locationTxt: UITextField!
+    
     var incomeExpenseData = ["支出","收入"]
     
     var incomeExpenseDataPicker = UIPickerView()
@@ -74,13 +76,13 @@ class FormViewController: UIViewController {
         
         self.dateDataPicker.maximumDate = Date()
         
-        self.incomeExpendPickerTxt.inputView = self.incomeExpenseDataPicker
-        
         self.datePickerTxt.inputView = self.dateDataPicker
 
         self.dateformatter.dateFormat = "yyyy年MM月dd日"
         
         self.datePickerTxt.text = dateformatter.string(from: self.date!)
+        
+        self.incomeExpendPickerTxt.inputView = self.incomeExpenseDataPicker
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         
@@ -116,6 +118,17 @@ class FormViewController: UIViewController {
         
         self.dateDataPicker.addTarget(self, action: #selector(FormViewController.datePickerValue(datePicker:)), for: .valueChanged)
         
+        self.incomeExpendPickerTxt.addTarget(self, action: #selector(FormViewController.disPlayPickerValue), for: .touchDown)
+        
+        self.locationTxt.addTarget(self, action: #selector(FormViewController.goToMap), for: .touchDown)
+        
+    }
+    
+  
+    @objc func goToMap() {
+
+        self.performSegue(withIdentifier: "MapSegue", sender: nil)
+
     }
     
     @objc func dissPicker () {
@@ -137,6 +150,14 @@ class FormViewController: UIViewController {
         self.datePickerTxt.text = dateformatter.string(from: self.dateDataPicker.date)
         
         self.delegate?.upDateCalendar(datePicker: self.dateDataPicker)
+        
+    }
+    
+    @objc func disPlayPickerValue() {
+        
+        let selectedIndex = self.incomeExpenseDataPicker.selectedRow(inComponent: 0)
+        
+        self.incomeExpendPickerTxt.text = self.incomeExpenseData[selectedIndex]
         
     }
     
@@ -191,26 +212,6 @@ extension FormViewController : UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         self.incomeExpendPickerTxt.text = self.incomeExpenseData[row]
-        
-        if self.incomeExpenseData[row] == "支出" {
-            
-            self.priceTxt.layer.borderWidth = 2
-
-            self.priceTxt.layer.borderColor = UIColor.red.cgColor
-            
-            self.priceTxt.layer.cornerRadius = 2
-            
-        }
-        
-        else {
-            
-            self.priceTxt.layer.borderWidth = 2
-            
-            self.priceTxt.layer.borderColor = UIColor.blue.cgColor
-            
-            self.priceTxt.layer.cornerRadius = 2
-            
-        }
         
     }
     
