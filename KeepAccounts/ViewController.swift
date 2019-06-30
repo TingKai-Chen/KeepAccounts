@@ -100,6 +100,13 @@ class ViewController: UIViewController {
         
         self.calendarView.selectDates([self.endDate])
         
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = view.bounds
+
+        gradientLayer.colors = [UIColor.orange.cgColor, UIColor.blue.cgColor]
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
