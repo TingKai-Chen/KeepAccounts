@@ -18,10 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tal-Tl-MsR" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <rect key="frame" x="33" y="72" width="338" height="269"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.083209864795207977" green="0.48732978105545044" blue="0.42484375834465027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tal-Tl-MsR" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="0.0" y="64" width="414" height="265"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DAm-6l-qfP">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="50" height="59"/>
@@ -36,22 +35,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOy-ib-Wo8" userLabel="Selected View">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOy-ib-Wo8" userLabel="Selected View">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.082772888243198395" green="0.71699309349060059" blue="0.38405692577362061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="HOy-ib-Wo8" secondAttribute="height" multiplier="1:1" id="soe-f2-oNh"/>
+                                                    </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uy-xn-Z8h" userLabel="DateLabel">
-                                                    <rect key="frame" x="4" y="14.666666666666664" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="3.3333333333333321" y="14.666666666666664" width="43.666666666666671" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="7Uy-xn-Z8h" firstAttribute="centerX" secondItem="ihf-dF-azC" secondAttribute="centerX" id="foH-F2-Atk"/>
-                                            <constraint firstItem="7Uy-xn-Z8h" firstAttribute="centerY" secondItem="ihf-dF-azC" secondAttribute="centerY" id="o2v-Bw-Xda"/>
+                                            <constraint firstItem="7Uy-xn-Z8h" firstAttribute="centerY" secondItem="ihf-dF-azC" secondAttribute="centerY" id="6HO-ct-uwC"/>
+                                            <constraint firstItem="HOy-ib-Wo8" firstAttribute="centerY" secondItem="ihf-dF-azC" secondAttribute="centerY" id="S3z-ZB-LhV"/>
+                                            <constraint firstItem="HOy-ib-Wo8" firstAttribute="height" secondItem="ihf-dF-azC" secondAttribute="height" id="fH6-Uv-62O"/>
+                                            <constraint firstItem="HOy-ib-Wo8" firstAttribute="centerX" secondItem="ihf-dF-azC" secondAttribute="centerX" id="vjt-LE-OjT"/>
+                                            <constraint firstItem="7Uy-xn-Z8h" firstAttribute="centerX" secondItem="ihf-dF-azC" secondAttribute="centerX" id="x5j-BP-yxh"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="dateLabel" destination="7Uy-xn-Z8h" id="91F-5H-erf"/>
@@ -59,71 +63,83 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" reuseIdentifier="DateHeader" id="Ff7-CW-xDB" customClass="DateHeader" customModule="KeepAccounts" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="338" height="59"/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DateHeader" id="Ff7-CW-xDB" customClass="DateHeader" customModule="KeepAccounts" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH6-bq-PQ7" userLabel="Month Title">
-                                            <rect key="frame" x="123.66666666666666" y="18.333333333333336" width="90.666666666666657" height="20.333333333333336"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VI0-Yz-L32">
-                                            <rect key="frame" x="0.0" y="38.666666666666664" width="338" height="20.333333333333336"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWx-Pt-jh7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="38.666666666666664"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sj-Lq-olk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH6-bq-PQ7" userLabel="Month Title">
+                                                    <rect key="frame" x="159.66666666666666" y="9.3333333333333339" width="95" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-qx-Z03">
-                                                    <rect key="frame" x="48.666666666666671" y="0.0" width="39.666666666666671" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="FH6-bq-PQ7" firstAttribute="centerX" secondItem="xWx-Pt-jh7" secondAttribute="centerX" id="Sht-BW-1b6"/>
+                                                <constraint firstItem="FH6-bq-PQ7" firstAttribute="centerY" secondItem="xWx-Pt-jh7" secondAttribute="centerY" id="Wx8-TD-mlH"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="VI0-Yz-L32">
+                                            <rect key="frame" x="0.0" y="38.666666666666664" width="414" height="20.333333333333336"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sj-Lq-olk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwJ-Gq-uh7">
-                                                    <rect key="frame" x="103" y="0.0" width="32.333333333333343" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-qx-Z03">
+                                                    <rect key="frame" x="63.333333333333343" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-pt-onx">
-                                                    <rect key="frame" x="151" y="0.0" width="38" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週二" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwJ-Gq-uh7">
+                                                    <rect key="frame" x="126.33333333333333" y="0.0" width="34.666666666666671" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65n-PE-XJv">
-                                                    <rect key="frame" x="203.33333333333334" y="0.0" width="35" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-pt-onx">
+                                                    <rect key="frame" x="189.66666666666666" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-Ur-ZYR">
-                                                    <rect key="frame" x="259.66666666666669" y="0.0" width="24.333333333333314" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週四" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65n-PE-XJv">
+                                                    <rect key="frame" x="252.99999999999997" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKl-Nc-Xuc">
-                                                    <rect key="frame" x="307.33333333333331" y="0.0" width="30.666666666666686" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週五" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-Ur-ZYR">
+                                                    <rect key="frame" x="316" y="0.0" width="34.666666666666686" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週六" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKl-Nc-Xuc">
+                                                    <rect key="frame" x="379.33333333333331" y="0.0" width="34.666666666666686" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.093021012842655182" green="0.69662785530090332" blue="0.091817177832126617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.097794018685817719" green="0.71073991060256958" blue="0.37376147508621216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="FH6-bq-PQ7" firstAttribute="centerX" secondItem="Ff7-CW-xDB" secondAttribute="centerX" id="7Wf-Zo-fTN"/>
                                         <constraint firstItem="VI0-Yz-L32" firstAttribute="leading" secondItem="Ff7-CW-xDB" secondAttribute="leading" id="Dn4-rj-obb"/>
-                                        <constraint firstItem="VI0-Yz-L32" firstAttribute="top" secondItem="FH6-bq-PQ7" secondAttribute="bottom" id="GRG-gb-wnv"/>
+                                        <constraint firstItem="xWx-Pt-jh7" firstAttribute="top" secondItem="Ff7-CW-xDB" secondAttribute="top" id="SI2-jG-B3b"/>
                                         <constraint firstAttribute="bottom" secondItem="VI0-Yz-L32" secondAttribute="bottom" id="Wy5-wV-ehY"/>
+                                        <constraint firstAttribute="trailing" secondItem="xWx-Pt-jh7" secondAttribute="trailing" id="ZRk-6Q-XfW"/>
+                                        <constraint firstItem="xWx-Pt-jh7" firstAttribute="leading" secondItem="Ff7-CW-xDB" secondAttribute="leading" id="Znc-Da-pla"/>
                                         <constraint firstItem="VI0-Yz-L32" firstAttribute="centerX" secondItem="Ff7-CW-xDB" secondAttribute="centerX" id="aZP-g1-liI"/>
+                                        <constraint firstItem="VI0-Yz-L32" firstAttribute="top" secondItem="xWx-Pt-jh7" secondAttribute="bottom" id="fZ2-sg-nw6"/>
                                         <constraint firstAttribute="trailing" secondItem="VI0-Yz-L32" secondAttribute="trailing" id="mxI-Pq-3CY"/>
                                     </constraints>
                                     <connections>
@@ -206,16 +222,15 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請從日曆選擇日期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzQ-TP-1QU" userLabel="DateLab">
-                                <rect key="frame" x="125" y="391" width="164" height="33"/>
+                                <rect key="frame" x="125" y="393" width="164" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yh-FR-xlu" userLabel="Start Account Btn">
-                                <rect key="frame" x="134" y="349" width="146" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yh-FR-xlu" userLabel="Start Account Btn">
+                                <rect key="frame" x="10" y="337" width="394" height="48"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="開始記帳">
@@ -226,25 +241,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="每日總收支:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsB-3d-cX7">
-                                <rect key="frame" x="140" y="426" width="92" height="21"/>
+                                <rect key="frame" x="137" y="425" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAg-Re-zGy" userLabel="TotalPriceLab">
-                                <rect key="frame" x="240" y="426" width="146" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAg-Re-zGy" userLabel="TotalPriceLab">
+                                <rect key="frame" x="241" y="425" width="146" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94802182912826538" green="0.9733244776725769" blue="0.98141735792160034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tal-Tl-MsR" firstAttribute="height" secondItem="AzY-hN-Jvn" secondAttribute="height" multiplier="0.36" id="4YD-jk-AyE"/>
+                            <constraint firstItem="4Yh-FR-xlu" firstAttribute="leading" secondItem="G6l-07-q4Y" secondAttribute="leading" constant="10" id="8vo-gz-l8B"/>
+                            <constraint firstItem="tal-Tl-MsR" firstAttribute="leading" secondItem="G6l-07-q4Y" secondAttribute="leading" id="ABT-Hv-gTb"/>
                             <constraint firstItem="hct-aG-zV3" firstAttribute="leading" secondItem="G6l-07-q4Y" secondAttribute="leading" id="aom-FR-jux"/>
+                            <constraint firstItem="G6l-07-q4Y" firstAttribute="trailing" secondItem="4Yh-FR-xlu" secondAttribute="trailing" constant="10" id="d2a-hW-tIQ"/>
                             <constraint firstItem="G6l-07-q4Y" firstAttribute="bottom" secondItem="hct-aG-zV3" secondAttribute="bottom" constant="38" id="eaB-wj-tTD"/>
+                            <constraint firstItem="4Yh-FR-xlu" firstAttribute="top" secondItem="tal-Tl-MsR" secondAttribute="bottom" constant="8" id="eqg-Yc-gOM"/>
                             <constraint firstItem="hct-aG-zV3" firstAttribute="trailing" secondItem="G6l-07-q4Y" secondAttribute="trailing" id="f5B-Nf-QG3"/>
+                            <constraint firstItem="tal-Tl-MsR" firstAttribute="trailing" secondItem="G6l-07-q4Y" secondAttribute="trailing" id="iBa-WP-NUE"/>
+                            <constraint firstItem="tal-Tl-MsR" firstAttribute="top" secondItem="G6l-07-q4Y" secondAttribute="top" id="oDa-TE-odr"/>
+                            <constraint firstItem="4Yh-FR-xlu" firstAttribute="centerX" secondItem="AzY-hN-Jvn" secondAttribute="centerX" id="uCY-AT-YMN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6l-07-q4Y"/>
                     </view>

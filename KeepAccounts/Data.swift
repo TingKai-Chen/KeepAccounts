@@ -4,6 +4,8 @@ import UIKit
 
 class Data {
 
+    var date = Date()
+    
     var project = String()
     
     var price = String()

@@ -17,7 +17,7 @@
 		8DD77F5022BDFD6D00768106 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F4C22BDFD6C00768106 /* DateHeader.swift */; };
 		8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F4D22BDFD6D00768106 /* FormViewController.swift */; };
 		8DD77F5222BDFD6D00768106 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F4E22BDFD6D00768106 /* DateCell.swift */; };
-		8DD77F5522BE0CFC00768106 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F5422BE0CFC00768106 /* DataCell.swift */; };
+		8DD77F5522BE0CFC00768106 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F5422BE0CFC00768106 /* Cell.swift */; };
 		8DD77F5722BE0F2D00768106 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F5622BE0F2D00768106 /* Data.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		8DD77F4C22BDFD6C00768106 /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
 		8DD77F4D22BDFD6D00768106 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		8DD77F4E22BDFD6D00768106 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
-		8DD77F5422BE0CFC00768106 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+		8DD77F5422BE0CFC00768106 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		8DD77F5622BE0F2D00768106 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A736988DB78244EFB0871CC7 /* Pods_KeepAccounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepAccounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E5F54EEAD9D057882EF30C /* Pods-KeepAccounts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.release.xcconfig"; path = "Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 				8DD77F4122BDFA9400768106 /* Assets.xcassets */,
 				8DD77F4322BDFA9400768106 /* LaunchScreen.storyboard */,
 				8DD77F4622BDFA9400768106 /* Info.plist */,
-				8DD77F5422BE0CFC00768106 /* DataCell.swift */,
+				8DD77F5422BE0CFC00768106 /* Cell.swift */,
 				8DD77F5622BE0F2D00768106 /* Data.swift */,
 			);
 			path = KeepAccounts;
@@ -223,7 +223,7 @@
 			files = (
 				8DD77F5722BE0F2D00768106 /* Data.swift in Sources */,
 				8DD77F5022BDFD6D00768106 /* DateHeader.swift in Sources */,
-				8DD77F5522BE0CFC00768106 /* DataCell.swift in Sources */,
+				8DD77F5522BE0CFC00768106 /* Cell.swift in Sources */,
 				8DD77F5222BDFD6D00768106 /* DateCell.swift in Sources */,
 				8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */,
 				8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */,

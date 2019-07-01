@@ -84,8 +84,6 @@ class ViewController: UIViewController {
         
         self.startAccountBtn.layer.cornerRadius = 10
         
-        self.calendarView.layer.cornerRadius = 10
-        
         self.calendarView.calendarDelegate = self
         
         self.calendarView.calendarDataSource = self
@@ -98,15 +96,18 @@ class ViewController: UIViewController {
         
         self.totalPriceLab.text = String(self.totalPrice)
         
-        self.calendarView.selectDates([self.endDate])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
-        let gradientLayer = CAGradientLayer()
+        super.viewDidAppear(animated)
         
-        gradientLayer.frame = view.bounds
+        if self.calendarView.selectedDates.count == 0 {
+            
+            self.calendarView.selectDates([self.endDate])
+            
+        }
 
-        gradientLayer.colors = [UIColor.orange.cgColor, UIColor.blue.cgColor]
-        
-        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
@@ -177,9 +178,13 @@ class ViewController: UIViewController {
         
         if cellState.isSelected {
             
-            //cell.selectedView.layer.cornerRadius =  5
+            cell.selectedView.layer.cornerRadius = cell.selectedView.frame.height/2
+            
+            cell.selectedView.clipsToBounds = true
             
             cell.selectedView.isHidden = false
+            
+            cell.dateLabel.textColor = UIColor.white
             
             self.dataArray = []
             
@@ -261,7 +266,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         let formatter = DateFormatter()
         
-        formatter.dateFormat = "yyyy年MM月dd日"
+        formatter.dateFormat = "yyyy年 MM月 dd日"
         
         formatter.locale = Locale(identifier: "zh_TW")
         
