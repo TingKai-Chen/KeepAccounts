@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startAccountBtn: UIButton!
     
+    @IBOutlet weak var totalPriceNameLab: UILabel!
+    
     var dataArray : [Data] = [] {
         
         didSet {
@@ -79,11 +81,7 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
         
         self.navigationItem.rightBarButtonItem = editButtonItem
-        
-        self.startAccountBtn.clipsToBounds = true
-        
-        self.startAccountBtn.layer.cornerRadius = 10
-        
+
         self.calendarView.calendarDelegate = self
         
         self.calendarView.calendarDataSource = self
@@ -94,7 +92,53 @@ class ViewController: UIViewController {
         
         self.calendarView.showsHorizontalScrollIndicator = false
         
+        self.calendarView.layer.shadowColor = UIColor.darkGray.cgColor
+        
+        self.calendarView.layer.shadowOpacity = 0.8
+        
+        self.calendarView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        
         self.totalPriceLab.text = String(self.totalPrice)
+        
+        self.startAccountBtn.clipsToBounds = true
+        
+        self.startAccountBtn.layer.cornerRadius = self.startAccountBtn.frame.height/2
+        
+//        self.startAccountBtn.layer.shadowColor = UIColor.darkGray.cgColor
+//
+//        self.startAccountBtn.layer.shadowOpacity = 0.8
+//
+//        self.startAccountBtn.layer.shadowOffset = CGSize(width: 5, height: 5)
+
+        let gradientLayerBtn = CAGradientLayer()
+        
+        gradientLayerBtn.startPoint = CGPoint(x: 0, y: 0.5)
+        
+        gradientLayerBtn.endPoint = CGPoint(x: 1, y: 0.5)
+        
+        gradientLayerBtn.frame = self.startAccountBtn.bounds
+        
+        gradientLayerBtn.colors = [UIColor(rgb:0xff0080).cgColor, UIColor(rgb:0xf75000).cgColor]
+        
+        self.startAccountBtn.layer.addSublayer(gradientLayerBtn)
+        
+        let label = UILabel()
+        
+        label.text = "每日收支總額 :"
+
+        label.font = UIFont.boldSystemFont(ofSize: 26)
+
+        label.sizeToFit()
+        
+        let gradientLayerLab = CAGradientLayer()
+        
+        gradientLayerLab.frame = self.totalPriceNameLab.bounds
+        
+        gradientLayerLab.colors = [UIColor.orange.cgColor, UIColor.blue.cgColor]
+        
+        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
+        
+        self.totalPriceNameLab.mask = label
         
     }
     
@@ -356,4 +400,26 @@ extension ViewController : UITableViewDataSource {
 
     }
 
+}
+
+extension UIColor {
+    
+    convenience init(red: Int, green: Int, blue: Int) {
+        
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+        
+    }
+    
+    convenience init(rgb: Int) {
+        
+        self.init(red: (rgb >> 16) & 0xFF,green: (rgb >> 8) & 0xFF,blue: rgb & 0xFF)
+        
+    }
+    
 }
