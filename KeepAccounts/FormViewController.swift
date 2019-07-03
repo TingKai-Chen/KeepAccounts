@@ -34,6 +34,8 @@ class FormViewController: UIViewController {
     
     @IBOutlet weak var locationTxt: UITextField!
     
+    @IBOutlet weak var roundTxt: UITextView!
+    
     var incomeExpenseData = ["支出","收入"]
     
     var incomeExpenseDataPicker = UIPickerView()
@@ -124,11 +126,22 @@ class FormViewController: UIViewController {
         
     }
     
-  
     @objc func goToMap() {
 
         self.performSegue(withIdentifier: "MapSegue", sender: nil)
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "MapSegue" {
+            
+            let mapVC = segue.destination as! MapViewController
+            
+            mapVC.delegate = self
+            
+        }
+        
     }
     
     @objc func dissPicker () {
@@ -197,6 +210,10 @@ class FormViewController: UIViewController {
             
             self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
             
+            self.allData.address = self.locationTxt.text!
+            
+            self.allData.round = self.roundTxt.text
+            
             self.delegate?.upDateData(data: self.allData)
             
             self.navigationController?.popViewController(animated: true)
@@ -234,6 +251,16 @@ extension FormViewController : UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         return self.incomeExpenseData[row]
+        
+    }
+    
+}
+
+extension FormViewController : UIMapViewControllerDelegate {
+    
+    func upDateMapTxt(textField: UITextField) {
+        
+        self.locationTxt.text = textField.text
         
     }
     

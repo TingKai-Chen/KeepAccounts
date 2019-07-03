@@ -28,13 +28,21 @@ class ViewController: UIViewController {
                 
                 self.totalPriceLab.text = String(totalPrice) + "$"
                 
+                self.totalPriceLab.shadowColor = UIColor.gray
+                
+                self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+                
             }
             
             else if totalPrice == 0 {
                 
-                self.totalPriceLab.textColor = UIColor.black
+                self.totalPriceLab.textColor = UIColor(rgb: 0x8e8e8e)
                 
-                self.totalPriceLab.text = String(totalPrice) + "$"
+                self.totalPriceLab.text = "無金額 $"
+                
+                self.totalPriceLab.shadowColor = UIColor.gray
+                
+                self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
                 
             }
             
@@ -43,6 +51,10 @@ class ViewController: UIViewController {
                 self.totalPriceLab.textColor = UIColor.blue
                 
                 self.totalPriceLab.text = String(totalPrice) + "$"
+                
+                self.totalPriceLab.shadowColor = UIColor.gray
+                
+                self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
                 
             }
             
@@ -136,8 +148,10 @@ class ViewController: UIViewController {
         
         gradientLayerLab.colors = [UIColor.orange.cgColor, UIColor.blue.cgColor]
         
-        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
+        self.totalPriceNameLab.clipsToBounds = false
         
+        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
+    
         self.totalPriceNameLab.mask = label
         
     }
@@ -314,7 +328,21 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         formatter.locale = Locale(identifier: "zh_TW")
         
-        self.dateLab.text = formatter.string(from: self.date)
+        let myShadow = NSShadow()
+        
+        myShadow.shadowBlurRadius = 3
+        
+        myShadow.shadowOffset = CGSize(width: 3, height: 3)
+        
+        myShadow.shadowColor = UIColor.gray
+        
+        let myAttribute = [ NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 20.0)! , NSAttributedString.Key.shadow: myShadow ]
+        
+        let myAttrString = NSAttributedString(string: formatter.string(from: self.date), attributes: myAttribute)
+       
+        self.dateLab.attributedText = myAttrString
+        
+        self.dateLab.textColor = UIColor(rgb: 0x0066cc)
         
     }
     
@@ -393,6 +421,22 @@ extension ViewController : UITableViewDataSource {
             cell.priceLab.textColor = UIColor.blue
                 
             cell.priceLab.text = "+" + self.dataArray[indexPath.row].price + "$ "
+            
+        }
+        
+        cell.addressLab.text = self.dataArray[indexPath.row].address
+        
+        cell.roundLab.text = self.dataArray[indexPath.row].round
+        
+        if self.dataArray[indexPath.row].address == "" {
+            
+            cell.addressLab.text = "無填寫此筆資料"
+            
+        }
+        
+        if self.dataArray[indexPath.row].round == "" {
+            
+            cell.roundLab.text = "無填寫此筆資料"
             
         }
         

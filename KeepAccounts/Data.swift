@@ -12,4 +12,8 @@ class Data {
     
     var incomeExpend = String()
     
+    var address = String()
+    
+    var round = String()
+    
 }

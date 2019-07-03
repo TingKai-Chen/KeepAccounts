@@ -8,4 +8,8 @@ class Cell : UITableViewCell {
     
     @IBOutlet weak var priceLab: UILabel!
     
+    @IBOutlet weak var addressLab: UILabel!
+    
+    @IBOutlet weak var roundLab: UILabel!
+    
 }
