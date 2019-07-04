@@ -24,6 +24,8 @@ class FormViewController: UIViewController {
 
     weak var delegate : UIFormViewControllerDeletage?
     
+    @IBOutlet weak var imageBtn: UIButton!
+    
     @IBOutlet weak var priceTxt: UITextField!
     
     @IBOutlet weak var datePickerTxt: UITextField!
@@ -124,6 +126,16 @@ class FormViewController: UIViewController {
         
         self.locationTxt.addTarget(self, action: #selector(FormViewController.goToMap), for: .touchDown)
         
+        self.imageBtn.setImage(UIImage(named: "camera"), for: .normal)
+        
+        self.imageBtn.layer.masksToBounds = true
+        
+        self.imageBtn.layer.cornerRadius = 10
+        
+        self.imageBtn.layer.borderWidth = 2
+
+        self.imageBtn.layer.borderColor = UIColor.red.cgColor
+        
     }
     
     @objc func goToMap() {
@@ -155,6 +167,8 @@ class FormViewController: UIViewController {
         self.view.endEditing(true)
         
     }
+    
+    
     
     @objc func datePickerValue (datePicker: UIDatePicker) {
         
@@ -214,11 +228,25 @@ class FormViewController: UIViewController {
             
             self.allData.round = self.roundTxt.text
             
+            self.allData.image = self.imageBtn.image(for: .normal)!
+            
             self.delegate?.upDateData(data: self.allData)
             
             self.navigationController?.popViewController(animated: true)
             
         }
+        
+    }
+    
+    @IBAction func camera(_ sender: Any) {
+        
+        let imagePicker = UIImagePickerController()
+        
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker,animated: true,completion: nil)
+        
+        imagePicker.delegate = self
         
     }
     
@@ -264,4 +292,20 @@ extension FormViewController : UIMapViewControllerDelegate {
         
     }
     
+}
+
+extension FormViewController : UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            self.imageBtn.setImage(image, for: .normal)
+            
+        }
+        
+        dismiss(animated: true, completion:nil)
+        
+    }
+
 }

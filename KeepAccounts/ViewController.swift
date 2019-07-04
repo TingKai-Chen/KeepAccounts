@@ -332,7 +332,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         myShadow.shadowBlurRadius = 3
         
-        myShadow.shadowOffset = CGSize(width: 3, height: 3)
+        myShadow.shadowOffset = CGSize(width: 2, height: 2)
         
         myShadow.shadowColor = UIColor.gray
         
@@ -427,6 +427,18 @@ extension ViewController : UITableViewDataSource {
         cell.addressLab.text = self.dataArray[indexPath.row].address
         
         cell.roundLab.text = self.dataArray[indexPath.row].round
+        
+        if self.dataArray[indexPath.row].image == UIImage(named: "camera") {
+            
+            cell.photoImage.image = UIImage(named: "account")
+            
+        }
+        
+        else {
+            
+            cell.photoImage.image = self.dataArray[indexPath.row].thumbnailImage()
+            
+        }
         
         if self.dataArray[indexPath.row].address == "" {
             

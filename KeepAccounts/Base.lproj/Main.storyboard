@@ -215,6 +215,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLab" destination="gbY-nZ-8a2" id="HMA-vb-yco"/>
+                                            <outlet property="photoImage" destination="iFL-vV-zFw" id="2wj-AU-kcV"/>
                                             <outlet property="priceLab" destination="vla-Yi-OpX" id="5TC-vN-XfS"/>
                                             <outlet property="projectLab" destination="FL6-fl-add" id="cfH-G5-vc2"/>
                                             <outlet property="roundLab" destination="NDw-IH-7Bq" id="J0Y-x1-QQL"/>
@@ -294,7 +295,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="FYB-Tc-vfx">
-                                <rect key="frame" x="20" y="166" width="78.666666666666671" height="249.66666666666666"/>
+                                <rect key="frame" x="36.000000000000007" y="203" width="78.666666666666671" height="249.66666666666666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="項目 :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvk-tl-zlS">
@@ -330,21 +331,21 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcO-aI-8eq" userLabel="Project Text Field">
-                                <rect key="frame" x="124" y="157" width="256" height="30"/>
+                                <rect key="frame" x="124" y="195" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XG5-yh-RE1" userLabel="incomeExpend Picker Txt">
-                                <rect key="frame" x="123" y="216" width="256" height="30"/>
+                                <rect key="frame" x="124" y="255" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KId-Pe-mtO">
-                                <rect key="frame" x="99" y="620" width="60" height="39"/>
+                                <rect key="frame" x="96" y="632" width="60" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="確定">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -354,47 +355,57 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hse-cN-aHy" userLabel="Price Txt">
-                                <rect key="frame" x="124" y="275" width="256" height="30"/>
+                                <rect key="frame" x="124" y="312" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QpR-cQ-uw1">
-                                <rect key="frame" x="124" y="332" width="256" height="30"/>
+                                <rect key="frame" x="124" y="369" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-PZ-EPD">
-                                <rect key="frame" x="225" y="620" width="54" height="39"/>
+                                <rect key="frame" x="225" y="632" width="54" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="取消">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iwp-Pz-k0L" userLabel="data Picker Txt">
-                                <rect key="frame" x="124" y="101" width="256" height="30"/>
+                                <rect key="frame" x="124" y="138" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2t-tC-Sds">
+                                <rect key="frame" x="18" y="77" width="96" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="camera:" destination="rdE-HD-x30" eventType="touchUpInside" id="5R8-F8-tJK"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xT1-mY-i72">
-                                <rect key="frame" x="124" y="394" width="256" height="177"/>
+                                <rect key="frame" x="124" y="427" width="256" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.816968881754359" green="0.84333304910341389" blue="0.85138404187817263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ePR-99-RSX"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fry-Cc-oPO"/>
                     <connections>
                         <outlet property="datePickerTxt" destination="Iwp-Pz-k0L" id="FFi-w5-w8E"/>
+                        <outlet property="imageBtn" destination="A2t-tC-Sds" id="0os-hf-n9v"/>
                         <outlet property="incomeExpendPickerTxt" destination="XG5-yh-RE1" id="Ue7-Ba-hpN"/>
                         <outlet property="locationTxt" destination="QpR-cQ-uw1" id="O4p-M3-sfL"/>
                         <outlet property="priceTxt" destination="hse-cN-aHy" id="uSG-I1-Eeh"/>
