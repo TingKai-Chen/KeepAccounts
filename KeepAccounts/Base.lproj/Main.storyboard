@@ -280,6 +280,7 @@
                         <outlet property="tableView" destination="hct-aG-zV3" id="Y5L-sY-1mw"/>
                         <outlet property="totalPriceLab" destination="DAg-Re-zGy" id="rMI-vI-qoR"/>
                         <outlet property="totalPriceNameLab" destination="JsB-3d-cX7" id="S2j-Hd-wV9"/>
+                        <segue destination="rdE-HD-x30" kind="show" identifier="dataSegue" id="CwP-A4-PG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zt5-Ii-NH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -476,4 +477,7 @@
             <point key="canvasLocation" x="-778.26086956521749" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CwP-A4-PG8"/>
+    </inferredMetricsTieBreakers>
 </document>

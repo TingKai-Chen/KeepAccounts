@@ -4,32 +4,55 @@ import UIKit
 
 class Data {
 
-    var date = Date()
+    var date: Date
     
-    var project = String()
+    var projectName: String?
     
-    var price = String()
+    var price: String?
     
-    var incomeExpend = String()
+    var incomeExpend: String?
     
-    var address = String()
+    var address: String?
     
-    var round = String()
+    var round: String?
     
-    var image : UIImage?
+    var image: UIImage?
+    
+    init(date: Date , project: String? , price: String?, incomeExpend: String? , address: String? , round: String? , image: UIImage? ) {
+        
+        self.date = date
+        
+        self.projectName = project
+        
+        self.price = price
+        
+        self.incomeExpend = incomeExpend
+        
+        self.address = address
+        
+        self.round = round
+        
+        self.image = image
+        
+    }
+    
+    convenience init(date: Date) {
+        
+        self.init(date: date, project: nil, price: nil, incomeExpend: nil, address: nil, round: nil, image: nil)
+        
+    }
+    
     
     func thumbnailImage() -> UIImage? {
         
         if let image =  self.image {
 
-            let thumbnailSize = CGSize(width:20, height:20); //設定縮圖大小
+            let thumbnailSize = CGSize(width:50, height:50)
 
-            let scale = UIScreen.main.scale //找出目前螢幕的scale，視網膜技術為2.0
-            //產生畫布，第一個參數指定大小,第二個參數true:不透明（黑色底）,false表示透明背景,scale為螢幕scale
+            let scale = UIScreen.main.scale
+            
             UIGraphicsBeginImageContextWithOptions(thumbnailSize,false,scale)
-            //計算長寬要縮圖比例，取最大值MAX會變成UIViewContentModeScaleAspectFill
-            //最小值MIN會變成UIViewContentModeScaleAspectFit
-
+           
             let widthRatio = thumbnailSize.width / image.size.width;
 
             let heightRadio = thumbnailSize.height / image.size.height;
@@ -42,12 +65,12 @@ class Data {
 //            let circlePath = UIBezierPath(ovalIn: CGRect(x: 0,y: 0,width: thumbnailSize.width,height: thumbnailSize.height))
 //
 //            circlePath.addClip()
-//
+
             image.draw(in:CGRect(x: -(imageSize.width-thumbnailSize.width)/2.0,y: -(imageSize.height-thumbnailSize.height)/2.0,
                                  width: imageSize.width,height: imageSize.height))
-            //取得畫布上的縮圖
+            
             let smallImage = UIGraphicsGetImageFromCurrentImageContext();
-            //關掉畫布
+            
             UIGraphicsEndImageContext();
 
             return smallImage

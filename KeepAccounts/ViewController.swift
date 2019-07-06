@@ -20,43 +20,7 @@ class ViewController: UIViewController {
         
         didSet {
             
-            let totalPrice = self.dataArray.compactMap({Int($0.price)}).reduce(0, {$0 + $1})
-            
-            if totalPrice < 0 {
-                
-                self.totalPriceLab.textColor = UIColor.red
-                
-                self.totalPriceLab.text = String(totalPrice) + "$"
-                
-                self.totalPriceLab.shadowColor = UIColor.gray
-                
-                self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
-                
-            }
-            
-            else if totalPrice == 0 {
-                
-                self.totalPriceLab.textColor = UIColor(rgb: 0x8e8e8e)
-                
-                self.totalPriceLab.text = "無金額 $"
-                
-                self.totalPriceLab.shadowColor = UIColor.gray
-                
-                self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
-                
-            }
-            
-            else {
-                
-                self.totalPriceLab.textColor = UIColor.blue
-                
-                self.totalPriceLab.text = String(totalPrice) + "$"
-                
-                self.totalPriceLab.shadowColor = UIColor.gray
-                
-                self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
-                
-            }
+            self.caculateSummary()
             
         }
         
@@ -88,71 +52,19 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        self.tableView.delegate = self
+        self.setPrortocol()
         
-        self.tableView.dataSource = self
+        self.setCalendarViewLayout()
         
-        self.navigationItem.rightBarButtonItem = editButtonItem
+        self.setAccountBtnLayout()
 
-        self.calendarView.calendarDelegate = self
+        self.setGradientLayerBtn()
         
-        self.calendarView.calendarDataSource = self
-        
-        self.calendarView.scrollDirection = .horizontal
-        
-        self.calendarView.scrollingMode = .stopAtEachCalendarFrame
-        
-        self.calendarView.showsHorizontalScrollIndicator = false
-        
-        self.calendarView.layer.shadowColor = UIColor.darkGray.cgColor
-        
-        self.calendarView.layer.shadowOpacity = 0.8
-        
-        self.calendarView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.setTotalPriceNameLabLayout()
         
         self.totalPriceLab.text = String(self.totalPrice)
         
-        self.startAccountBtn.clipsToBounds = true
-        
-        self.startAccountBtn.layer.cornerRadius = self.startAccountBtn.frame.height/2
-        
-//        self.startAccountBtn.layer.shadowColor = UIColor.darkGray.cgColor
-//
-//        self.startAccountBtn.layer.shadowOpacity = 0.8
-//
-//        self.startAccountBtn.layer.shadowOffset = CGSize(width: 5, height: 5)
-
-        let gradientLayerBtn = CAGradientLayer()
-        
-        gradientLayerBtn.startPoint = CGPoint(x: 0, y: 0.5)
-        
-        gradientLayerBtn.endPoint = CGPoint(x: 1, y: 0.5)
-        
-        gradientLayerBtn.frame = self.startAccountBtn.bounds
-        
-        gradientLayerBtn.colors = [UIColor(rgb:0xff0080).cgColor, UIColor(rgb:0xf75000).cgColor]
-        
-        self.startAccountBtn.layer.addSublayer(gradientLayerBtn)
-        
-        let label = UILabel()
-        
-        label.text = "每日收支總額 :"
-
-        label.font = UIFont.boldSystemFont(ofSize: 26)
-
-        label.sizeToFit()
-        
-        let gradientLayerLab = CAGradientLayer()
-        
-        gradientLayerLab.frame = self.totalPriceNameLab.bounds
-        
-        gradientLayerLab.colors = [UIColor.orange.cgColor, UIColor.blue.cgColor]
-        
-        self.totalPriceNameLab.clipsToBounds = false
-        
-        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
-    
-        self.totalPriceNameLab.mask = label
+        self.navigationItem.rightBarButtonItem = editButtonItem
         
     }
     
@@ -176,6 +88,18 @@ class ViewController: UIViewController {
         
     }
     
+    private func setPrortocol() {
+        
+        self.tableView.delegate = self
+        
+        self.tableView.dataSource = self
+        
+        self.calendarView.calendarDelegate = self
+        
+        self.calendarView.calendarDataSource = self
+        
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
@@ -194,11 +118,27 @@ class ViewController: UIViewController {
             
             let FormVC = segue.destination as! FormViewController
             
-            FormVC.date = self.date
+            let allData = Data(date: self.date)
+            
+            FormVC.allData = allData
             
             FormVC.startDate = self.startDate
             
             FormVC.delegate = self
+            
+        }
+        
+        else if segue.identifier == "dataSegue" {
+            
+            let FormVC = segue.destination as! FormViewController
+            
+            if let data = sender as? Data {
+                
+                FormVC.allData = data
+                
+                FormVC.homeView = self
+                
+            }
             
         }
     
@@ -255,6 +195,121 @@ class ViewController: UIViewController {
             cell.selectedView.isHidden = true
             
         }
+        
+    }
+    
+    func caculateSummary() {
+        
+        let totalPrice = self.dataArray.compactMap({Int($0.price!)}).reduce(0, {$0 + $1})
+        
+        if totalPrice < 0 {
+            
+            self.totalPriceLab.textColor = UIColor.red
+            
+            self.totalPriceLab.text = String(totalPrice) + "$"
+            
+            self.totalPriceLab.shadowColor = UIColor.gray
+            
+            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+            
+        }
+            
+        else if totalPrice == 0 {
+            
+            self.totalPriceLab.textColor = UIColor(rgb: 0x8e8e8e)
+            
+            self.totalPriceLab.text = "無金額 $"
+            
+            self.totalPriceLab.shadowColor = UIColor.gray
+            
+            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+            
+        }
+            
+        else {
+            
+            self.totalPriceLab.textColor = UIColor.blue
+            
+            self.totalPriceLab.text = String(totalPrice) + "$"
+            
+            self.totalPriceLab.shadowColor = UIColor.gray
+            
+            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+            
+        }
+        
+    }
+    
+    private func setCalendarViewLayout() {
+        
+        self.calendarView.scrollDirection = .horizontal
+        
+        self.calendarView.scrollingMode = .stopAtEachCalendarFrame
+        
+        self.calendarView.showsHorizontalScrollIndicator = false
+        
+        self.calendarView.layer.shadowColor = UIColor.darkGray.cgColor
+        
+        self.calendarView.layer.shadowOpacity = 0.8
+        
+        self.calendarView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        
+    }
+    
+    private func setAccountBtnLayout() {
+        
+        self.startAccountBtn.clipsToBounds = true
+        
+        self.startAccountBtn.layer.cornerRadius = self.startAccountBtn.frame.height/2
+
+    }
+    
+    private func setGradientLayerBtn() {
+        
+        let gradientLayerBtn = CAGradientLayer()
+        
+        gradientLayerBtn.startPoint = CGPoint(x: 0, y: 0.5)
+        
+        gradientLayerBtn.endPoint = CGPoint(x: 1, y: 0.5)
+        
+        gradientLayerBtn.frame = self.startAccountBtn.bounds
+        
+        gradientLayerBtn.colors = [UIColor(rgb:0xff0080).cgColor, UIColor(rgb:0xf75000).cgColor]
+        
+        self.startAccountBtn.layer.addSublayer(gradientLayerBtn)
+        
+    }
+    
+    private func setTotalPriceNameLabLayout() {
+        
+        let label = UILabel()
+        
+        label.text = "每日收支總額 :"
+        
+        label.font = UIFont.boldSystemFont(ofSize: 26)
+        
+        label.sizeToFit()
+        
+        let gradientLayerLab = CAGradientLayer()
+        
+        gradientLayerLab.frame = self.totalPriceNameLab.bounds
+        
+        gradientLayerLab.colors = [UIColor.orange.cgColor, UIColor.blue.cgColor]
+        
+        self.totalPriceNameLab.clipsToBounds = false
+        
+        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
+        
+        self.totalPriceNameLab.mask = label
+        
+        
+    }
+    
+    func upDateData(data: Data) {
+        
+        self.dataArray.append(data)
+        
+        self.tableView.reloadData()
         
     }
     
@@ -373,15 +428,7 @@ extension ViewController : UIFormViewControllerDeletage {
         self.dateLab.text = formatter.string(from: self.date)
         
     }
-    
-    func upDateData(data: Data) {
-        
-        self.dataArray.append(data)
-    
-        self.tableView.reloadData()
-        
-    }
-    
+
 }
 
 extension ViewController : UITableViewDelegate {
@@ -389,6 +436,10 @@ extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        let data = self.dataArray[indexPath.row]
+        
+        self.performSegue(withIdentifier: "dataSegue", sender: data)
         
     }
     
@@ -406,13 +457,13 @@ extension ViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
         
-        cell.projectLab.text = self.dataArray[indexPath.row].project
+        cell.projectLab.text = self.dataArray[indexPath.row].projectName
         
         if self.dataArray[indexPath.row].incomeExpend == "支出" {
             
             cell.priceLab.textColor = UIColor.red
             
-            cell.priceLab.text = self.dataArray[indexPath.row].price + "$ "
+            cell.priceLab.text = self.dataArray[indexPath.row].price! + "$ "
             
         }
         
@@ -420,7 +471,7 @@ extension ViewController : UITableViewDataSource {
             
             cell.priceLab.textColor = UIColor.blue
                 
-            cell.priceLab.text = "+" + self.dataArray[indexPath.row].price + "$ "
+            cell.priceLab.text = "+" + self.dataArray[indexPath.row].price! + "$ "
             
         }
         
@@ -430,7 +481,9 @@ extension ViewController : UITableViewDataSource {
         
         if self.dataArray[indexPath.row].image == UIImage(named: "camera") {
             
-            cell.photoImage.image = UIImage(named: "account")
+            self.dataArray[indexPath.row].image = UIImage(named: "account")
+            
+            cell.photoImage.image = self.dataArray[indexPath.row].thumbnailImage()
             
         }
         

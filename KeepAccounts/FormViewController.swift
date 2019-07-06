@@ -14,13 +14,21 @@ class FormViewController: UIViewController {
     
     var c = -1
     
-    let allData = Data()
-  
-    var date : Date?
+    var homeView: ViewController?
     
-    var startDate : Date?
+    var allData: Data!
     
-    let dateformatter = DateFormatter()
+    var startDate: Date?
+    
+    var dateformatter: DateFormatter {
+    
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy年MM月dd日"
+        
+        return formatter
+        
+    }
 
     weak var delegate : UIFormViewControllerDeletage?
     
@@ -42,7 +50,7 @@ class FormViewController: UIViewController {
     
     var incomeExpenseDataPicker = UIPickerView()
     
-    var dateDataPicker = UIDatePicker()
+    var datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         
@@ -52,90 +60,18 @@ class FormViewController: UIViewController {
         
         self.incomeExpenseDataPicker.dataSource = self
         
-        self.priceTxt.keyboardType = UIKeyboardType.decimalPad
+        self.setLayout()
         
-        self.datePickerTxt.placeholder = "請選擇日期"
-        
-        self.incomeExpendPickerTxt.placeholder = "請選擇收支"
-        
-        self.projectTxt.placeholder = "請輸入文字"
-        
-        self.priceTxt.placeholder = "請輸入價格"
-        
-        self.datePickerTxt.borderStyle = .roundedRect
-        
-        self.incomeExpendPickerTxt.borderStyle = .roundedRect
-        
-        self.projectTxt.borderStyle = .roundedRect
-        
-        self.priceTxt.borderStyle = .roundedRect
-        
-        self.dateDataPicker.date = self.date!
-        
-        self.dateDataPicker.datePickerMode = .date
-        
-        self.dateDataPicker.locale = Locale(identifier: "zh_TW")
-        
-        self.dateDataPicker.minimumDate = self.startDate
-        
-        self.dateDataPicker.maximumDate = Date()
-        
-        self.datePickerTxt.inputView = self.dateDataPicker
+        self.setGesture()
 
-        self.dateformatter.dateFormat = "yyyy年MM月dd日"
+        self.setIncomeExpendPicker()
         
-        self.datePickerTxt.text = dateformatter.string(from: self.date!)
-        
-        self.incomeExpendPickerTxt.inputView = self.incomeExpenseDataPicker
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
-        
-        view.addGestureRecognizer(tap)
-        
-        let incomeExpendToolBar = UIToolbar()
-        
-        incomeExpendToolBar.barStyle = .default
-        
-        incomeExpendToolBar.sizeToFit()
-        
-        let incomeExpendFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        let incomeExpendToolBarBtnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dissPicker))
-        
-        incomeExpendToolBar.items = [incomeExpendFlexSpace , incomeExpendToolBarBtnDone]
-        
-        self.incomeExpendPickerTxt.inputAccessoryView = incomeExpendToolBar
-        
-        let dateToolBar = UIToolbar()
-        
-        dateToolBar.barStyle = .default
-        
-        dateToolBar.sizeToFit()
-        
-        let dateFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        let dateToolBarBtnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dissPicker))
-        
-        dateToolBar.items = [dateFlexSpace , dateToolBarBtnDone]
-        
-        self.datePickerTxt.inputAccessoryView = dateToolBar
-        
-        self.dateDataPicker.addTarget(self, action: #selector(FormViewController.datePickerValue(datePicker:)), for: .valueChanged)
-        
-        self.incomeExpendPickerTxt.addTarget(self, action: #selector(FormViewController.disPlayPickerValue), for: .touchDown)
-        
+        self.setDatePickerTextField()
+ 
         self.locationTxt.addTarget(self, action: #selector(FormViewController.goToMap), for: .touchDown)
         
-        self.imageBtn.setImage(UIImage(named: "camera"), for: .normal)
-        
-        self.imageBtn.layer.masksToBounds = true
-        
-        self.imageBtn.layer.cornerRadius = 10
-        
-        self.imageBtn.layer.borderWidth = 2
+        self.initView()
 
-        self.imageBtn.layer.borderColor = UIColor.red.cgColor
-        
     }
     
     @objc func goToMap() {
@@ -168,15 +104,11 @@ class FormViewController: UIViewController {
         
     }
     
-    
-    
     @objc func datePickerValue (datePicker: UIDatePicker) {
         
-        self.dateformatter.dateFormat = "yyyy年MM月dd日"
+        self.datePickerTxt.text = self.dateformatter.string(from: self.datePicker.date)
         
-        self.datePickerTxt.text = dateformatter.string(from: self.dateDataPicker.date)
-        
-        self.delegate?.upDateCalendar(datePicker: self.dateDataPicker)
+        self.delegate?.upDateCalendar(datePicker: self.datePicker)
         
     }
     
@@ -204,35 +136,16 @@ class FormViewController: UIViewController {
         
         else {
             
-            self.allData.project = self.projectTxt.text!
+            if let price = self.allData.price {
                 
-            if self.incomeExpendPickerTxt.text == "支出" {
-                
-                let intPrice = Int(self.priceTxt.text!)! * self.c
-                
-                self.allData.price = String(intPrice)
+                self.updateRecord()
                 
             }
-            
             else {
                 
-                let intPrice = Int(self.priceTxt.text!)! * self.n
-                
-                self.allData.price = String(intPrice)
-                
+                self.addNewRecord()
+
             }
-            
-            self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
-            
-            self.allData.address = self.locationTxt.text!
-            
-            self.allData.round = self.roundTxt.text
-            
-            self.allData.image = self.imageBtn.image(for: .normal)!
-            
-            self.delegate?.upDateData(data: self.allData)
-            
-            self.navigationController?.popViewController(animated: true)
             
         }
         
@@ -250,6 +163,245 @@ class FormViewController: UIViewController {
         
     }
     
+    private func setLayout() {
+        
+        self.priceTxt.keyboardType = UIKeyboardType.decimalPad
+        
+        self.datePickerTxt.placeholder = "請選擇日期"
+        
+        self.incomeExpendPickerTxt.placeholder = "請選擇收支"
+        
+        self.projectTxt.placeholder = "請輸入文字"
+        
+        self.priceTxt.placeholder = "請輸入價格"
+        
+        self.datePickerTxt.borderStyle = .roundedRect
+        
+        self.incomeExpendPickerTxt.borderStyle = .roundedRect
+        
+        self.projectTxt.borderStyle = .roundedRect
+        
+        self.priceTxt.borderStyle = .roundedRect
+        
+        self.datePickerTxt.text = self.dateformatter.string(from: self.allData.date)
+        
+        self.setImageBtn()
+        
+    }
+    
+    private func settingDatePicker() {
+        
+        self.datePicker.datePickerMode = .date
+        
+        self.datePicker.locale = Locale(identifier: "zh_TW")
+        
+        self.datePicker.minimumDate = self.startDate
+        
+        self.datePicker.maximumDate = Date()
+        
+        self.datePicker.date = self.allData.date
+        
+    }
+    
+    private func setGesture() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    private func setIncomeExpendPicker() {
+        
+        let incomeExpendToolBar = UIToolbar()
+        
+        incomeExpendToolBar.barStyle = .default
+        
+        incomeExpendToolBar.sizeToFit()
+        
+        let incomeExpendFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let incomeExpendToolBarBtnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dissPicker))
+        
+        incomeExpendToolBar.items = [incomeExpendFlexSpace , incomeExpendToolBarBtnDone]
+        
+        self.incomeExpendPickerTxt.inputView = self.incomeExpenseDataPicker
+        
+        self.incomeExpendPickerTxt.inputAccessoryView = incomeExpendToolBar
+        
+        self.incomeExpendPickerTxt.addTarget(self, action: #selector(FormViewController.disPlayPickerValue), for: .touchDown)
+        
+    }
+    
+    private func setDatePickerTextField() {
+        
+        self.settingDatePicker()
+        
+        let dateToolBar = UIToolbar()
+        
+        dateToolBar.barStyle = .default
+        
+        dateToolBar.sizeToFit()
+        
+        let dateFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let dateToolBarBtnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dissPicker))
+        
+        dateToolBar.items = [dateFlexSpace , dateToolBarBtnDone]
+        
+        self.datePickerTxt.inputView = self.datePicker
+        
+        self.datePickerTxt.inputAccessoryView = dateToolBar
+        
+        self.datePicker.addTarget(self, action: #selector(FormViewController.datePickerValue(datePicker:)), for: .valueChanged)
+        
+    }
+    
+    private func setImageBtn() {
+        
+        self.imageBtn.setImage(UIImage(named: "camera"), for: .normal)
+        
+        self.imageBtn.layer.masksToBounds = true
+        
+        self.imageBtn.layer.cornerRadius = 10
+        
+        self.imageBtn.layer.borderWidth = 2
+        
+        self.imageBtn.layer.borderColor = UIColor.red.cgColor
+        
+    }
+    
+    private func initView() {
+        
+        self.datePickerTxt.text = self.dateformatter.string(from: self.allData.date)
+        
+        self.projectTxt.text = self.allData.projectName
+        
+        if self.allData.incomeExpend == "支出" {
+
+            if let intPrice = Int(self.allData.price!) {
+
+                self.priceTxt.text = "\(intPrice * -1)"
+
+            }
+
+        }
+
+        else {
+
+            self.priceTxt.text = self.allData.price
+
+        }
+
+        self.incomeExpendPickerTxt.text = self.allData.incomeExpend
+
+        if self.allData.image == UIImage(named: "account") || self.allData.image == nil {
+
+            self.imageBtn.setImage(UIImage(named: "camera"), for: .normal)
+
+        }
+
+        else {
+
+            self.imageBtn.setImage(self.allData.image, for: .normal)
+
+        }
+
+        if self.allData.address == "" {
+
+            self.locationTxt.text = ""
+
+        }
+
+        else {
+
+            self.roundTxt.text = self.allData.round
+
+        }
+
+        if self.allData.round == "" {
+
+            self.roundTxt.text = ""
+
+        }
+
+        else {
+
+            self.roundTxt.text = self.allData.round
+
+        }
+
+    }
+    
+    private func addNewRecord() {
+        
+        self.allData.projectName = self.projectTxt.text!
+        
+        if self.incomeExpendPickerTxt.text == "支出" {
+            
+            let intPrice = Int(self.priceTxt.text!)! * self.c
+            
+            self.allData.price = String(intPrice)
+            
+        }
+            
+        else {
+            
+            let intPrice = Int(self.priceTxt.text!)! * self.n
+            
+            self.allData.price = String(intPrice)
+            
+        }
+        
+        self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
+        
+        self.allData.address = self.locationTxt.text!
+        
+        self.allData.round = self.roundTxt.text
+        
+        self.allData.image = self.imageBtn.image(for: .normal)!
+        
+        self.delegate?.upDateData(data: self.allData)
+        
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    private func updateRecord() {
+        
+        self.allData.projectName = self.projectTxt.text!
+        
+        if self.incomeExpendPickerTxt.text == "支出" {
+            
+            let intPrice = Int(self.priceTxt.text!)! * self.c
+            
+            self.allData.price = String(intPrice)
+            
+        }
+            
+        else {
+            
+            let intPrice = Int(self.priceTxt.text!)! * self.n
+            
+            self.allData.price = String(intPrice)
+            
+        }
+        
+        self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
+        
+        self.allData.address = self.locationTxt.text!
+        
+        self.allData.round = self.roundTxt.text
+        
+        self.allData.image = self.imageBtn.image(for: .normal)!
+        
+        self.homeView?.tableView.reloadData()
+        
+        self.homeView?.caculateSummary()
+        
+        self.navigationController?.popViewController(animated: true)
+        
+    }
 }
 
 extension FormViewController : UIPickerViewDelegate {
