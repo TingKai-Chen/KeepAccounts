@@ -257,6 +257,17 @@
                                 <color key="textColor" red="0.53585665227383816" green="0.1332901796157856" blue="0.73578283629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyv-aY-O9d">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="明細" id="L2P-Rt-WmD"/>
+                                    <barButtonItem width="114" style="plain" systemItem="fixedSpace" id="7w2-Jr-nsx"/>
+                                    <barButtonItem title="統計" id="rNo-sq-F9H"/>
+                                    <barButtonItem width="127" style="plain" systemItem="fixedSpace" id="y2r-Iz-4es"/>
+                                    <barButtonItem title="更多" id="xQK-MR-yvg"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.82777630483553544" green="0.85448923542036048" blue="0.86264673223350252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

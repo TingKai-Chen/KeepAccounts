@@ -26,10 +26,6 @@ class ViewController: UIViewController {
         
     }
     
-    var n = 1
-    
-    var c = -1
-    
     var totalPrice = 0
     
     var date = Date()
@@ -62,9 +58,19 @@ class ViewController: UIViewController {
         
         self.setTotalPriceNameLabLayout()
         
+        navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xffffff)
+        
         self.totalPriceLab.text = String(self.totalPrice)
         
         self.navigationItem.rightBarButtonItem = editButtonItem
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        self.createGradientLayer()
         
     }
     
@@ -85,6 +91,20 @@ class ViewController: UIViewController {
         super.setEditing(editing, animated: true)
         
         self.tableView.setEditing(editing, animated: true)
+        
+    }
+    
+    private func createGradientLayer() {
+        
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.view.bounds
+        
+        gradientLayer.colors = [UIColor(rgb:0xcfd9df).cgColor, UIColor(rgb:0xe2ebf0).cgColor]
+        
+        self.view.layer.addSublayer(gradientLayer)
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
         
     }
     
@@ -216,7 +236,7 @@ class ViewController: UIViewController {
             
         else if totalPrice == 0 {
             
-            self.totalPriceLab.textColor = UIColor(rgb: 0x8e8e8e)
+            self.totalPriceLab.textColor = UIColor(rgb: 0xadadad)
             
             self.totalPriceLab.text = "無金額 $"
             
@@ -228,7 +248,7 @@ class ViewController: UIViewController {
             
         else {
             
-            self.totalPriceLab.textColor = UIColor.blue
+            self.totalPriceLab.textColor = UIColor(rgb: 0x009100)
             
             self.totalPriceLab.text = String(totalPrice) + "$"
             
@@ -248,12 +268,16 @@ class ViewController: UIViewController {
         
         self.calendarView.showsHorizontalScrollIndicator = false
         
+        self.calendarView.layer.borderWidth = 1
+        
+        self.calendarView.layer.borderColor = UIColor(rgb: 0xff0000).cgColor
+
         self.calendarView.layer.shadowColor = UIColor.darkGray.cgColor
-        
+
         self.calendarView.layer.shadowOpacity = 0.8
-        
+
         self.calendarView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        
+
     }
     
     private func setAccountBtnLayout() {
@@ -282,27 +306,35 @@ class ViewController: UIViewController {
     
     private func setTotalPriceNameLabLayout() {
         
-        let label = UILabel()
+        self.totalPriceNameLab.textColor = UIColor(rgb: 0x272727)
         
-        label.text = "每日收支總額 :"
+        self.totalPriceNameLab.text = "每日收支總額 :"
         
-        label.font = UIFont.boldSystemFont(ofSize: 26)
+        self.totalPriceNameLab.font = UIFont.boldSystemFont(ofSize: 26)
         
-        label.sizeToFit()
-        
-        let gradientLayerLab = CAGradientLayer()
-        
-        gradientLayerLab.frame = self.totalPriceNameLab.bounds
-        
-        gradientLayerLab.colors = [UIColor.orange.cgColor, UIColor.blue.cgColor]
-        
-        self.totalPriceNameLab.clipsToBounds = false
-        
-        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
-        
-        self.totalPriceNameLab.mask = label
-        
-        
+        self.totalPriceNameLab.sizeToFit()
+    
+//        let label = UILabel()
+//
+//        label.text = "每日收支總額 :"
+//
+//        label.font = UIFont.boldSystemFont(ofSize: 26)
+//
+//        label.sizeToFit()
+//
+//        let gradientLayerLab = CAGradientLayer()
+//
+//        gradientLayerLab.frame = self.totalPriceNameLab.bounds
+//
+//        gradientLayerLab.colors = [UIColor(rgb:0x0250c5).cgColor, UIColor(rgb:0xd43f8d).cgColor]
+//
+//        self.totalPriceNameLab.clipsToBounds = false
+//
+//        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
+//
+//        self.totalPriceNameLab.mask = label
+//
+
     }
     
     func upDateData(data: Data) {
@@ -397,7 +429,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
        
         self.dateLab.attributedText = myAttrString
         
-        self.dateLab.textColor = UIColor(rgb: 0x0066cc)
+        self.dateLab.textColor = UIColor(rgb: 0xff0080)
         
     }
     
@@ -469,7 +501,7 @@ extension ViewController : UITableViewDataSource {
         
         if self.dataArray[indexPath.row].incomeExpend == "收入" {
             
-            cell.priceLab.textColor = UIColor.blue
+            cell.priceLab.textColor = UIColor(rgb: 0x009100)
                 
             cell.priceLab.text = "+" + self.dataArray[indexPath.row].price! + "$ "
             

@@ -55,7 +55,7 @@ class FormViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
         self.incomeExpenseDataPicker.delegate = self
         
         self.incomeExpenseDataPicker.dataSource = self
@@ -72,6 +72,14 @@ class FormViewController: UIViewController {
         
         self.initView()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        self.createGradientLayer()
+        
     }
     
     @objc func goToMap() {
@@ -136,7 +144,7 @@ class FormViewController: UIViewController {
         
         else {
             
-            if let price = self.allData.price {
+            if self.allData.price != nil {
                 
                 self.updateRecord()
                 
@@ -160,6 +168,20 @@ class FormViewController: UIViewController {
         present(imagePicker,animated: true,completion: nil)
         
         imagePicker.delegate = self
+        
+    }
+    
+    private func createGradientLayer() {
+        
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.view.bounds
+        
+        gradientLayer.colors = [UIColor(rgb:0xfad0c4).cgColor, UIColor(rgb:0xffd1ff).cgColor]
+        
+        self.view.layer.addSublayer(gradientLayer)
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
         
     }
     
@@ -277,7 +299,7 @@ class FormViewController: UIViewController {
         
         self.projectTxt.text = self.allData.projectName
         
-        if self.allData.incomeExpend == "支出" {
+        if self.allData.incomeExpend == self.incomeExpenseData[0] {
 
             if let intPrice = Int(self.allData.price!) {
 
@@ -312,12 +334,13 @@ class FormViewController: UIViewController {
             self.locationTxt.text = ""
 
         }
-
+            
         else {
-
-            self.roundTxt.text = self.allData.round
-
+            
+            self.locationTxt.text = self.allData.address
+            
         }
+
 
         if self.allData.round == "" {
 
@@ -337,14 +360,14 @@ class FormViewController: UIViewController {
         
         self.allData.projectName = self.projectTxt.text!
         
-        if self.incomeExpendPickerTxt.text == "支出" {
+        if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
             
             let intPrice = Int(self.priceTxt.text!)! * self.c
             
             self.allData.price = String(intPrice)
             
         }
-            
+        
         else {
             
             let intPrice = Int(self.priceTxt.text!)! * self.n
@@ -371,7 +394,7 @@ class FormViewController: UIViewController {
         
         self.allData.projectName = self.projectTxt.text!
         
-        if self.incomeExpendPickerTxt.text == "支出" {
+        if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
             
             let intPrice = Int(self.priceTxt.text!)! * self.c
             
