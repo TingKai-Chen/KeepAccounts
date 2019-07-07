@@ -20,15 +20,15 @@ class ViewController: UIViewController {
         
         didSet {
             
-            self.caculateSummary()
+            if self.dataArray.count > 0 {
+                
+                self.caculateSummary()
+
+            }
             
         }
         
     }
-    
-    var n = 1
-    
-    var c = -1
     
     var totalPrice = 0
     
@@ -61,8 +61,6 @@ class ViewController: UIViewController {
         self.setGradientLayerBtn()
         
         self.setTotalPriceNameLabLayout()
-        
-        self.totalPriceLab.text = String(self.totalPrice)
         
         self.navigationItem.rightBarButtonItem = editButtonItem
         
@@ -200,17 +198,17 @@ class ViewController: UIViewController {
     
     func caculateSummary() {
         
-        let totalPrice = self.dataArray.compactMap({Int($0.price!)}).reduce(0, {$0 + $1})
+        self.totalPriceLab.shadowColor = UIColor.gray
+        
+        self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+        
+        let totalPrice = self.dataArray.compactMap({$0.price! * $0.recordType.rawValue}).reduce(0, {$0 + $1})
+        
+        self.totalPriceLab.text = String(totalPrice) + "$"
         
         if totalPrice < 0 {
             
             self.totalPriceLab.textColor = UIColor.red
-            
-            self.totalPriceLab.text = String(totalPrice) + "$"
-            
-            self.totalPriceLab.shadowColor = UIColor.gray
-            
-            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
             
         }
             
@@ -218,23 +216,11 @@ class ViewController: UIViewController {
             
             self.totalPriceLab.textColor = UIColor(rgb: 0x8e8e8e)
             
-            self.totalPriceLab.text = "無金額 $"
-            
-            self.totalPriceLab.shadowColor = UIColor.gray
-            
-            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
-            
         }
             
         else {
             
             self.totalPriceLab.textColor = UIColor.blue
-            
-            self.totalPriceLab.text = String(totalPrice) + "$"
-            
-            self.totalPriceLab.shadowColor = UIColor.gray
-            
-            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
             
         }
         
@@ -302,6 +288,7 @@ class ViewController: UIViewController {
         
         self.totalPriceNameLab.mask = label
         
+        self.totalPriceLab.text = "無金額 $"
         
     }
     
@@ -459,21 +446,9 @@ extension ViewController : UITableViewDataSource {
         
         cell.projectLab.text = self.dataArray[indexPath.row].projectName
         
-        if self.dataArray[indexPath.row].incomeExpend == "支出" {
-            
-            cell.priceLab.textColor = UIColor.red
-            
-            cell.priceLab.text = self.dataArray[indexPath.row].price! + "$ "
-            
-        }
+        cell.priceLab.textColor = self.dataArray[indexPath.row].recordType == .Outgoing ? .red : .blue
         
-        if self.dataArray[indexPath.row].incomeExpend == "收入" {
-            
-            cell.priceLab.textColor = UIColor.blue
-                
-            cell.priceLab.text = "+" + self.dataArray[indexPath.row].price! + "$ "
-            
-        }
+        cell.priceLab.text = "\(self.dataArray[indexPath.row].price!)$ "
         
         cell.addressLab.text = self.dataArray[indexPath.row].address
         

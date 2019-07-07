@@ -46,8 +46,6 @@ class FormViewController: UIViewController {
     
     @IBOutlet weak var roundTxt: UITextView!
     
-    var incomeExpenseData = ["支出","收入"]
-    
     var incomeExpenseDataPicker = UIPickerView()
     
     var datePicker = UIDatePicker()
@@ -116,7 +114,9 @@ class FormViewController: UIViewController {
         
         let selectedIndex = self.incomeExpenseDataPicker.selectedRow(inComponent: 0)
         
-        self.incomeExpendPickerTxt.text = self.incomeExpenseData[selectedIndex]
+        self.allData.recordType = selectedIndex == 0 ? .Outgoing : .Income
+
+        self.incomeExpendPickerTxt.text = self.allData.recordType.description
         
     }
     
@@ -147,6 +147,8 @@ class FormViewController: UIViewController {
 
             }
             
+            self.navigationController?.popViewController(animated: true)
+
         }
         
     }
@@ -277,24 +279,25 @@ class FormViewController: UIViewController {
         
         self.projectTxt.text = self.allData.projectName
         
-        if self.allData.incomeExpend == "支出" {
-
-            if let intPrice = Int(self.allData.price!) {
-
-                self.priceTxt.text = "\(intPrice * -1)"
-
-            }
-
-        }
-
-        else {
-
-            self.priceTxt.text = self.allData.price
-
+        if let price = self.allData.price {
+            
+            self.priceTxt.text = String(price)
+            
         }
 
         self.incomeExpendPickerTxt.text = self.allData.incomeExpend
 
+        if self.allData.recordType == .Outgoing {
+            
+            self.incomeExpenseDataPicker.selectRow(0, inComponent: 0, animated: false)
+            
+        }
+        else {
+            
+            self.incomeExpenseDataPicker.selectRow(1, inComponent: 0, animated: false)
+            
+        }
+        
         if self.allData.image == UIImage(named: "account") || self.allData.image == nil {
 
             self.imageBtn.setImage(UIImage(named: "camera"), for: .normal)
@@ -335,57 +338,29 @@ class FormViewController: UIViewController {
     
     private func addNewRecord() {
         
-        self.allData.projectName = self.projectTxt.text!
-        
-        if self.incomeExpendPickerTxt.text == "支出" {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.c
-            
-            self.allData.price = String(intPrice)
-            
-        }
-            
-        else {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.n
-            
-            self.allData.price = String(intPrice)
-            
-        }
-        
-        self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
-        
-        self.allData.address = self.locationTxt.text!
-        
-        self.allData.round = self.roundTxt.text
-        
-        self.allData.image = self.imageBtn.image(for: .normal)!
+        self.fetchValue()
         
         self.delegate?.upDateData(data: self.allData)
         
-        self.navigationController?.popViewController(animated: true)
         
     }
     
     private func updateRecord() {
         
+        self.fetchValue()
+        
+        self.homeView?.tableView.reloadData()
+        
+        self.homeView?.caculateSummary()
+        
+        
+    }
+    
+    private func fetchValue() {
+        
         self.allData.projectName = self.projectTxt.text!
         
-        if self.incomeExpendPickerTxt.text == "支出" {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.c
-            
-            self.allData.price = String(intPrice)
-            
-        }
-            
-        else {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.n
-            
-            self.allData.price = String(intPrice)
-            
-        }
+        self.allData.price = Int(self.priceTxt.text!)
         
         self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
         
@@ -395,20 +370,17 @@ class FormViewController: UIViewController {
         
         self.allData.image = self.imageBtn.image(for: .normal)!
         
-        self.homeView?.tableView.reloadData()
-        
-        self.homeView?.caculateSummary()
-        
-        self.navigationController?.popViewController(animated: true)
-        
     }
+    
 }
 
 extension FormViewController : UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        self.incomeExpendPickerTxt.text = self.incomeExpenseData[row]
+        self.allData.recordType = row == 0 ? .Outgoing : .Income
+        
+        self.incomeExpendPickerTxt.text = self.allData.recordType.description
         
     }
     
@@ -424,13 +396,13 @@ extension FormViewController : UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        return self.incomeExpenseData.count
+        return RecordType.allCases.count
         
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return self.incomeExpenseData[row]
+        return RecordType.allCases[row].description
         
     }
     

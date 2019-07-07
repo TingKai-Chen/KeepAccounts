@@ -2,15 +2,34 @@ import Foundation
 
 import UIKit
 
+enum RecordType: Int, CaseIterable {
+    
+    case Outgoing = -1
+    case Income = 1
+
+    var description: String {
+        
+        switch self {
+        case .Income:
+            return "收入"
+        case .Outgoing:
+            return "支出"
+        }
+        
+    }
+}
+
 class Data {
 
     var date: Date
     
     var projectName: String?
     
-    var price: String?
+    var price: Int?
     
     var incomeExpend: String?
+    
+    var recordType: RecordType = .Outgoing
     
     var address: String?
     
@@ -18,7 +37,7 @@ class Data {
     
     var image: UIImage?
     
-    init(date: Date , project: String? , price: String?, incomeExpend: String? , address: String? , round: String? , image: UIImage? ) {
+    init(date: Date , project: String? , price: Int?, incomeExpend: String? , address: String? , round: String? , image: UIImage? ) {
         
         self.date = date
         
