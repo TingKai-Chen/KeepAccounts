@@ -16,6 +16,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var totalPriceNameLab: UILabel!
     
+    @IBOutlet weak var detailBtnItem: UIBarButtonItem!
+    
+    @IBOutlet var statisticBtnItem: UIBarButtonItem!
+    
+    @IBOutlet weak var setBtnItem: UIBarButtonItem!
+    
     var dataArray : [Data] = [] {
         
         didSet {
@@ -58,11 +64,11 @@ class ViewController: UIViewController {
         
         self.setTotalPriceNameLabLayout()
         
-        navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xffffff)
+        self.setNavigationLayout()
+        
+        self.setToolBarLayout()
         
         self.totalPriceLab.text = String(self.totalPrice)
-        
-        self.navigationItem.rightBarButtonItem = editButtonItem
         
     }
     
@@ -94,44 +100,6 @@ class ViewController: UIViewController {
         
     }
     
-    private func createGradientLayer() {
-        
-        let gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = self.view.bounds
-        
-        gradientLayer.colors = [UIColor(rgb:0xcfd9df).cgColor, UIColor(rgb:0xe2ebf0).cgColor]
-        
-        self.view.layer.addSublayer(gradientLayer)
-        
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
-    }
-    
-    private func setPrortocol() {
-        
-        self.tableView.delegate = self
-        
-        self.tableView.dataSource = self
-        
-        self.calendarView.calendarDelegate = self
-        
-        self.calendarView.calendarDataSource = self
-        
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            
-            let deleteDataArray = self.dataArray.remove(at: indexPath.row)
-            
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-        
-        }
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "Segue" {
@@ -147,7 +115,7 @@ class ViewController: UIViewController {
             FormVC.delegate = self
             
         }
-        
+            
         else if segue.identifier == "dataSegue" {
             
             let FormVC = segue.destination as! FormViewController
@@ -161,7 +129,7 @@ class ViewController: UIViewController {
             }
             
         }
-    
+        
     }
     
     func configureCell(view: JTAppleCell?, cellState: CellState) {
@@ -226,37 +194,139 @@ class ViewController: UIViewController {
             
             self.totalPriceLab.textColor = UIColor.red
             
-            self.totalPriceLab.text = String(totalPrice) + "$"
+            self.totalPriceLab.text = String(totalPrice)
             
-            self.totalPriceLab.shadowColor = UIColor.gray
-            
-            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
-            
+//            self.totalPriceLab.shadowColor = UIColor.gray
+//
+//            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+//
         }
             
         else if totalPrice == 0 {
             
-            self.totalPriceLab.textColor = UIColor(rgb: 0xadadad)
+            self.totalPriceLab.textColor = UIColor(rgb: 0xc6a300)
             
-            self.totalPriceLab.text = "無金額 $"
-            
-            self.totalPriceLab.shadowColor = UIColor.gray
-            
-            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
-            
+            self.totalPriceLab.text = String(totalPrice)
+//
+//            self.totalPriceLab.shadowColor = UIColor.gray
+//
+//            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+//
         }
             
         else {
             
             self.totalPriceLab.textColor = UIColor(rgb: 0x009100)
             
-            self.totalPriceLab.text = String(totalPrice) + "$"
+            self.totalPriceLab.text =  "+" + String(totalPrice)
             
-            self.totalPriceLab.shadowColor = UIColor.gray
-            
-            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
+//            self.totalPriceLab.shadowColor = UIColor.gray
+//
+//            self.totalPriceLab.shadowOffset = CGSize(width: 1, height: 1)
             
         }
+        
+    }
+    
+    private func createGradientLayer() {
+        
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.view.bounds
+        
+        gradientLayer.colors = [UIColor(rgb:0xcfd9df).cgColor, UIColor(rgb:0xe2ebf0).cgColor]
+        
+        self.view.layer.addSublayer(gradientLayer)
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+    }
+    
+    private func setNavigationLayout() {
+        
+        let leftButton = UIButton(type:.custom)
+        
+        leftButton.imageView?.contentMode = .scaleAspectFit
+        
+        leftButton.imageEdgeInsets = UIEdgeInsets(top: 27, left: 27, bottom: 27, right: 27)
+        
+        let image = UIImage(named: "user")
+        
+        leftButton.setImage(image, for: .normal)
+        
+        let leftBarButton = UIBarButtonItem(customView: leftButton)
+        
+        let leftCurrWidth = leftBarButton.customView?.widthAnchor.constraint(equalToConstant: 24)
+        
+        leftCurrWidth?.isActive = true
+        
+        let leftCurrHeight = leftBarButton.customView?.heightAnchor.constraint(equalToConstant: 24)
+        
+        leftCurrHeight?.isActive = true
+        
+        self.navigationItem.leftBarButtonItem = leftBarButton
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xffffff)
+        
+        self.navigationController?.navigationBar.tintColor = .black
+        
+        let rightButton = UIButton(type:.custom)
+        
+        rightButton.imageView?.contentMode = .scaleAspectFit
+        
+        rightButton.imageEdgeInsets = UIEdgeInsets(top: 27, left: 27, bottom: 27, right: 27)
+        
+        let image2 = UIImage(named: "plus")
+        
+        rightButton.setImage(image2, for: .normal)
+        
+        let rightBarButton = UIBarButtonItem(customView: rightButton)
+        
+        let rightcurrWidth = rightBarButton.customView?.widthAnchor.constraint(equalToConstant: 24)
+        
+        rightcurrWidth?.isActive = true
+        
+        let rightCurrHeight = rightBarButton.customView?.heightAnchor.constraint(equalToConstant: 24)
+        
+        rightCurrHeight?.isActive = true
+        
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        
+    }
+    
+    private func setToolBarLayout() {
+        
+        let statisticButton = UIButton(type:.custom)
+        
+        statisticButton.imageView?.contentMode = .scaleAspectFit
+        
+        statisticButton.imageEdgeInsets = UIEdgeInsets(top: 27, left: 27, bottom: 27, right: 27)
+        
+        let image = UIImage(named: "pie-chart")
+        
+        statisticButton.setImage(image, for: .normal)
+        
+        self.statisticBtnItem = UIBarButtonItem(customView: statisticButton)
+        
+        let statisticCurrWidth = self.statisticBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
+
+        statisticCurrWidth?.isActive = true
+
+        let statisticCurrHeight = self.statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
+
+        statisticCurrHeight?.isActive = true
+
+    }
+    
+    private func setPrortocol() {
+        
+        self.tableView.delegate = self
+        
+        self.tableView.dataSource = self
+        
+        self.calendarView.calendarDelegate = self
+        
+        self.calendarView.calendarDataSource = self
         
     }
     
@@ -306,35 +376,34 @@ class ViewController: UIViewController {
     
     private func setTotalPriceNameLabLayout() {
         
-        self.totalPriceNameLab.textColor = UIColor(rgb: 0x272727)
-        
-        self.totalPriceNameLab.text = "每日收支總額 :"
-        
-        self.totalPriceNameLab.font = UIFont.boldSystemFont(ofSize: 26)
-        
-        self.totalPriceNameLab.sizeToFit()
+//        self.totalPriceNameLab.textColor = UIColor(rgb: 0x5b5b5b)
+//
+//        self.totalPriceNameLab.text = "每日收支總額 :"
+//
+//        self.totalPriceNameLab.font = UIFont.boldSystemFont(ofSize: 24)
+//
+//        self.totalPriceNameLab.sizeToFit()
     
-//        let label = UILabel()
-//
-//        label.text = "每日收支總額 :"
-//
-//        label.font = UIFont.boldSystemFont(ofSize: 26)
-//
-//        label.sizeToFit()
-//
-//        let gradientLayerLab = CAGradientLayer()
-//
-//        gradientLayerLab.frame = self.totalPriceNameLab.bounds
-//
-//        gradientLayerLab.colors = [UIColor(rgb:0x0250c5).cgColor, UIColor(rgb:0xd43f8d).cgColor]
-//
-//        self.totalPriceNameLab.clipsToBounds = false
-//
-//        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
-//
-//        self.totalPriceNameLab.mask = label
-//
+        let label = UILabel()
 
+        label.text = "每日總額:"
+
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+
+        label.sizeToFit()
+
+        let gradientLayerLab = CAGradientLayer()
+
+        gradientLayerLab.frame = self.totalPriceNameLab.bounds
+
+        gradientLayerLab.colors = [UIColor(rgb:0x00e3e3).cgColor, UIColor(rgb:0xff9224).cgColor]
+
+        self.totalPriceNameLab.clipsToBounds = false
+
+        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
+
+        self.totalPriceNameLab.mask = label
+        
     }
     
     func upDateData(data: Data) {
@@ -475,6 +544,12 @@ extension ViewController : UITableViewDelegate {
         
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.backgroundColor = UIColor(rgb: 0xffffff)
+        
+    }
+    
 }
 
 extension ViewController : UITableViewDataSource {
@@ -540,7 +615,19 @@ extension ViewController : UITableViewDataSource {
         return cell
 
     }
-
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let deleteDataArray = self.dataArray.remove(at: indexPath.row)
+            
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        }
+        
+    }
+    
 }
 
 extension UIColor {
