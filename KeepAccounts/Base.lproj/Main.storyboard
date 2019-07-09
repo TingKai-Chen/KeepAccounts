@@ -250,17 +250,6 @@
                                 <color key="textColor" red="0.15491800194484187" green="0.80260548857868019" blue="0.3378269949419232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyv-aY-O9d">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="明細" id="L2P-Rt-WmD"/>
-                                    <barButtonItem width="114" style="plain" systemItem="fixedSpace" id="7w2-Jr-nsx"/>
-                                    <barButtonItem title="統計" id="rNo-sq-F9H"/>
-                                    <barButtonItem width="127" style="plain" systemItem="fixedSpace" id="y2r-Iz-4es"/>
-                                    <barButtonItem title="更多" id="xQK-MR-yvg"/>
-                                </items>
-                            </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profit" translatesAutoresizingMaskIntoConstraints="NO" id="FJl-Rh-yfg">
                                 <rect key="frame" x="13" y="405" width="64" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -280,6 +269,11 @@
                                 <color key="textColor" red="0.53585665227383816" green="0.1332901796157856" blue="0.73578283629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aap-Hg-pYJ">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.82777630483553544" green="0.85448923542036048" blue="0.86264673223350252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -297,11 +291,9 @@
                     <connections>
                         <outlet property="calendarView" destination="tal-Tl-MsR" id="afT-7m-eM3"/>
                         <outlet property="dateLab" destination="GzQ-TP-1QU" id="Bc0-K9-FHP"/>
-                        <outlet property="detailBtnItem" destination="L2P-Rt-WmD" id="OhS-E3-gpa"/>
-                        <outlet property="setBtnItem" destination="xQK-MR-yvg" id="wip-OF-DFq"/>
                         <outlet property="startAccountBtn" destination="4Yh-FR-xlu" id="kyK-mW-mH6"/>
-                        <outlet property="statisticBtnItem" destination="rNo-sq-F9H" id="ebL-Sg-nau"/>
                         <outlet property="tableView" destination="hct-aG-zV3" id="Y5L-sY-1mw"/>
+                        <outlet property="toolBar" destination="aap-Hg-pYJ" id="K66-wK-SZL"/>
                         <outlet property="totalPriceLab" destination="DAg-Re-zGy" id="rMI-vI-qoR"/>
                         <outlet property="totalPriceNameLab" destination="JsB-3d-cX7" id="S2j-Hd-wV9"/>
                         <segue destination="rdE-HD-x30" kind="show" identifier="dataSegue" id="CwP-A4-PG8"/>
@@ -507,7 +499,7 @@
         <image name="profit" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CwP-A4-PG8"/>
+        <segue reference="Odd-OA-O8i"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.097794018689999998" green="0.71073991059999997" blue="0.37376147510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

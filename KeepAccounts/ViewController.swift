@@ -16,11 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var totalPriceNameLab: UILabel!
     
-    @IBOutlet weak var detailBtnItem: UIBarButtonItem!
-    
-    @IBOutlet var statisticBtnItem: UIBarButtonItem!
-    
-    @IBOutlet weak var setBtnItem: UIBarButtonItem!
+    @IBOutlet weak var toolBar: UIToolbar!
     
     var dataArray : [Data] = [] {
         
@@ -234,7 +230,7 @@ class ViewController: UIViewController {
         
         gradientLayer.frame = self.view.bounds
         
-        gradientLayer.colors = [UIColor(rgb:0xcfd9df).cgColor, UIColor(rgb:0xe2ebf0).cgColor]
+        gradientLayer.colors = [UIColor(rgb:0xfdfcfb).cgColor, UIColor(rgb:0xe2d1c3).cgColor]
         
         self.view.layer.addSublayer(gradientLayer)
         
@@ -270,6 +266,9 @@ class ViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = .black
         
+        
+        
+        
         let rightButton = UIButton(type:.custom)
         
         rightButton.imageView?.contentMode = .scaleAspectFit
@@ -279,6 +278,8 @@ class ViewController: UIViewController {
         let image2 = UIImage(named: "plus")
         
         rightButton.setImage(image2, for: .normal)
+        
+        rightButton.addTarget(self, action: #selector(ViewController.rightBtn), for: .touchUpInside)
         
         let rightBarButton = UIBarButtonItem(customView: rightButton)
         
@@ -292,6 +293,8 @@ class ViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = rightBarButton
         
+        
+        
     }
     
     private func setToolBarLayout() {
@@ -300,21 +303,75 @@ class ViewController: UIViewController {
         
         statisticButton.imageView?.contentMode = .scaleAspectFit
         
-        statisticButton.imageEdgeInsets = UIEdgeInsets(top: 27, left: 27, bottom: 27, right: 27)
+        statisticButton.imageEdgeInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
         
-        let image = UIImage(named: "pie-chart")
+        let statisticImage = UIImage(named: "pie-chart")
         
-        statisticButton.setImage(image, for: .normal)
+        statisticButton.setImage(statisticImage, for: .normal)
         
-        self.statisticBtnItem = UIBarButtonItem(customView: statisticButton)
+        let statisticBtnItem = UIBarButtonItem(customView: statisticButton)
         
-        let statisticCurrWidth = self.statisticBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
-
+        let statisticCurrWidth = statisticBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
+        
         statisticCurrWidth?.isActive = true
-
-        let statisticCurrHeight = self.statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
-
+        
+        let statisticCurrHeight = statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
+        
         statisticCurrHeight?.isActive = true
+        
+        let detailButton = UIButton(type:.custom)
+        
+        detailButton.imageView?.contentMode = .scaleAspectFit
+        
+        detailButton.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+        
+        let detailImage = UIImage(named: "seo")
+        
+        detailButton.setImage(detailImage, for: .normal)
+        
+        let detailBtnItem = UIBarButtonItem(customView: detailButton)
+        
+        let detailCurrWidth = detailBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
+        
+        detailCurrWidth?.isActive = true
+        
+        let detailCurrHeight = statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
+        
+        detailCurrHeight?.isActive = true
+        
+        let setButton = UIButton(type:.custom)
+        
+        setButton.imageView?.contentMode = .scaleAspectFit
+        
+        setButton.imageEdgeInsets = UIEdgeInsets(top: 33, left: 33, bottom: 33, right: 33)
+        
+        let setImage = UIImage(named: "settings")
+        
+        setButton.setImage(setImage, for: .normal)
+        
+        let setBtnItem = UIBarButtonItem(customView: setButton)
+        
+        let setCurrWidth = setBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
+        
+        setCurrWidth?.isActive = true
+        
+        let setCurrHeight = setBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
+        
+        setCurrHeight?.isActive = true
+        
+        var items = [UIBarButtonItem]()
+        
+        items.append(detailBtnItem)
+        
+        items.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil))
+        
+        items.append(statisticBtnItem)
+        
+        items.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil))
+        
+        items.append(setBtnItem)
+        
+        self.toolBar.items = items
 
     }
     
@@ -411,6 +468,12 @@ class ViewController: UIViewController {
         self.dataArray.append(data)
         
         self.tableView.reloadData()
+        
+    }
+    
+    @objc func rightBtn() {
+        
+        self.performSegue(withIdentifier: "Segue", sender: nil)
         
     }
     
