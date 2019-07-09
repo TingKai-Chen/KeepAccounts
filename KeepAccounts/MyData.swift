@@ -2,7 +2,7 @@ import Foundation
 
 import UIKit
 
-class Data {
+class MyData {
 
     var date: Date
     

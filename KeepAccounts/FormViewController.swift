@@ -4,7 +4,7 @@ protocol UIFormViewControllerDeletage : class{
     
     func upDateCalendar (datePicker:UIDatePicker)
 
-    func upDateData (data : Data)
+    func upDateData (data : MyData)
     
 }
 
@@ -16,7 +16,7 @@ class FormViewController: UIViewController {
     
     var homeView: ViewController?
     
-    var allData: Data!
+    var allData: MyData!
     
     var startDate: Date?
     

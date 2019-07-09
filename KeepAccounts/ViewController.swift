@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toolBar: UIToolbar!
     
-    var dataArray : [Data] = [] {
+    var dataArray : [MyData] = [] {
         
         didSet {
             
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
             
             let FormVC = segue.destination as! FormViewController
             
-            let allData = Data(date: self.date)
+            let allData = MyData(date: self.date)
             
             FormVC.allData = allData
             
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
             
             let FormVC = segue.destination as! FormViewController
             
-            if let data = sender as? Data {
+            if let data = sender as? MyData {
                 
                 FormVC.allData = data
                 
@@ -463,7 +463,7 @@ class ViewController: UIViewController {
         
     }
     
-    func upDateData(data: Data) {
+    func upDateData(data: MyData) {
         
         self.dataArray.append(data)
         
