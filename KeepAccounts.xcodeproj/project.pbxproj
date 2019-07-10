@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		430CE6A122C45CC2006EB0CD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CE6A022C45CC2006EB0CD /* MapViewController.swift */; };
+		43FD17B322D58F8300E23978 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 43FD17B222D58F8300E23978 /* GoogleService-Info (1).plist */; };
+		43FD17B522D5959A00E23978 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD17B422D5959A00E23978 /* SignUpViewController.swift */; };
 		71F4C1985F1BC49F07E5AC1D /* Pods_KeepAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A736988DB78244EFB0871CC7 /* Pods_KeepAccounts.framework */; };
 		8DD77F3B22BDFA9400768106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F3A22BDFA9400768106 /* AppDelegate.swift */; };
 		8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F3C22BDFA9400768106 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		430CE6A022C45CC2006EB0CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		43FD17B222D58F8300E23978 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		43FD17B422D5959A00E23978 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8DD77F3722BDFA9400768106 /* KeepAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD77F3A22BDFA9400768106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD77F3C22BDFA9400768106 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				8DD77F4622BDFA9400768106 /* Info.plist */,
 				8DD77F5422BE0CFC00768106 /* Cell.swift */,
 				8DD77F5622BE0F2D00768106 /* MyData.swift */,
+				43FD17B222D58F8300E23978 /* GoogleService-Info (1).plist */,
+				43FD17B422D5959A00E23978 /* SignUpViewController.swift */,
 			);
 			path = KeepAccounts;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 				8DD77F4522BDFA9400768106 /* LaunchScreen.storyboard in Resources */,
 				8DD77F4222BDFA9400768106 /* Assets.xcassets in Resources */,
 				8DD77F4022BDFA9400768106 /* Main.storyboard in Resources */,
+				43FD17B322D58F8300E23978 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +234,7 @@
 				8DD77F5222BDFD6D00768106 /* DateCell.swift in Sources */,
 				8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */,
 				8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */,
+				43FD17B522D5959A00E23978 /* SignUpViewController.swift in Sources */,
 				8DD77F3B22BDFA9400768106 /* AppDelegate.swift in Sources */,
 				430CE6A122C45CC2006EB0CD /* MapViewController.swift in Sources */,
 			);
@@ -376,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 79E68ZK73C;
+				DEVELOPMENT_TEAM = A22P8H2NW2;
 				INFOPLIST_FILE = KeepAccounts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 79E68ZK73C;
+				DEVELOPMENT_TEAM = A22P8H2NW2;
 				INFOPLIST_FILE = KeepAccounts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (

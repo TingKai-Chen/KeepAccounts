@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>84113266761-7t4ifpdg4530et028av25tq1836t6unc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.84113266761-7t4ifpdg4530et028av25tq1836t6unc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDR9hucTyOaGGne5w3xDkvNz3jvfzOi-Z0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>84113266761</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tw.com.geovision.keepaccount</string>
+	<key>PROJECT_ID</key>
+	<string>keepaccounts-93f30</string>
+	<key>STORAGE_BUCKET</key>
+	<string>keepaccounts-93f30.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:84113266761:ios:7520af4e34dbec56</string>
+	<key>DATABASE_URL</key>
+	<string>https://keepaccounts-93f30.firebaseio.com</string>
+</dict>
+</plist>
