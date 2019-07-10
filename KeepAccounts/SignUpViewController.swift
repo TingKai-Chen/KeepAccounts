@@ -50,6 +50,8 @@ class SignUpViewController: UIViewController {
         
         self.numberTxtField.placeholder = "請輸入手機號碼"
         
+        self.passwordTxtField.isSecureTextEntry = true
+        
         
     }
     

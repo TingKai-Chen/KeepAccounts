@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
         
         self.passwordTxtField.placeholder = "請輸入密碼"
         
+        self.passwordTxtField.isSecureTextEntry = true
+        
     }
     
     @IBAction func login(_ sender: Any) {
@@ -62,10 +64,19 @@ class LoginViewController: UIViewController {
                         
                     }
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    let alertController = UIAlertController(title: "登入", message: "您已經成功登入", preferredStyle: .alert)
                     
-                    self.present(vc!, animated: true, completion: nil)
+                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                        
+                        self.navigationController?.popViewController(animated: true)
+                        
+                    })
                     
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                   
                 }
                     
                 else {
