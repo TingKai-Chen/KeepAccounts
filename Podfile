@@ -7,7 +7,7 @@ target 'KeepAccounts' do
 
   # Pods for KeepAccounts
   pod 'JTAppleCalendar'
-  pod 'Firebase/Core'
+   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-
+  pod 'Firebase/Database'
 end

@@ -224,6 +224,12 @@ class ViewController: UIViewController {
         
     }
     
+    @objc func setLogin() {
+
+        performSegue(withIdentifier: "LoginSegue", sender: nil)
+
+    }
+    
     private func createGradientLayer() {
         
         let gradientLayer = CAGradientLayer()
@@ -240,60 +246,21 @@ class ViewController: UIViewController {
     
     private func setNavigationLayout() {
         
-        let leftButton = UIButton(type:.custom)
-        
-        leftButton.imageView?.contentMode = .scaleAspectFit
-        
-        leftButton.imageEdgeInsets = UIEdgeInsets(top: 27, left: 27, bottom: 27, right: 27)
-        
         let image = UIImage(named: "user")
         
-        leftButton.setImage(image, for: .normal)
-        
-        let leftBarButton = UIBarButtonItem(customView: leftButton)
-        
-        let leftCurrWidth = leftBarButton.customView?.widthAnchor.constraint(equalToConstant: 24)
-        
-        leftCurrWidth?.isActive = true
-        
-        let leftCurrHeight = leftBarButton.customView?.heightAnchor.constraint(equalToConstant: 24)
-        
-        leftCurrHeight?.isActive = true
-        
+        let leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(self.setLogin))
+
         self.navigationItem.leftBarButtonItem = leftBarButton
-        
+       
         self.navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xffffff)
         
         self.navigationController?.navigationBar.tintColor = .black
-        
-        
-        
-        
-        let rightButton = UIButton(type:.custom)
-        
-        rightButton.imageView?.contentMode = .scaleAspectFit
-        
-        rightButton.imageEdgeInsets = UIEdgeInsets(top: 27, left: 27, bottom: 27, right: 27)
-        
+
         let image2 = UIImage(named: "plus")
         
-        rightButton.setImage(image2, for: .normal)
-        
-        rightButton.addTarget(self, action: #selector(ViewController.rightBtn), for: .touchUpInside)
-        
-        let rightBarButton = UIBarButtonItem(customView: rightButton)
-        
-        let rightcurrWidth = rightBarButton.customView?.widthAnchor.constraint(equalToConstant: 24)
-        
-        rightcurrWidth?.isActive = true
-        
-        let rightCurrHeight = rightBarButton.customView?.heightAnchor.constraint(equalToConstant: 24)
-        
-        rightCurrHeight?.isActive = true
+        let rightBarButton = UIBarButtonItem(image: image2, style: .plain, target: self, action: #selector(self.rightBtn))
         
         self.navigationItem.rightBarButtonItem = rightBarButton
-        
-        
         
     }
     

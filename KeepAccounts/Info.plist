@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>要相機</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>存照片</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>看照片</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -30,12 +24,18 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>要相機</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>在背景取得位置</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>在背景取得位置</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>在背景取得位置</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>存照片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>看照片</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string></string>
