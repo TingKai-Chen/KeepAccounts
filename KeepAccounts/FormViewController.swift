@@ -16,9 +16,11 @@ class FormViewController: UIViewController {
     
     var homeView: ViewController?
     
-    var allData: MyData!
+    var allData: MyData?
     
     var startDate: Date?
+    
+    var currentDate: Date!
     
     var dateformatter: DateFormatter {
     
@@ -130,6 +132,14 @@ class FormViewController: UIViewController {
     
     @IBAction func determineBtn(_ sender: Any) {
         
+        let moc = CoreDataHelper.shared.managedObjectContext()
+        
+        let myData = MyData(context: moc)
+        
+        guard let allData = self.allData else { return }
+        
+        myData.image = allData.image
+        
         if self.datePickerTxt.text == "" || self.projectTxt.text == "" || self.incomeExpendPickerTxt.text == "" || self.priceTxt.text == "" {
             
             let alert = UIAlertController(title: "請輸入完整資料", message: nil, preferredStyle: .alert)
@@ -144,7 +154,7 @@ class FormViewController: UIViewController {
         
         else {
             
-            if self.allData.price != nil {
+            if allData.price != nil {
                 
                 self.updateRecord()
                 
@@ -156,6 +166,8 @@ class FormViewController: UIViewController {
             }
             
         }
+        
+        self.saveToCoreData()
         
     }
     
@@ -205,7 +217,7 @@ class FormViewController: UIViewController {
         
         self.priceTxt.borderStyle = .roundedRect
         
-        self.datePickerTxt.text = self.dateformatter.string(from: self.allData.date)
+        self.datePickerTxt.text = self.dateformatter.string(from: currentDate)
         
         self.setImageBtn()
         
@@ -221,7 +233,7 @@ class FormViewController: UIViewController {
         
         self.datePicker.maximumDate = Date()
         
-        self.datePicker.date = self.allData.date
+        self.datePicker.date = currentDate
         
     }
     
@@ -295,13 +307,15 @@ class FormViewController: UIViewController {
     
     private func initView() {
         
-        self.datePickerTxt.text = self.dateformatter.string(from: self.allData.date)
+        self.datePickerTxt.text = self.dateformatter.string(from: currentDate)
         
-        self.projectTxt.text = self.allData.projectName
+        guard let allData = self.allData else { return }
         
-        if self.allData.incomeExpend == self.incomeExpenseData[0] {
+        self.projectTxt.text = allData.projectName
+        
+        if allData.incomeExpend == self.incomeExpenseData[0] {
 
-            if let intPrice = Int(self.allData.price!) {
+            if let intPrice = Int(allData.price!) {
 
                 self.priceTxt.text = "\(intPrice * -1)"
 
@@ -311,13 +325,13 @@ class FormViewController: UIViewController {
 
         else {
 
-            self.priceTxt.text = self.allData.price
+            self.priceTxt.text = allData.price
 
         }
 
-        self.incomeExpendPickerTxt.text = self.allData.incomeExpend
+        self.incomeExpendPickerTxt.text = allData.incomeExpend
 
-        if self.allData.image == UIImage(named: "account") || self.allData.image == nil {
+        if allData.image == UIImage(named: "account") || allData.image == nil {
 
             self.imageBtn.setImage(UIImage(named: "camera"), for: .normal)
 
@@ -325,11 +339,11 @@ class FormViewController: UIViewController {
 
         else {
 
-            self.imageBtn.setImage(self.allData.image, for: .normal)
+            self.imageBtn.setImage(allData.image, for: .normal)
 
         }
 
-        if self.allData.address == "" {
+        if allData.address == "" {
 
             self.locationTxt.text = ""
 
@@ -337,12 +351,12 @@ class FormViewController: UIViewController {
             
         else {
             
-            self.locationTxt.text = self.allData.address
+            self.locationTxt.text = allData.address
             
         }
 
 
-        if self.allData.round == "" {
+        if allData.round == "" {
 
             self.roundTxt.text = ""
 
@@ -350,7 +364,7 @@ class FormViewController: UIViewController {
 
         else {
 
-            self.roundTxt.text = self.allData.round
+            self.roundTxt.text = allData.round
 
         }
 
@@ -358,13 +372,15 @@ class FormViewController: UIViewController {
     
     private func addNewRecord() {
         
-        self.allData.projectName = self.projectTxt.text!
+        guard let allData = self.allData else { return }
+        
+        allData.projectName = self.projectTxt.text!
         
         if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
             
             let intPrice = Int(self.priceTxt.text!)! * self.c
             
-            self.allData.price = String(intPrice)
+            allData.price = String(intPrice)
             
         }
         
@@ -372,19 +388,19 @@ class FormViewController: UIViewController {
             
             let intPrice = Int(self.priceTxt.text!)! * self.n
             
-            self.allData.price = String(intPrice)
+            allData.price = String(intPrice)
             
         }
         
-        self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
+        allData.incomeExpend = self.incomeExpendPickerTxt.text!
         
-        self.allData.address = self.locationTxt.text!
+        allData.address = self.locationTxt.text!
         
-        self.allData.round = self.roundTxt.text
+        allData.round = self.roundTxt.text
         
-        self.allData.image = self.imageBtn.image(for: .normal)!
+        allData.image = self.imageBtn.image(for: .normal)!
         
-        self.delegate?.upDateData(data: self.allData)
+        self.delegate?.upDateData(data: allData)
         
         self.navigationController?.popViewController(animated: true)
         
@@ -392,13 +408,15 @@ class FormViewController: UIViewController {
     
     private func updateRecord() {
         
-        self.allData.projectName = self.projectTxt.text!
+        guard let allData = self.allData else { return }
+        
+        allData.projectName = self.projectTxt.text!
         
         if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
             
             let intPrice = Int(self.priceTxt.text!)! * self.c
             
-            self.allData.price = String(intPrice)
+            allData.price = String(intPrice)
             
         }
             
@@ -406,17 +424,17 @@ class FormViewController: UIViewController {
             
             let intPrice = Int(self.priceTxt.text!)! * self.n
             
-            self.allData.price = String(intPrice)
+            allData.price = String(intPrice)
             
         }
         
-        self.allData.incomeExpend = self.incomeExpendPickerTxt.text!
+        allData.incomeExpend = self.incomeExpendPickerTxt.text!
         
-        self.allData.address = self.locationTxt.text!
+        allData.address = self.locationTxt.text!
         
-        self.allData.round = self.roundTxt.text
+        allData.round = self.roundTxt.text
         
-        self.allData.image = self.imageBtn.image(for: .normal)!
+        allData.image = self.imageBtn.image(for: .normal)!
         
         self.homeView?.tableView.reloadData()
         
@@ -425,6 +443,13 @@ class FormViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         
     }
+    
+    func saveToCoreData() {
+        
+        CoreDataHelper.shared.saveContext()
+        
+    }
+    
 }
 
 extension FormViewController : UIPickerViewDelegate {

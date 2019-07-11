@@ -110,9 +110,9 @@ class ViewController: UIViewController {
             
             let FormVC = segue.destination as! FormViewController
             
-            let allData = MyData(date: self.date)
+            FormVC.currentDate = self.date
             
-            FormVC.allData = allData
+//            FormVC.allData = allData
             
             FormVC.startDate = self.startDate
             
@@ -686,7 +686,7 @@ extension ViewController : UITableViewDataSource {
         
         if self.dataArray[indexPath.row].image == UIImage(named: "camera") {
             
-            self.dataArray[indexPath.row].image = UIImage(named: "account")
+            self.dataArray[indexPath.row].image = UIImage(named: "account")!
             
             cell.photoImage.image = self.dataArray[indexPath.row].thumbnailImage()
             
