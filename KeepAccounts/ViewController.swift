@@ -2,6 +2,10 @@ import UIKit
 
 import JTAppleCalendar
 
+import Firebase
+
+import FirebaseAuth
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var totalPriceLab: UILabel!
@@ -45,6 +49,10 @@ class ViewController: UIViewController {
         return formatter
         
     }
+    
+    var leftBarButton = UIBarButtonItem()
+    
+    var rightBarButton = UIBarButtonItem()
     
     override func viewDidLoad() {
         
@@ -114,15 +122,23 @@ class ViewController: UIViewController {
             
         else if segue.identifier == "dataSegue" {
             
-            let FormVC = segue.destination as! FormViewController
+            let formVC = segue.destination as! FormViewController
             
             if let data = sender as? MyData {
                 
-                FormVC.allData = data
+                formVC.allData = data
                 
-                FormVC.homeView = self
+                formVC.homeView = self
                 
             }
+            
+        }
+        
+        else if segue.identifier == "LoginSegue" {
+            
+            let loginVC = segue.destination as! LoginViewController
+            
+            loginVC.homeView = self
             
         }
         
@@ -224,12 +240,6 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func setLogin() {
-
-        performSegue(withIdentifier: "LoginSegue", sender: nil)
-
-    }
-    
     private func createGradientLayer() {
         
         let gradientLayer = CAGradientLayer()
@@ -248,9 +258,9 @@ class ViewController: UIViewController {
         
         let image = UIImage(named: "user")
         
-        let leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(self.setLogin))
-
-        self.navigationItem.leftBarButtonItem = leftBarButton
+        self.leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(self.setLogin))
+        
+        self.navigationItem.leftBarButtonItem = self.leftBarButton
        
         self.navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xffffff)
         
@@ -258,20 +268,30 @@ class ViewController: UIViewController {
 
         let image2 = UIImage(named: "plus")
         
-        let rightBarButton = UIBarButtonItem(image: image2, style: .plain, target: self, action: #selector(self.rightBtn))
+        self.rightBarButton = UIBarButtonItem(image: image2, style: .plain, target: self, action: #selector(self.rightBtn))
         
-        self.navigationItem.rightBarButtonItem = rightBarButton
+        self.navigationItem.rightBarButtonItem = self.rightBarButton
+        
+    }
+    
+    func signOutLayout() {
+       
+        let image = UIImage(named: "sign-out")
+        
+        self.leftBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(self.signOut))
+        
+        self.navigationItem.leftBarButtonItem = self.leftBarButton
         
     }
     
     private func setToolBarLayout() {
         
         let statisticButton = UIButton(type:.custom)
-        
+
         statisticButton.imageView?.contentMode = .scaleAspectFit
-        
+
         statisticButton.imageEdgeInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
-        
+
         let statisticImage = UIImage(named: "pie-chart")
         
         statisticButton.setImage(statisticImage, for: .normal)
@@ -279,13 +299,14 @@ class ViewController: UIViewController {
         let statisticBtnItem = UIBarButtonItem(customView: statisticButton)
         
         let statisticCurrWidth = statisticBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
-        
+
         statisticCurrWidth?.isActive = true
-        
+
         let statisticCurrHeight = statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
-        
+
         statisticCurrHeight?.isActive = true
         
+    
         let detailButton = UIButton(type:.custom)
         
         detailButton.imageView?.contentMode = .scaleAspectFit
@@ -305,6 +326,7 @@ class ViewController: UIViewController {
         let detailCurrHeight = statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
         
         detailCurrHeight?.isActive = true
+        
         
         let setButton = UIButton(type:.custom)
         
@@ -376,6 +398,8 @@ class ViewController: UIViewController {
     
     private func setAccountBtnLayout() {
         
+        self.startAccountBtn.setTitle("記一筆", for: .normal)
+        
         self.startAccountBtn.clipsToBounds = true
         
         self.startAccountBtn.layer.cornerRadius = self.startAccountBtn.frame.height/2
@@ -441,6 +465,50 @@ class ViewController: UIViewController {
     @objc func rightBtn() {
         
         self.performSegue(withIdentifier: "Segue", sender: nil)
+        
+    }
+    
+    @objc func setLogin() {
+        
+        performSegue(withIdentifier: "LoginSegue", sender: nil)
+        
+    }
+    
+    @objc func signOut() {
+        
+        let alertController = UIAlertController(title: "登出", message: "是否確定要登出", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "登出", style: .default) { (action) in
+            
+            if Auth.auth().currentUser != nil {
+                
+                do {
+                    
+                    try Auth.auth().signOut()
+                    
+                }
+                    
+                catch let error as NSError {
+                    
+                    print(error.localizedDescription)
+                    
+                }
+                
+            }
+            
+            self.setNavigationLayout()
+            
+            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        
+        alertController.addAction(defaultAction)
+        
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
         
     }
     

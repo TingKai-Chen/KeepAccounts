@@ -10,6 +10,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var passwordTxtField: UITextField!
     
+    var homeView: ViewController?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -68,6 +70,12 @@ class LoginViewController: UIViewController {
                     
                     let defaultAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
                         
+                        let leftBarButton = UIBarButtonItem()
+                        
+                        self.homeView?.navigationItem.leftBarButtonItem = leftBarButton
+                        
+                        self.homeView?.signOutLayout()
+                        
                         self.navigationController?.popViewController(animated: true)
                         
                     })
@@ -76,7 +84,6 @@ class LoginViewController: UIViewController {
                     
                     self.present(alertController, animated: true, completion: nil)
                     
-                   
                 }
                     
                 else {
