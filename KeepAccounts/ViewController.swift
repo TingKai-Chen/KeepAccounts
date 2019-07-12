@@ -112,8 +112,6 @@ class ViewController: UIViewController {
             
             FormVC.currentDate = self.date
             
-//            FormVC.allData = allData
-            
             FormVC.startDate = self.startDate
             
             FormVC.delegate = self

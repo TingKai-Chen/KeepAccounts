@@ -26,28 +26,39 @@ extension MyData {
     
     @NSManaged public var imageStr: String?
     
+    
     var image: UIImage? {
-        
+
         set {
-            
+
             let imageData = image!.jpegData(compressionQuality: 1.0)
-            
+
             let strBase64 = imageData!.base64EncodedString(options: .lineLength64Characters)
-           
+
             self.imageStr = strBase64
-            
+
         }
-        
+
         get {
             
-            let dataDecoded :Data = Data(base64Encoded: self.imageStr!, options: .ignoreUnknownCharacters)!
+            if self.imageStr == nil {
+                
+                return UIImage(named: "account")
+                
+            }
             
-            let decodedimage = UIImage(data: dataDecoded)
-            
-            return decodedimage
-            
+            else {
+                
+                let dataDecoded :Data = Data(base64Encoded: self.imageStr!, options: .ignoreUnknownCharacters)!
+                
+                let decodedimage = UIImage(data: dataDecoded)
+                
+                return decodedimage
+
+            }
+
         }
-        
+
     }
     
     func thumbnailImage() -> UIImage? {
@@ -91,4 +102,16 @@ extension MyData {
         
     }
 
+}
+
+extension UIImage {
+    
+    func toString() -> String? {
+        
+        let data: Data? = self.pngData()
+        
+        return data?.base64EncodedString(options: .endLineWithLineFeed)
+        
+    }
+    
 }
