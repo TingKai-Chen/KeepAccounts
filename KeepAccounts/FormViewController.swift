@@ -1,5 +1,7 @@
 import UIKit
 
+import CoreData
+
 protocol UIFormViewControllerDeletage : class{
     
     func upDateCalendar (datePicker:UIDatePicker)
@@ -132,14 +134,6 @@ class FormViewController: UIViewController {
     
     @IBAction func determineBtn(_ sender: Any) {
         
-        let moc = CoreDataHelper.shared.managedObjectContext()
-        
-        let myData = MyData(context: moc)
-        
-        guard let allData = self.allData else { return }
-        
-        myData.image = allData.image
-        
         if self.datePickerTxt.text == "" || self.projectTxt.text == "" || self.incomeExpendPickerTxt.text == "" || self.priceTxt.text == "" {
             
             let alert = UIAlertController(title: "請輸入完整資料", message: nil, preferredStyle: .alert)
@@ -154,7 +148,7 @@ class FormViewController: UIViewController {
         
         else {
             
-            if allData.price != nil {
+            if self.allData!.price != nil {
                 
                 self.updateRecord()
                 
@@ -166,6 +160,14 @@ class FormViewController: UIViewController {
             }
             
         }
+        
+        let moc = CoreDataHelper.shared.managedObjectContext()
+        
+        let myData = MyData(context: moc)
+        
+        guard let allData = self.allData else { return }
+        
+        myData.image = allData.image
         
         self.saveToCoreData()
         

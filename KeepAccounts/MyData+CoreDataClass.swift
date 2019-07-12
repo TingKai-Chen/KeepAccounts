@@ -11,8 +11,6 @@ import Foundation
 
 import CoreData
 
-@objc(MyData)
-
 public class MyData: NSManagedObject {
 
 }

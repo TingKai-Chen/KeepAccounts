@@ -27,7 +27,7 @@ class CoreDataHelper: NSObject {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "DataModel")
+        let container = NSPersistentContainer(name: "DataModal")
         let description = NSPersistentStoreDescription()
         //設定sqlite存放位置
         var sqlUrl = URL(fileURLWithPath: NSHomeDirectory())
