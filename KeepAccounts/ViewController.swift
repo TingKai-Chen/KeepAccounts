@@ -6,6 +6,8 @@ import Firebase
 
 import FirebaseAuth
 
+import CoreData
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var totalPriceLab: UILabel!
@@ -34,7 +36,15 @@ class ViewController: UIViewController {
     
     var totalPrice = 0
     
-    var date = Date()
+    var currentDate = Date() {
+        
+        didSet {
+            
+            self.queryFromCoreData()
+            
+        }
+        
+    }
     
     var startDate = Date()
     
@@ -110,11 +120,19 @@ class ViewController: UIViewController {
             
             let FormVC = segue.destination as! FormViewController
             
-            FormVC.currentDate = self.date
+            FormVC.currentDate = self.currentDate
             
             FormVC.startDate = self.startDate
             
             FormVC.delegate = self
+            
+            let moc = CoreDataHelper.shared.managedObjectContext()
+
+            let newData = MyData(context: moc)
+            
+            newData.date = self.currentDate as NSDate
+            
+            FormVC.allData = newData
             
         }
             
@@ -127,6 +145,11 @@ class ViewController: UIViewController {
                 formVC.allData = data
                 
                 formVC.homeView = self
+                
+                formVC.delegate = self
+                
+                formVC.currentDate = self.currentDate
+                
                 
             }
             
@@ -452,9 +475,35 @@ class ViewController: UIViewController {
         
     }
     
-    func upDateData(data: MyData) {
+    func upDateData() {
         
-        self.dataArray.append(data)
+        queryFromCoreData()
+        
+    }
+    
+    func queryFromCoreData () {
+        
+        let moc = CoreDataHelper.shared.managedObjectContext()
+        
+        let fetchRequest = NSFetchRequest<MyData>(entityName:"MyData")
+        
+        fetchRequest.predicate = NSPredicate(format: "date = %@",self.currentDate as NSDate)
+        
+        moc.performAndWait {
+            
+            do {
+                
+                self.dataArray = try moc.fetch(fetchRequest) as [MyData]
+                
+            }
+                
+            catch {
+                
+                print("error\(error)")
+                
+            }
+            
+        }
         
         self.tableView.reloadData()
         
@@ -572,7 +621,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         configureCell(view: cell, cellState: cellState)
         
-        self.date = date
+        self.currentDate = date
         
         let formatter = DateFormatter()
         
@@ -590,7 +639,7 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         let myAttribute = [ NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 20.0)! , NSAttributedString.Key.shadow: myShadow ]
         
-        let myAttrString = NSAttributedString(string: formatter.string(from: self.date), attributes: myAttribute)
+        let myAttrString = NSAttributedString(string: formatter.string(from: self.currentDate), attributes: myAttribute)
        
         self.dateLab.attributedText = myAttrString
         
@@ -610,11 +659,11 @@ extension ViewController : UIFormViewControllerDeletage {
     
     func upDateCalendar(datePicker: UIDatePicker) {
         
-        self.date = datePicker.date
+        self.currentDate = datePicker.date
         
-        self.calendarView.selectDates([self.date])
+        self.calendarView.selectDates([self.currentDate])
         
-        self.calendarView.scrollToDate(self.date,animateScroll:false)
+        self.calendarView.scrollToDate(self.currentDate,animateScroll:false)
         
         let formatter = DateFormatter()
         
@@ -622,7 +671,7 @@ extension ViewController : UIFormViewControllerDeletage {
         
         formatter.locale = Locale(identifier: "zh_TW")
         
-        self.dateLab.text = formatter.string(from: self.date)
+        self.dateLab.text = formatter.string(from: self.currentDate)
         
     }
 
@@ -682,17 +731,14 @@ extension ViewController : UITableViewDataSource {
         
         cell.roundLab.text = self.dataArray[indexPath.row].round
         
-        if self.dataArray[indexPath.row].image == UIImage(named: "camera") {
+        if let thumbnailImage = self.dataArray[indexPath.row].thumbnailImage() {
             
-            self.dataArray[indexPath.row].image = UIImage(named: "account")!
-            
-            cell.photoImage.image = self.dataArray[indexPath.row].thumbnailImage()
+            cell.photoImage.image = thumbnailImage
             
         }
-        
         else {
             
-            cell.photoImage.image = self.dataArray[indexPath.row].thumbnailImage()
+            cell.photoImage.image = UIImage(named: "account")
             
         }
         
@@ -715,12 +761,20 @@ extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
+
+            let deletedData = self.dataArray.remove(at: indexPath.row)
             
-            let deleteDataArray = self.dataArray.remove(at: indexPath.row)
+            let moc = CoreDataHelper.shared.managedObjectContext()
+            
+            moc.delete(deletedData)
+            
+            CoreDataHelper.shared.saveContext()
             
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             
         }
+        
+        
         
     }
     

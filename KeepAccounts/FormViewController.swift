@@ -6,12 +6,14 @@ protocol UIFormViewControllerDeletage : class{
     
     func upDateCalendar (datePicker:UIDatePicker)
 
-    func upDateData (data : MyData)
+    func upDateData ()
     
 }
 
 class FormViewController: UIViewController {
 
+    let imagePicker = UIImagePickerController()
+    
     var n = 1
     
     var c = -1
@@ -144,57 +146,25 @@ class FormViewController: UIViewController {
             
             present(alert,animated: true,completion: nil)
             
-        }
-        
-        let moc = CoreDataHelper.shared.managedObjectContext()
-    
-        var myData = NSEntityDescription.insertNewObject(forEntityName: "MyData", into: moc) as! MyData
-        
-        
-        self.allData = myData
-        
-        if self.allData?.price != nil {
+            return
             
-                    
-            self.updateRecord()
-                    
         }
-                    
-        else {
-                    
-            self.addNewRecord()
-                    
-        }
-        
-        var tableDate = MyData(context: moc)
-        
-        tableDate.imageStr = allData?.imageStr
-        
-        tableDate.date = allData?.date
-        
-        tableDate.projectName = allData?.projectName
-        
-        tableDate.incomeExpend = allData?.incomeExpend
-        
-        tableDate.price = allData?.price
-        
-        tableDate.address = allData?.address
-        
-        tableDate.round = allData?.round
         
         self.saveToCoreData()
+        
+        self.delegate?.upDateData()
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
     
     @IBAction func camera(_ sender: Any) {
         
-        let imagePicker = UIImagePickerController()
+        self.imagePicker.delegate = self
         
-        imagePicker.sourceType = .camera
+        self.imagePicker.sourceType = .camera
         
-        present(imagePicker,animated: true,completion: nil)
-        
-        imagePicker.delegate = self
+        self.present(self.imagePicker, animated: true, completion: nil)
         
     }
     
@@ -413,7 +383,7 @@ class FormViewController: UIViewController {
         
         self.allData!.image = self.imageBtn.image(for: .normal)!
         
-        self.delegate?.upDateData(data: self.allData!)
+        self.delegate?.upDateData()
         
         self.navigationController?.popViewController(animated: true)
         
@@ -458,6 +428,30 @@ class FormViewController: UIViewController {
     }
     
     func saveToCoreData() {
+        
+        self.allData!.projectName = self.projectTxt.text!
+        
+        if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
+            
+            let intPrice = Int(self.priceTxt.text!)! * self.c
+            
+            self.allData!.price = String(intPrice)
+            
+        }
+            
+        else {
+            
+            let intPrice = Int(self.priceTxt.text!)! * self.n
+            
+            self.allData!.price = String(intPrice)
+            
+        }
+        
+        self.allData!.incomeExpend = self.incomeExpendPickerTxt.text!
+        
+        self.allData!.address = self.locationTxt.text!
+        
+        self.allData!.round = self.roundTxt.text
         
         CoreDataHelper.shared.saveContext()
         
@@ -509,16 +503,38 @@ extension FormViewController : UIMapViewControllerDelegate {
 
 extension FormViewController : UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+            let scaledImage = image.scaled(with: 0.05) {
             
-            self.imageBtn.setImage(image, for: .normal)
+            self.imageBtn.setImage(scaledImage, for: .normal)
+            
+            self.allData?.image = scaledImage
             
         }
         
-        dismiss(animated: true, completion:nil)
+        picker.dismiss(animated: true, completion: nil)
         
     }
 
+}
+
+extension UIImage {
+    
+    func scaled(with scale: CGFloat) -> UIImage? {
+        // size has to be integer, otherwise it could get white lines
+        let size = CGSize(width: floor(self.size.width * scale), height: floor(self.size.height * scale))
+        UIGraphicsBeginImageContext(size)
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }
