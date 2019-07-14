@@ -11,6 +11,10 @@
 		43FD17B522D5959A00E23978 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD17B422D5959A00E23978 /* SignUpViewController.swift */; };
 		71F4C1985F1BC49F07E5AC1D /* Pods_KeepAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A736988DB78244EFB0871CC7 /* Pods_KeepAccounts.framework */; };
 		8D30728122D78172005FE191 /* DataModal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D30727F22D78172005FE191 /* DataModal.xcdatamodeld */; };
+		8D763F5C22DB242C00833A20 /* statisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D763F5B22DB242C00833A20 /* statisticViewController.swift */; };
+		8D763F5E22DB247900833A20 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D763F5D22DB247900833A20 /* detailViewController.swift */; };
+		8D763F6022DB24D600833A20 /* setViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D763F5F22DB24D600833A20 /* setViewController.swift */; };
+		8D763F6222DB32EC00833A20 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D763F6122DB32EC00833A20 /* DetailCell.swift */; };
 		8D843F8E22D786DF00A8054D /* MyData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D843F8C22D786DF00A8054D /* MyData+CoreDataClass.swift */; };
 		8D843F8F22D786DF00A8054D /* MyData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D843F8D22D786DF00A8054D /* MyData+CoreDataProperties.swift */; };
 		8D843F9122D78B5200A8054D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D843F9022D78B5200A8054D /* CoreDataHelper.swift */; };
@@ -33,6 +37,10 @@
 		430CE6A022C45CC2006EB0CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		43FD17B422D5959A00E23978 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8D30728022D78172005FE191 /* DataModal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModal.xcdatamodel; sourceTree = "<group>"; };
+		8D763F5B22DB242C00833A20 /* statisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statisticViewController.swift; sourceTree = "<group>"; };
+		8D763F5D22DB247900833A20 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		8D763F5F22DB24D600833A20 /* setViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setViewController.swift; sourceTree = "<group>"; };
+		8D763F6122DB32EC00833A20 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		8D843F8C22D786DF00A8054D /* MyData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8D843F8D22D786DF00A8054D /* MyData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8D843F9022D78B5200A8054D /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -118,6 +126,10 @@
 				8D9F3EC122D5DDE300536AEC /* ResetPasswordViewController.swift */,
 				8D30727F22D78172005FE191 /* DataModal.xcdatamodeld */,
 				8D843F9022D78B5200A8054D /* CoreDataHelper.swift */,
+				8D763F5B22DB242C00833A20 /* statisticViewController.swift */,
+				8D763F5D22DB247900833A20 /* detailViewController.swift */,
+				8D763F5F22DB24D600833A20 /* setViewController.swift */,
+				8D763F6122DB32EC00833A20 /* DetailCell.swift */,
 			);
 			path = KeepAccounts;
 			sourceTree = "<group>";
@@ -249,6 +261,7 @@
 				8D843F9122D78B5200A8054D /* CoreDataHelper.swift in Sources */,
 				8DD77F5722BE0F2D00768106 /* MyData.swift in Sources */,
 				8D843F8F22D786DF00A8054D /* MyData+CoreDataProperties.swift in Sources */,
+				8D763F6022DB24D600833A20 /* setViewController.swift in Sources */,
 				8DD77F5022BDFD6D00768106 /* DateHeader.swift in Sources */,
 				8DD77F5522BE0CFC00768106 /* Cell.swift in Sources */,
 				8D9F3EC222D5DDE300536AEC /* ResetPasswordViewController.swift in Sources */,
@@ -257,10 +270,13 @@
 				8D30728122D78172005FE191 /* DataModal.xcdatamodeld in Sources */,
 				8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */,
 				8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */,
+				8D763F5E22DB247900833A20 /* detailViewController.swift in Sources */,
 				43FD17B522D5959A00E23978 /* SignUpViewController.swift in Sources */,
 				8DD77F3B22BDFA9400768106 /* AppDelegate.swift in Sources */,
 				8D9F3EC022D5C80600536AEC /* LoginViewController.swift in Sources */,
 				430CE6A122C45CC2006EB0CD /* MapViewController.swift in Sources */,
+				8D763F6222DB32EC00833A20 /* DetailCell.swift in Sources */,
+				8D763F5C22DB242C00833A20 /* statisticViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

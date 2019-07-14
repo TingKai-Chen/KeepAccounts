@@ -20,6 +20,10 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet var numberTxtField: UITextField!
     
+    @IBOutlet var doneBtn: UIButton!
+    
+    @IBOutlet var cancelBtn: UIButton!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -35,7 +39,21 @@ class SignUpViewController: UIViewController {
         self.numberTxtField.delegate = self
         
         self.setLayout()
+        
+        self.layoutBtn()
 
+    }
+    
+    private func layoutBtn () {
+        
+        self.doneBtn.clipsToBounds = true
+        
+        self.doneBtn.layer.cornerRadius = 5
+        
+        self.cancelBtn.clipsToBounds = true
+        
+        self.cancelBtn.layer.cornerRadius = 5
+        
     }
     
     private func setLayout() {

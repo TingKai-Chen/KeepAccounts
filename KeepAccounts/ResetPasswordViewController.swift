@@ -5,6 +5,10 @@ import FirebaseAuth
 class ResetPasswordViewController: UIViewController {
 
     @IBOutlet var emailTxtField: UITextField!
+
+    @IBOutlet var doneBtn: UIButton!
+    
+    @IBOutlet var cancelBtn: UIButton!
     
     override func viewDidLoad() {
         
@@ -13,6 +17,8 @@ class ResetPasswordViewController: UIViewController {
         self.setLayout()
         
         self.emailTxtField.delegate = self
+        
+        self.layoutBtn()
         
     }
     
@@ -82,6 +88,18 @@ class ResetPasswordViewController: UIViewController {
     @IBAction func cancel(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    private func layoutBtn () {
+        
+        self.doneBtn.clipsToBounds = true
+        
+        self.doneBtn.layer.cornerRadius = 5
+        
+        self.cancelBtn.clipsToBounds = true
+        
+        self.cancelBtn.layer.cornerRadius = 5
         
     }
 

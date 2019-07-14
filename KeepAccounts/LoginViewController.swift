@@ -10,6 +10,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var passwordTxtField: UITextField!
     
+    @IBOutlet var loginBtn: UIButton!
+    
     var homeView: ViewController?
     
     override func viewDidLoad() {
@@ -21,14 +23,18 @@ class LoginViewController: UIViewController {
         self.emailTxtField.delegate = self
         
         self.passwordTxtField.delegate = self
+        
+        self.layoutLoginBtn()
+        
+        self.navigationItem.title = "登入"
 
     }
     
     private func setLayout() {
         
-        self.emailTxtField.placeholder = "請輸入帳號"
+        self.emailTxtField.placeholder = "Email"
         
-        self.passwordTxtField.placeholder = "請輸入密碼"
+        self.passwordTxtField.placeholder = "Password"
         
         self.passwordTxtField.isSecureTextEntry = true
         
@@ -38,7 +44,7 @@ class LoginViewController: UIViewController {
         
         if self.emailTxtField.text == "" || self.passwordTxtField.text == "" {
             
-            let alertController = UIAlertController(title: "資料不完全", message: "請輸入正確的帳號及密碼", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "資料不完全", message: "請輸入正確的Email帳號及密碼", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
@@ -102,6 +108,14 @@ class LoginViewController: UIViewController {
             
         }
         
+    }
+    
+    private func layoutLoginBtn() {
+        
+        self.loginBtn.clipsToBounds = true
+        
+        self.loginBtn.layer.cornerRadius = self.loginBtn.frame.height/2
+
     }
  
 }

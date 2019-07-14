@@ -70,4 +70,11 @@ class CoreDataHelper: NSObject {
             }
         }
     }
+    
+    func resetContext() {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            context.reset()
+        }
+    }
 }

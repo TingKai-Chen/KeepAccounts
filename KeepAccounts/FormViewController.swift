@@ -457,6 +457,13 @@ class FormViewController: UIViewController {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        CoreDataHelper.shared.resetContext()
+        
+    }
+    
 }
 
 extension FormViewController : UIPickerViewDelegate {

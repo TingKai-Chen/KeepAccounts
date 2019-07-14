@@ -24,6 +24,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toolBar: UIToolbar!
     
+    var statisticBtnItem = UIBarButtonItem()
+    
+    var detailBtnItem = UIBarButtonItem()
+    
+    var setBtnItem = UIBarButtonItem()
+    
     var dataArray : [MyData] = [] {
         
         didSet {
@@ -307,75 +313,25 @@ class ViewController: UIViewController {
     
     private func setToolBarLayout() {
         
-        let statisticButton = UIButton(type:.custom)
-
-        statisticButton.imageView?.contentMode = .scaleAspectFit
-
-        statisticButton.imageEdgeInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
+        let detailImage = UIImage(named: "seo")
+        
+        self.detailBtnItem = UIBarButtonItem(image: detailImage, style: .plain, target: self, action: #selector(ViewController.detailBtn))
 
         let statisticImage = UIImage(named: "pie-chart")
         
-        statisticButton.setImage(statisticImage, for: .normal)
-        
-        let statisticBtnItem = UIBarButtonItem(customView: statisticButton)
-        
-        let statisticCurrWidth = statisticBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
-
-        statisticCurrWidth?.isActive = true
-
-        let statisticCurrHeight = statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
-
-        statisticCurrHeight?.isActive = true
-        
-    
-        let detailButton = UIButton(type:.custom)
-        
-        detailButton.imageView?.contentMode = .scaleAspectFit
-        
-        detailButton.imageEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
-        
-        let detailImage = UIImage(named: "seo")
-        
-        detailButton.setImage(detailImage, for: .normal)
-        
-        let detailBtnItem = UIBarButtonItem(customView: detailButton)
-        
-        let detailCurrWidth = detailBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
-        
-        detailCurrWidth?.isActive = true
-        
-        let detailCurrHeight = statisticBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
-        
-        detailCurrHeight?.isActive = true
-        
-        
-        let setButton = UIButton(type:.custom)
-        
-        setButton.imageView?.contentMode = .scaleAspectFit
-        
-        setButton.imageEdgeInsets = UIEdgeInsets(top: 33, left: 33, bottom: 33, right: 33)
+        self.statisticBtnItem = UIBarButtonItem(image: statisticImage, style: .plain, target: self, action: #selector(ViewController.statisticBtn))
         
         let setImage = UIImage(named: "settings")
         
-        setButton.setImage(setImage, for: .normal)
-        
-        let setBtnItem = UIBarButtonItem(customView: setButton)
-        
-        let setCurrWidth = setBtnItem.customView?.widthAnchor.constraint(equalToConstant: 24)
-        
-        setCurrWidth?.isActive = true
-        
-        let setCurrHeight = setBtnItem.customView?.heightAnchor.constraint(equalToConstant: 24)
-        
-        setCurrHeight?.isActive = true
+        self.setBtnItem = UIBarButtonItem(image: setImage, style: .plain, target: self, action: #selector(ViewController.setBtn))
         
         var items = [UIBarButtonItem]()
         
-        items.append(detailBtnItem)
+        items.append(self.detailBtnItem)
         
         items.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil))
         
-        items.append(statisticBtnItem)
+        items.append(self.statisticBtnItem)
         
         items.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil))
         
@@ -506,6 +462,24 @@ class ViewController: UIViewController {
         }
         
         self.tableView.reloadData()
+        
+    }
+    
+    @objc func detailBtn() {
+        
+        self.performSegue(withIdentifier: "detailSegue", sender: nil)
+        
+    }
+    
+    @objc func statisticBtn() {
+        
+        
+        
+    }
+    
+    @objc func setBtn() {
+        
+        
         
     }
     
