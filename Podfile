@@ -10,4 +10,6 @@ target 'KeepAccounts' do
    pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Charts'
+  pod 'ChartsRealm'
 end

@@ -2,8 +2,8 @@ import UIKit
 
 import CoreData
 
-class detailViewController: UIViewController {
-
+class DetailViewController: UIViewController {
+    
     @IBOutlet var tableView: UITableView!
     
     var allDataArray : [MyData]!
@@ -28,8 +28,10 @@ class detailViewController: UIViewController {
         
         self.tableView.dataSource = self
         
+        self.navigationItem.title = "所有帳目資料"
+        
         self.queryFromCoreData()
-
+        
     }
     
     func queryFromCoreData () {
@@ -37,6 +39,10 @@ class detailViewController: UIViewController {
         let moc = CoreDataHelper.shared.managedObjectContext()
         
         let fetchRequest = NSFetchRequest<MyData>(entityName:"MyData")
+        
+        let sort = NSSortDescriptor(key:"date", ascending:true)
+        
+        fetchRequest.sortDescriptors = [sort]
         
         moc.performAndWait {
             
@@ -57,24 +63,30 @@ class detailViewController: UIViewController {
         self.tableView.reloadData()
         
     }
-
+    
 }
 
-extension detailViewController : UITableViewDelegate {
+extension DetailViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 220
         
     }
-
+    
 }
 
-extension detailViewController : UITableViewDataSource {
+extension DetailViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.allDataArray.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
         
     }
     
@@ -103,6 +115,8 @@ extension detailViewController : UITableViewDataSource {
             cell.priceLab.text = "+" + self.allDataArray[indexPath.row].price! + "$ "
             
         }
+        
+        cell.categoryLab.text = self.allDataArray[indexPath.row].category
         
         cell.addressLab.text = self.allDataArray[indexPath.row].address
         

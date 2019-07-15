@@ -1,4 +1,10 @@
 PODS:
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
+  - ChartsRealm (3.2.2):
+    - Charts (~> 3.3.0)
+    - RealmSwift (~> 3.15.0)
   - Firebase/Auth (6.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.1.2)
@@ -69,8 +75,15 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Realm (3.15.0):
+    - Realm/Headers (= 3.15.0)
+  - Realm/Headers (3.15.0)
+  - RealmSwift (3.15.0):
+    - Realm (= 3.15.0)
 
 DEPENDENCIES:
+  - Charts
+  - ChartsRealm
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -78,6 +91,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Charts
+    - ChartsRealm
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -91,8 +106,12 @@ SPEC REPOS:
     - JTAppleCalendar
     - leveldb-library
     - nanopb
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
+  Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
+  ChartsRealm: cb13811d8dd54741688ce057dce3e2f7ae1b5ce1
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
   FirebaseAuth: 7fa2cc010b93770831a4e7a60651b52c3b8d111a
@@ -106,7 +125,9 @@ SPEC CHECKSUMS:
   JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Realm: 9b834e1be6062f544805252c812348872dc5d4ed
+  RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
 
-PODFILE CHECKSUM: acff9f0e2309641200ed85b2b850d31d8d43bee4
+PODFILE CHECKSUM: 3263186424e284bb64c61287973436c1a14a18cc
 
 COCOAPODS: 1.7.3

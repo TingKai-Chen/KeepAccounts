@@ -44,6 +44,8 @@ class FormViewController: UIViewController {
     
     @IBOutlet weak var datePickerTxt: UITextField!
     
+    @IBOutlet var categoryPickerTxt: UITextField!
+    
     @IBOutlet weak var projectTxt: UITextField!
     
     @IBOutlet weak var incomeExpendPickerTxt: UITextField!
@@ -51,6 +53,16 @@ class FormViewController: UIViewController {
     @IBOutlet weak var locationTxt: UITextField!
     
     @IBOutlet weak var roundTxt: UITextView!
+    
+    @IBOutlet var dete: UIButton!
+    
+    @IBOutlet var determineBtn: UIButton!
+    
+    @IBOutlet var cancelBtn: UIButton!
+    
+    var category = ["飲食","交通","通訊","服飾","居住","娛樂","日常","醫療","教育","保險","社交","健身美容","孝順養育","其他"]
+    
+    var categoryDataPicker = UIPickerView()
     
     var incomeExpenseData = ["支出","收入"]
     
@@ -66,6 +78,10 @@ class FormViewController: UIViewController {
         
         self.incomeExpenseDataPicker.dataSource = self
         
+        self.categoryDataPicker.delegate = self
+        
+        self.categoryDataPicker.dataSource = self
+        
         self.setLayout()
         
         self.setGesture()
@@ -77,6 +93,10 @@ class FormViewController: UIViewController {
         self.locationTxt.addTarget(self, action: #selector(FormViewController.goToMap), for: .touchDown)
         
         self.initView()
+        
+        self.layoutBtn()
+        
+        self.setCategoryPicker()
 
     }
     
@@ -86,12 +106,6 @@ class FormViewController: UIViewController {
         
         self.createGradientLayer()
         
-    }
-    
-    @objc func goToMap() {
-
-        self.performSegue(withIdentifier: "MapSegue", sender: nil)
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -126,7 +140,7 @@ class FormViewController: UIViewController {
         
     }
     
-    @objc func disPlayPickerValue() {
+    @objc func disPlayincomeExpendPickerValue() {
         
         let selectedIndex = self.incomeExpenseDataPicker.selectedRow(inComponent: 0)
         
@@ -134,9 +148,24 @@ class FormViewController: UIViewController {
         
     }
     
+    @objc func disPlayCategoryPickerValue() {
+        
+        let selectedIndex = self.categoryDataPicker.selectedRow(inComponent: 0)
+        
+        self.categoryPickerTxt.text = self.category[selectedIndex]
+        
+    }
+    
+    
+    @objc func goToMap() {
+        
+        self.performSegue(withIdentifier: "MapSegue", sender: nil)
+        
+    }
+    
     @IBAction func determineBtn(_ sender: Any) {
         
-        if self.datePickerTxt.text == "" || self.projectTxt.text == "" || self.incomeExpendPickerTxt.text == "" || self.priceTxt.text == "" {
+        if self.datePickerTxt.text == "" || self.projectTxt.text == "" || self.incomeExpendPickerTxt.text == "" || self.priceTxt.text == "" || self.categoryPickerTxt.text == "" {
             
             let alert = UIAlertController(title: "請輸入完整資料", message: nil, preferredStyle: .alert)
             
@@ -194,6 +223,8 @@ class FormViewController: UIViewController {
         
         self.priceTxt.placeholder = "請輸入價格"
         
+        self.categoryPickerTxt.placeholder = "請選擇分類"
+        
         self.datePickerTxt.borderStyle = .roundedRect
         
         self.incomeExpendPickerTxt.borderStyle = .roundedRect
@@ -248,7 +279,29 @@ class FormViewController: UIViewController {
         
         self.incomeExpendPickerTxt.inputAccessoryView = incomeExpendToolBar
         
-        self.incomeExpendPickerTxt.addTarget(self, action: #selector(FormViewController.disPlayPickerValue), for: .touchDown)
+        self.incomeExpendPickerTxt.addTarget(self, action: #selector(FormViewController.disPlayincomeExpendPickerValue), for: .touchDown)
+        
+    }
+    
+    private func setCategoryPicker() {
+        
+        let catgorytoolBar = UIToolbar()
+        
+        catgorytoolBar.barStyle = .default
+        
+        catgorytoolBar.sizeToFit()
+        
+        let categoryFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let categoryToolBarBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dissPicker))
+        
+        catgorytoolBar.items = [categoryFlexSpace,categoryToolBarBtn]
+        
+        self.categoryPickerTxt.inputView = self.categoryDataPicker
+        
+        self.categoryPickerTxt.inputAccessoryView = catgorytoolBar
+        
+        self.categoryPickerTxt.addTarget(self, action: #selector(FormViewController.disPlayCategoryPickerValue), for: .touchDown)
         
     }
     
@@ -315,6 +368,8 @@ class FormViewController: UIViewController {
         }
 
         self.incomeExpendPickerTxt.text = allData.incomeExpend
+        
+        self.categoryPickerTxt.text = allData.category
 
         if allData.image == UIImage(named: "account") || allData.image == nil {
 
@@ -355,75 +410,15 @@ class FormViewController: UIViewController {
 
     }
     
-    private func addNewRecord() {
+    private func layoutBtn() {
         
-        self.allData!.projectName = self.projectTxt.text!
+        self.cancelBtn.clipsToBounds = true
         
-        if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.c
-            
-            self.allData!.price = String(intPrice)
-            
-        }
+        self.cancelBtn.layer.cornerRadius = 10
         
-        else {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.n
-            
-            self.allData!.price = String(intPrice)
-            
-        }
+        self.determineBtn.clipsToBounds = true
         
-        self.allData!.incomeExpend = self.incomeExpendPickerTxt.text!
-        
-        self.allData!.address = self.locationTxt.text!
-        
-        self.allData!.round = self.roundTxt.text
-        
-        self.allData!.image = self.imageBtn.image(for: .normal)!
-        
-        self.delegate?.upDateData()
-        
-        self.navigationController?.popViewController(animated: true)
-        
-    }
-    
-    private func updateRecord() {
-        
-        guard let allData = self.allData else { return }
-        
-        allData.projectName = self.projectTxt.text!
-        
-        if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.c
-            
-            allData.price = String(intPrice)
-            
-        }
-            
-        else {
-            
-            let intPrice = Int(self.priceTxt.text!)! * self.n
-            
-            allData.price = String(intPrice)
-            
-        }
-        
-        allData.incomeExpend = self.incomeExpendPickerTxt.text!
-        
-        allData.address = self.locationTxt.text!
-        
-        allData.round = self.roundTxt.text
-        
-        allData.image = self.imageBtn.image(for: .normal)!
-        
-        self.homeView?.tableView.reloadData()
-        
-        self.homeView?.caculateSummary()
-        
-        self.navigationController?.popViewController(animated: true)
+        self.determineBtn.layer.cornerRadius = 10
         
     }
     
@@ -449,7 +444,9 @@ class FormViewController: UIViewController {
         
         self.allData!.incomeExpend = self.incomeExpendPickerTxt.text!
         
-        self.allData!.address = self.locationTxt.text!
+        self.allData!.category = self.categoryPickerTxt.text!
+        
+        self.allData!.address = self.locationTxt.text
         
         self.allData!.round = self.roundTxt.text
         
@@ -457,8 +454,7 @@ class FormViewController: UIViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    deinit {
         
         CoreDataHelper.shared.resetContext()
         
@@ -470,7 +466,17 @@ extension FormViewController : UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        self.incomeExpendPickerTxt.text = self.incomeExpenseData[row]
+        if pickerView == self.incomeExpenseDataPicker {
+            
+            self.incomeExpendPickerTxt.text = self.incomeExpenseData[row]
+            
+        }
+        
+        else if pickerView == self.categoryDataPicker {
+            
+            self.categoryPickerTxt.text = self.category[row]
+            
+        }
         
     }
     
@@ -486,13 +492,35 @@ extension FormViewController : UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        return self.incomeExpenseData.count
+        if pickerView == self.incomeExpenseDataPicker {
+            
+             return self.incomeExpenseData.count
+            
+        }
+        else if pickerView == self.categoryDataPicker {
+            
+            return self.category.count
+            
+        }
+        
+        return 1
         
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return self.incomeExpenseData[row]
+        if pickerView == self.incomeExpenseDataPicker {
+            
+            return self.incomeExpenseData[row]
+            
+        }
+        else if pickerView == self.categoryDataPicker {
+            
+            return self.category[row]
+            
+        }
+        
+        return ""
         
     }
     

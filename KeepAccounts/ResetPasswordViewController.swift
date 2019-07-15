@@ -95,11 +95,11 @@ class ResetPasswordViewController: UIViewController {
         
         self.doneBtn.clipsToBounds = true
         
-        self.doneBtn.layer.cornerRadius = 5
+        self.doneBtn.layer.cornerRadius = 10
         
         self.cancelBtn.clipsToBounds = true
         
-        self.cancelBtn.layer.cornerRadius = 5
+        self.cancelBtn.layer.cornerRadius = 10
         
     }
 

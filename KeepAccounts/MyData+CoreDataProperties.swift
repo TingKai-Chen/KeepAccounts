@@ -16,6 +16,8 @@ extension MyData {
     
     @NSManaged public var date: NSDate?
     
+    @NSManaged public var category: String?
+    
     @NSManaged public var incomeExpend: String?
     
     @NSManaged public var price: String?

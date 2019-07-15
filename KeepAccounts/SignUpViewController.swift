@@ -48,11 +48,11 @@ class SignUpViewController: UIViewController {
         
         self.doneBtn.clipsToBounds = true
         
-        self.doneBtn.layer.cornerRadius = 5
+        self.doneBtn.layer.cornerRadius = 10
         
         self.cancelBtn.clipsToBounds = true
         
-        self.cancelBtn.layer.cornerRadius = 5
+        self.cancelBtn.layer.cornerRadius = 10
         
     }
     
@@ -86,7 +86,7 @@ class SignUpViewController: UIViewController {
         let address = self.addressTxtField.text
         
         if self.emailTxtField.text == "" || self.passwordTxtField.text == "" || self.nameTxtField.text == "" || self.addressTxtField.text == "" || self.numberTxtField.text == "" {
-            let alertController = UIAlertController(title: "資料不完整", message: "請輸入正確的帳號及密碼", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "資料不完整", message: "請輸入表格上完整的資料", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             

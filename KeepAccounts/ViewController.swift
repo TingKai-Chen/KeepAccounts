@@ -134,11 +134,9 @@ class ViewController: UIViewController {
             
             let moc = CoreDataHelper.shared.managedObjectContext()
 
-            let newData = MyData(context: moc)
+            FormVC.allData = MyData(context: moc)
             
-            newData.date = self.currentDate as NSDate
-            
-            FormVC.allData = newData
+            FormVC.allData!.date = self.currentDate as NSDate
             
         }
             
@@ -431,12 +429,6 @@ class ViewController: UIViewController {
         
     }
     
-    func upDateData() {
-        
-        queryFromCoreData()
-        
-    }
-    
     func queryFromCoreData () {
         
         let moc = CoreDataHelper.shared.managedObjectContext()
@@ -646,6 +638,12 @@ extension ViewController : UIFormViewControllerDeletage {
         formatter.locale = Locale(identifier: "zh_TW")
         
         self.dateLab.text = formatter.string(from: self.currentDate)
+        
+    }
+    
+    func upDateData() {
+        
+        queryFromCoreData()
         
     }
 
