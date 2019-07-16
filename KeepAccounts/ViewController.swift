@@ -465,7 +465,29 @@ class ViewController: UIViewController {
     
     @objc func statisticBtn() {
         
+        let alert = UIAlertController(title: "統計圖", message:"請選擇年總收支或月總收支", preferredStyle: .actionSheet)
         
+        let alertActionYear = UIAlertAction(title: "年收支", style: .default) { (action) in
+            
+            self.performSegue(withIdentifier: "YearSegue", sender: nil)
+            
+        }
+        
+        let alertActionMonth = UIAlertAction(title: "月收支", style: .default) { (action) in
+            
+            self.performSegue(withIdentifier: "MonthSegue", sender: nil)
+            
+        }
+        
+        let actionCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        
+        alert.addAction(alertActionYear)
+        
+        alert.addAction(alertActionMonth)
+        
+        alert.addAction(actionCancel)
+        
+        self.present(alert,animated: true,completion: nil)
         
     }
     

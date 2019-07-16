@@ -60,7 +60,9 @@ class FormViewController: UIViewController {
     
     @IBOutlet var cancelBtn: UIButton!
     
-    var category = ["飲食","交通","通訊","服飾","居住","娛樂","日常","醫療","教育","保險","社交","健身美容","孝順養育","其他"]
+    var categoryExpense = ["飲食","交通","通訊","服飾","居住","娛樂","日常","醫療","教育","保險","社交","健身美容","孝順養育","其他"]
+    
+    var categoryIncome = ["工資","獎金","外快","報銷","投資","其他"]
     
     var categoryDataPicker = UIPickerView()
     
@@ -144,15 +146,37 @@ class FormViewController: UIViewController {
         
         let selectedIndex = self.incomeExpenseDataPicker.selectedRow(inComponent: 0)
         
-        self.incomeExpendPickerTxt.text = self.incomeExpenseData[selectedIndex]
+        if selectedIndex == 0 {
+            
+            self.categoryPickerTxt.text = categoryExpense[0]
+            
+        }
         
+        else {
+            
+            self.categoryPickerTxt.text = categoryIncome[0]
+            
+        }
+        
+        self.incomeExpendPickerTxt.text = self.incomeExpenseData[selectedIndex]
+
     }
     
     @objc func disPlayCategoryPickerValue() {
         
         let selectedIndex = self.categoryDataPicker.selectedRow(inComponent: 0)
         
-        self.categoryPickerTxt.text = self.category[selectedIndex]
+        if self.incomeExpendPickerTxt.text == self.incomeExpenseData[0] {
+            
+            self.categoryPickerTxt.text = self.categoryExpense[selectedIndex]
+            
+        }
+        
+        else if self.incomeExpendPickerTxt.text == self.incomeExpenseData[1] {
+            
+            self.categoryPickerTxt.text = self.categoryIncome[selectedIndex]
+            
+        }
         
     }
     
@@ -472,9 +496,15 @@ extension FormViewController : UIPickerViewDelegate {
             
         }
         
-        else if pickerView == self.categoryDataPicker {
+        else if pickerView == self.categoryDataPicker && self.incomeExpendPickerTxt.text! == incomeExpenseData[0] {
             
-            self.categoryPickerTxt.text = self.category[row]
+            self.categoryPickerTxt.text = self.categoryExpense[row]
+            
+        }
+        
+        else if pickerView == self.categoryDataPicker && self.incomeExpendPickerTxt.text! == incomeExpenseData[1] {
+            
+            self.categoryPickerTxt.text = self.categoryIncome[row]
             
         }
         
@@ -497,9 +527,15 @@ extension FormViewController : UIPickerViewDataSource {
              return self.incomeExpenseData.count
             
         }
-        else if pickerView == self.categoryDataPicker {
+        else if pickerView == self.categoryDataPicker && self.incomeExpendPickerTxt.text! == incomeExpenseData[0] {
             
-            return self.category.count
+            return self.categoryExpense.count
+            
+        }
+        
+        else if pickerView == self.categoryDataPicker && self.incomeExpendPickerTxt.text! == incomeExpenseData[1] {
+            
+            return self.categoryIncome.count
             
         }
         
@@ -514,9 +550,16 @@ extension FormViewController : UIPickerViewDataSource {
             return self.incomeExpenseData[row]
             
         }
-        else if pickerView == self.categoryDataPicker {
             
-            return self.category[row]
+        else if pickerView == self.categoryDataPicker && self.incomeExpendPickerTxt.text! == incomeExpenseData[0] {
+            
+            return self.categoryExpense[row]
+            
+        }
+            
+        else if pickerView == self.categoryDataPicker && self.incomeExpendPickerTxt.text! == incomeExpenseData[1] {
+            
+            return self.categoryIncome[row]
             
         }
         

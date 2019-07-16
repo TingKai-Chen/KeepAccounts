@@ -11,6 +11,8 @@
 		43FD17B522D5959A00E23978 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD17B422D5959A00E23978 /* SignUpViewController.swift */; };
 		71F4C1985F1BC49F07E5AC1D /* Pods_KeepAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A736988DB78244EFB0871CC7 /* Pods_KeepAccounts.framework */; };
 		8D30728122D78172005FE191 /* DataModal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D30727F22D78172005FE191 /* DataModal.xcdatamodeld */; };
+		8D6D1A6722DE1F8400238163 /* YearExpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D1A6622DE1F8400238163 /* YearExpendViewController.swift */; };
+		8D6D1A6922DE218800238163 /* YearIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6D1A6822DE218800238163 /* YearIncomeViewController.swift */; };
 		8D763F6222DB32EC00833A20 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D763F6122DB32EC00833A20 /* DetailCell.swift */; };
 		8D843F8E22D786DF00A8054D /* MyData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D843F8C22D786DF00A8054D /* MyData+CoreDataClass.swift */; };
 		8D843F8F22D786DF00A8054D /* MyData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D843F8D22D786DF00A8054D /* MyData+CoreDataProperties.swift */; };
@@ -22,7 +24,6 @@
 		8D9F3EC022D5C80600536AEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F3EBF22D5C80600536AEC /* LoginViewController.swift */; };
 		8D9F3EC222D5DDE300536AEC /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9F3EC122D5DDE300536AEC /* ResetPasswordViewController.swift */; };
 		8DBD560822DCC73000E9EF4D /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD560722DCC73000E9EF4D /* SetViewController.swift */; };
-		8DBD560A22DCC74600E9EF4D /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD560922DCC74600E9EF4D /* StatisticViewController.swift */; };
 		8DBD560C22DCC75800E9EF4D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD560B22DCC75800E9EF4D /* DetailViewController.swift */; };
 		8DD77F3B22BDFA9400768106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F3A22BDFA9400768106 /* AppDelegate.swift */; };
 		8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD77F3C22BDFA9400768106 /* ViewController.swift */; };
@@ -37,6 +38,8 @@
 		430CE6A022C45CC2006EB0CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		43FD17B422D5959A00E23978 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8D30728022D78172005FE191 /* DataModal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModal.xcdatamodel; sourceTree = "<group>"; };
+		8D6D1A6622DE1F8400238163 /* YearExpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearExpendViewController.swift; sourceTree = "<group>"; };
+		8D6D1A6822DE218800238163 /* YearIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearIncomeViewController.swift; sourceTree = "<group>"; };
 		8D763F6122DB32EC00833A20 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		8D843F8C22D786DF00A8054D /* MyData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8D843F8D22D786DF00A8054D /* MyData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyData+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -45,7 +48,6 @@
 		8D9F3EC122D5DDE300536AEC /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8D9F3EC322D5E8B600536AEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DBD560722DCC73000E9EF4D /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
-		8DBD560922DCC74600E9EF4D /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		8DBD560B22DCC75800E9EF4D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8DD77F3722BDFA9400768106 /* KeepAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD77F3A22BDFA9400768106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,8 +130,9 @@
 				8D843F9022D78B5200A8054D /* CoreDataHelper.swift */,
 				8D763F6122DB32EC00833A20 /* DetailCell.swift */,
 				8DBD560722DCC73000E9EF4D /* SetViewController.swift */,
-				8DBD560922DCC74600E9EF4D /* StatisticViewController.swift */,
 				8DBD560B22DCC75800E9EF4D /* DetailViewController.swift */,
+				8D6D1A6622DE1F8400238163 /* YearExpendViewController.swift */,
+				8D6D1A6822DE218800238163 /* YearIncomeViewController.swift */,
 			);
 			path = KeepAccounts;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				8DD77F5722BE0F2D00768106 /* MyData.swift in Sources */,
 				8D843F8F22D786DF00A8054D /* MyData+CoreDataProperties.swift in Sources */,
 				8DD77F5022BDFD6D00768106 /* DateHeader.swift in Sources */,
+				8D6D1A6922DE218800238163 /* YearIncomeViewController.swift in Sources */,
 				8DD77F5522BE0CFC00768106 /* Cell.swift in Sources */,
 				8D9F3EC222D5DDE300536AEC /* ResetPasswordViewController.swift in Sources */,
 				8D843F8E22D786DF00A8054D /* MyData+CoreDataClass.swift in Sources */,
@@ -274,7 +278,7 @@
 				8DD77F3B22BDFA9400768106 /* AppDelegate.swift in Sources */,
 				8D9F3EC022D5C80600536AEC /* LoginViewController.swift in Sources */,
 				8DBD560822DCC73000E9EF4D /* SetViewController.swift in Sources */,
-				8DBD560A22DCC74600E9EF4D /* StatisticViewController.swift in Sources */,
+				8D6D1A6722DE1F8400238163 /* YearExpendViewController.swift in Sources */,
 				430CE6A122C45CC2006EB0CD /* MapViewController.swift in Sources */,
 				8D763F6222DB32EC00833A20 /* DetailCell.swift in Sources */,
 			);
