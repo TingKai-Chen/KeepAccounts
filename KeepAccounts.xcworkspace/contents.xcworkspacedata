@@ -4,6 +4,3397 @@
    <FileRef
       location = "group:KeepAccounts.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:Pods"
+      name = "Pods">
+      <Group
+         location = "group:Pods/Charts"
+         name = "Charts">
+         <Group
+            location = "group:Pods/Charts"
+            name = "Core">
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Jobs/AnimatedMoveViewJob.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Jobs/AnimatedZoomViewJob.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Animation/Animator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/AxisBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/AxisRendererBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BarChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BarChartDataEntry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/BarChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/BarChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/BarChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/BarHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/BarLineChartViewBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BarLineScatterCandleBubbleChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/BarLineScatterCandleBubbleChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BarLineScatterCandleBubbleChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/BarLineScatterCandleBubbleRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BubbleChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BubbleChartDataEntry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/BubbleChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/BubbleChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/BubbleChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/BubbleChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/CandleChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/CandleChartDataEntry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/CandleChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/CandleChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/CandleStickChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/CandleStickChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Animation/ChartAnimationEasing.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/ChartBaseDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/ChartColorTemplates.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartDataEntry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartDataEntryBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/ChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/ChartDataRendererBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/ChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/ChartHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/ChartLimitLine.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/ChartUtils.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/ChartViewBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/ChevronDownShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/ChevronUpShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/CircleShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/CombinedChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/CombinedChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/CombinedChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/CombinedChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/CombinedHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/ComponentBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/CrossShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Filters/DataApproximator.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Filters/DataApproximator+N.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Formatters/DefaultAxisValueFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Formatters/DefaultFillFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Formatters/DefaultValueFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/Description.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/Fill.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/Highlight.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/HorizontalBarChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/HorizontalBarChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/HorizontalBarHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Formatters/IAxisValueFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/IBarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/IBarLineScatterCandleBubbleChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/IBubbleChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/ICandleChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/IChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Formatters/IFillFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/IHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/ILineChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/ILineRadarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/ILineScatterCandleRadarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/IMarker.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Formatters/IndexAxisValueFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/IPieChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/IRadarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Interfaces/IScatterChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/IShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Formatters/IValueFormatter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/Legend.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/LegendEntry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/LegendRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/LineChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/LineChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/LineChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/LineChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/LineChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/LineRadarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/LineRadarRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/LineScatterCandleRadarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/LineScatterCandleRadarRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/MarkerImage.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/MarkerView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Jobs/MoveViewJob.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/PieChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/PieChartDataEntry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/PieChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/PieChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/PieChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/PieHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/PieRadarChartViewBase.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/PieRadarHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/Platform.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/Platform+Accessibility.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/RadarChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/RadarChartDataEntry.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/RadarChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/RadarChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/RadarChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/RadarHighlighter.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Highlight/Range.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Renderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/ScatterChartData.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Interfaces/ScatterChartDataProvider.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Data/Implementations/Standard/ScatterChartDataSet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/ScatterChartRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Charts/ScatterChartView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/SquareShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/Transformer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/TransformerHorizontalBarChart.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/TriangleShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Utils/ViewPortHandler.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Jobs/ViewPortJob.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/XAxis.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/XAxisRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/XAxisRendererRadarChart.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/Scatter/XShapeRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Components/YAxis.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/YAxisRenderer.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Renderers/YAxisRendererRadarChart.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Charts/Source/Charts/Jobs/ZoomViewJob.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/Charts/../Target Support Files/Charts"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/Charts/Charts.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Charts/Charts.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Charts/Charts-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Charts/Charts-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Charts/Charts-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Charts/Charts-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/ChartsRealm"
+         name = "ChartsRealm">
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmBarDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmBarLineScatterCandleBubbleDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmBaseDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmBubbleDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmCandleDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmLineDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmLineRadarDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmLineScatterCandleRadarDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmPieDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmRadarDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Classes/Data/RealmScatterDataSet.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/ChartsRealm/ChartsRealm/Supporting Files/RLMSupport.swift">
+         </FileRef>
+         <Group
+            location = "group:Pods/ChartsRealm/../Target Support Files/ChartsRealm"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/ChartsRealm/ChartsRealm.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/ChartsRealm/ChartsRealm.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/ChartsRealm/ChartsRealm-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/ChartsRealm/ChartsRealm-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/ChartsRealm/ChartsRealm-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/ChartsRealm/ChartsRealm-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/Firebase"
+         name = "Firebase">
+         <Group
+            location = "group:Pods/Firebase"
+            name = "CoreOnly">
+            <FileRef
+               location = "group:Pods/Firebase/CoreOnly/Sources/Firebase.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/Firebase/../Target Support Files/Firebase"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/Firebase/Firebase.xcconfig">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/FirebaseAnalytics"
+         name = "FirebaseAnalytics">
+         <Group
+            location = "group:Pods/FirebaseAnalytics"
+            name = "Frameworks">
+            <FileRef
+               location = "group:Pods/FirebaseAnalytics/Frameworks/FIRAnalyticsConnector.framework">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/FirebaseAnalytics/Frameworks/FirebaseCoreDiagnostics.framework">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/FirebaseAnalytics/../Target Support Files/FirebaseAnalytics"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.xcconfig">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/FirebaseAuth"
+         name = "FirebaseAuth">
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRActionCodeSettings.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRActionCodeSettings.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAdditionalUserInfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRAdditionalUserInfo.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRAdditionalUserInfo_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuth.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuth.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuth_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAPNSToken.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAPNSToken.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAPNSTokenManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAPNSTokenManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthAPNSTokenType.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAppCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAppCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAppCredentialManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthAppCredentialManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRAuthBackend.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRAuthBackend.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/FIRAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/FIRAuthCredential_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthDataResult.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthDataResult.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthDataResult_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthDefaultUIDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthDefaultUIDelegate.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthDispatcher.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthDispatcher.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthErrors.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthErrorUtils.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthErrorUtils.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthExceptionUtils.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthExceptionUtils.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthGlobalWorkQueue.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthGlobalWorkQueue.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthInternalErrors.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Storage/FIRAuthKeychain.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Storage/FIRAuthKeychain.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthNotificationManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthNotificationManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthOperationType.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/FIRAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRAuthRequestConfiguration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRAuthRequestConfiguration.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRAuthRPCRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRAuthRPCResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthSerialTaskQueue.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthSerialTaskQueue.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthSettings.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthSettings.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthStoredUserManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRAuthStoredUserManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthTokenResult.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthTokenResult.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Auth/FIRAuthTokenResult_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthUIDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthURLPresenter.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthURLPresenter.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Storage/FIRAuthUserDefaultsStorage.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Storage/FIRAuthUserDefaultsStorage.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthWebUtils.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthWebUtils.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthWebView.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthWebView.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthWebViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/FIRAuthWebViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRCreateAuthURIRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRCreateAuthURIRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRCreateAuthURIResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRCreateAuthURIResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRDeleteAccountRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRDeleteAccountRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRDeleteAccountResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRDeleteAccountResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuth.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuthVersion.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/FirebaseAuthVersion.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIREmailAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Email/FIREmailAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIREmailLinkSignInRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIREmailLinkSignInRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIREmailLinkSignInResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIREmailLinkSignInResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Email/FIREmailPasswordAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Email/FIREmailPasswordAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Facebook/FIRFacebookAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Facebook/FIRFacebookAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRFacebookAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Facebook/FIRFacebookAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRFederatedAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/GameCenter/FIRGameCenterAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/GameCenter/FIRGameCenterAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGameCenterAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/GameCenter/FIRGameCenterAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetAccountInfoRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetAccountInfoRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetAccountInfoResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetAccountInfoResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetOOBConfirmationCodeRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetOOBConfirmationCodeRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetOOBConfirmationCodeResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetOOBConfirmationCodeResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetProjectConfigRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetProjectConfigRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetProjectConfigResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRGetProjectConfigResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/GitHub/FIRGitHubAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/GitHub/FIRGitHubAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGitHubAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/GitHub/FIRGitHubAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Google/FIRGoogleAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Google/FIRGoogleAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGoogleAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Google/FIRGoogleAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRIdentityToolkitRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/FIRIdentityToolkitRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIROAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/OAuth/FIROAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/OAuth/FIROAuthCredential_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIROAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/OAuth/FIROAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Phone/FIRPhoneAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Phone/FIRPhoneAuthCredential_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Phone/FIRPhoneAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRResetPasswordRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRResetPasswordRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRResetPasswordResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRResetPasswordResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSecureTokenRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSecureTokenRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSecureTokenResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSecureTokenResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRSecureTokenService.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/SystemService/FIRSecureTokenService.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSendVerificationCodeRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSendVerificationCodeRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSendVerificationCodeResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSendVerificationCodeResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSetAccountInfoRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSetAccountInfoRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSetAccountInfoResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSetAccountInfoResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignInWithGameCenterRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignInWithGameCenterRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignInWithGameCenterResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignInWithGameCenterResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignUpNewUserRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignUpNewUserRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignUpNewUserResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRSignUpNewUserResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Twitter/FIRTwitterAuthCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Twitter/FIRTwitterAuthCredential.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRTwitterAuthProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/AuthProvider/Twitter/FIRTwitterAuthProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUser.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRUser.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRUser_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUserInfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRUserInfoImpl.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRUserInfoImpl.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUserMetadata.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRUserMetadata.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/User/FIRUserMetadata_Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyAssertionRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyAssertionRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyAssertionResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyAssertionResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyClientRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyClientRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyClientResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyClientResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyCustomTokenRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyCustomTokenRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyCustomTokenResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyCustomTokenResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPasswordRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPasswordRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPasswordResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPasswordResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPhoneNumberRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPhoneNumberRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPhoneNumberResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Backend/RPC/FIRVerifyPhoneNumberResponse.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/NSData+FIRBase64.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseAuth/Firebase/Auth/Source/Utilities/NSData+FIRBase64.m">
+         </FileRef>
+         <Group
+            location = "group:Pods/FirebaseAuth/../Target Support Files/FirebaseAuth"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseAuth/FirebaseAuth.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseAuth/FirebaseAuth.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseAuth/FirebaseAuth-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseAuth/FirebaseAuth-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseAuth/FirebaseAuth-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/FirebaseAuthInterop"
+         name = "FirebaseAuthInterop">
+         <FileRef
+            location = "group:Pods/FirebaseAuthInterop/Interop/Auth/Public/FIRAuthInterop.h">
+         </FileRef>
+         <Group
+            location = "group:Pods/FirebaseAuthInterop/../Target Support Files/FirebaseAuthInterop"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseAuthInterop/FirebaseAuthInterop.xcconfig">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/FirebaseCore"
+         name = "FirebaseCore">
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRAnalyticsConfiguration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRAnalyticsConfiguration.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRApp.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRAppAssociationRegistration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRAppAssociationRegistration.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRBundleUtil.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRBundleUtil.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRComponent.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRComponent.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainer.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRComponentContainer.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainerInternal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRComponentType.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRComponentType.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRConfiguration.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRConfigurationInternal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRDependency.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRDependency.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRErrors.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRLibrary.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRLogger.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIROptions.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIROptionsInternal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/Private/FIRVersion.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseCore/Firebase/Core/FIRVersion.m">
+         </FileRef>
+         <Group
+            location = "group:Pods/FirebaseCore/../Target Support Files/FirebaseCore"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseCore/FirebaseCore.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseCore/FirebaseCore.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseCore/FirebaseCore-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseCore/FirebaseCore-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseCore/FirebaseCore-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/FirebaseDatabase"
+         name = "FirebaseDatabase">
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/Wrap-leveldb/APLevelDB.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/Wrap-leveldb/APLevelDB.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FAckUserWrite.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FAckUserWrite.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FArraySortedDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FArraySortedDictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FAtomicNumber.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FAtomicNumber.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Login/FAuthTokenProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Login/FAuthTokenProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/fbase64.c">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/fbase64.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FCacheNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FCacheNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FCachePolicy.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FCachePolicy.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FCancelEvent.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FCancelEvent.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FChange.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FChange.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FChildChangeAccumulator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FChildChangeAccumulator.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FChildEventRegistration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FChildEventRegistration.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FChildrenNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FChildrenNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FClock.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FClock.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FCompleteChildSource.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FCompoundHash.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FCompoundHash.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FCompoundWrite.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FCompoundWrite.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Realtime/FConnection.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Realtime/FConnection.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Constants/FConstants.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Constants/FConstants.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FDataEvent.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FDataEvent.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FEmptyNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FEmptyNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FEvent.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FEventEmitter.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FEventEmitter.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FEventGenerator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FEventGenerator.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FEventRaiser.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FEventRaiser.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FEventRegistration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FImmutableSortedDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FImmutableSortedDictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FImmutableSortedSet.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FImmutableSortedSet.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FImmutableTree.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FImmutableTree.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FIndex.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FIndex.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FIndexedFilter.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FIndexedFilter.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FIndexedNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FIndexedNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabase.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabase.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDatabase_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseComponent.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseComponent.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseConfig.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseConfig.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FIRDatabaseConfig_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseQuery.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseQuery.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDatabaseQuery_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseReference.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FIRDatabaseReference.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDatabaseReference_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataSnapshot.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRDataSnapshot.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDataSnapshot_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FirebaseDatabase.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRMutableData.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRMutableData.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRMutableData_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Login/FIRNoopAuthTokenProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Login/FIRNoopAuthTokenProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FIRRetryHelper.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FIRRetryHelper.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRServerValue.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRServerValue.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Public/FIRTransactionResult.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/FIRTransactionResult.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRTransactionResult_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FKeepSyncedEventRegistration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FKeepSyncedEventRegistration.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FKeyIndex.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FKeyIndex.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FLeafNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FLeafNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FLevelDBStorageEngine.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FLevelDBStorageEngine.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FLimitedFilter.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FLimitedFilter.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FListenComplete.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FListenComplete.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FListenProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FListenProvider.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBEmptyNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBEmptyNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBValueNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FLLRBValueNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FMaxNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FMaxNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FMerge.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FMerge.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FNamedNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FNamedNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FNextPushId.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FNextPushId.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FNodeFilter.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FOperation.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FOperationSource.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FOperationSource.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FOverwrite.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Operation/FOverwrite.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FPathIndex.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FPathIndex.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FPendingPut.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FPendingPut.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FPersistenceManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FPersistenceManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FPersistentConnection.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FPersistentConnection.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FPriorityIndex.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FPriorityIndex.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FPruneForest.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FPruneForest.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FQuerySpec.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FQuerySpec.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FRangedFilter.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FRangedFilter.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRangeMerge.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRangeMerge.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRepo.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRepo.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRepo_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRepoManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FRepoManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FServerValues.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FServerValues.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSnapshotHolder.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSnapshotHolder.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FSnapshotUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Snapshot/FSnapshotUtilities.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSparseSnapshotTree.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSparseSnapshotTree.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/FSRWebSocket.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/FSRWebSocket.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FStorageEngine.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FStringUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FStringUtilities.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSyncPoint.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSyncPoint.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSyncTree.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FSyncTree.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FTrackedQuery.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FTrackedQuery.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FTrackedQueryManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Persistence/FTrackedQueryManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FTransformedEnumerator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FTransformedEnumerator.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FTree.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FTree.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FTreeNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FTreeNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FTreeSortedDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FTreeSortedDictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FTreeSortedDictionaryEnumerator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/FImmutableSortedDictionary/FImmutableSortedDictionary/FTreeSortedDictionaryEnumerator.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleBoolBlock.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleBoolBlock.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleCallbackStatus.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleCallbackStatus.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleFirebase.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleFirebase.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleNodePath.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleNodePath.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleObjectNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleObjectNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleObjects.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleObjects.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleOnDisconnect.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleOnDisconnect.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTuplePathValue.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTuplePathValue.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleRemovedQueriesEvents.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleRemovedQueriesEvents.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleSetIdPath.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleSetIdPath.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleStringNode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleStringNode.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleTransaction.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleTransaction.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleTSN.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleTSN.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleUserCallback.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleUserCallback.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FTypedefs.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FValidation.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Utilities/FValidation.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FValueEventRegistration.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FValueEventRegistration.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FValueIndex.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FValueIndex.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FView.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FView.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FViewCache.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/View/FViewCache.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FViewProcessor.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FViewProcessor.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FViewProcessorResult.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/FViewProcessorResult.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Realtime/FWebSocketConnection.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Realtime/FWebSocketConnection.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FWriteRecord.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FWriteRecord.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FWriteTree.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FWriteTree.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FWriteTreeRef.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/Core/FWriteTreeRef.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/NSData+SRB64Additions.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/NSData+SRB64Additions.m">
+         </FileRef>
+         <Group
+            location = "group:Pods/FirebaseDatabase/../Target Support Files/FirebaseDatabase"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/FirebaseInstanceID"
+         name = "FirebaseInstanceID">
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FirebaseInstanceID.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRIMessageCode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FIRInstanceID.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID+Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID+Private.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/Private/FIRInstanceID_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAPNSInfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAPNSInfo.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthKeyChain.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthKeyChain.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthService.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthService.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDBackupExcludedPlist.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDBackupExcludedPlist.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences+Internal.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences+Internal.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinService.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinService.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinStore.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinStore.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCombinedHandler.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCombinedHandler.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDConstants.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDConstants.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDDefines.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeychain.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeychain.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPair.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPair.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairStore.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairStore.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairUtilities.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDLogger.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDLogger.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStore.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStore.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStringEncoding.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStringEncoding.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenDeleteOperation.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenDeleteOperation.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenFetchOperation.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenFetchOperation.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenInfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenInfo.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenOperation.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenOperation.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenOperation+Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenStore.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenStore.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDURLQueryItem.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDURLQueryItem.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDUtilities.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDVersionUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDVersionUtilities.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/NSError+FIRInstanceID.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/FirebaseInstanceID/Firebase/InstanceID/NSError+FIRInstanceID.m">
+         </FileRef>
+         <Group
+            location = "group:Pods/FirebaseInstanceID/../Target Support Files/FirebaseInstanceID"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/GoogleAppMeasurement"
+         name = "GoogleAppMeasurement">
+         <Group
+            location = "group:Pods/GoogleAppMeasurement"
+            name = "Frameworks">
+            <FileRef
+               location = "group:Pods/GoogleAppMeasurement/Frameworks/GoogleAppMeasurement.framework">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleAppMeasurement/../Target Support Files/GoogleAppMeasurement"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.xcconfig">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/GoogleUtilities"
+         name = "GoogleUtilities">
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "AppDelegateSwizzler">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Private/GULApplication.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Common/GULLoggerCodes.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "Environment">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "Logger">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Logger/Private/GULLogger.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Logger/GULLogger.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GULLoggerLevel.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "MethodSwizzler">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/Private/GULOriginalIMPConvenienceMacros.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/Private/GULSwizzler.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/GULSwizzler.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "Network">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULMutableDictionary.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/GULMutableDictionary.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetwork.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/GULNetwork.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkConstants.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/GULNetworkConstants.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkLoggerProtocol.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkMessageCode.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkURLSession.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Network/GULNetworkURLSession.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "NSData+zlib">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/GULNSData+zlib.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/GULNSData+zlib.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "Reachability">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityChecker.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Reachability/GULReachabilityChecker.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityMessageCode.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities/../Target Support Files/GoogleUtilities"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/GoogleUtilities/GoogleUtilities.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GoogleUtilities/GoogleUtilities.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GoogleUtilities/GoogleUtilities-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GoogleUtilities/GoogleUtilities-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GoogleUtilities/GoogleUtilities-umbrella.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GoogleUtilities"
+            name = "UserDefaults">
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/UserDefaults/Private/GULUserDefaults.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GoogleUtilities/GoogleUtilities/UserDefaults/GULUserDefaults.m">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/GTMSessionFetcher"
+         name = "GTMSessionFetcher">
+         <Group
+            location = "group:Pods/GTMSessionFetcher"
+            name = "Core">
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionFetcher.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/GTMSessionFetcher/../Target Support Files/GTMSessionFetcher"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/JTAppleCalendar"
+         name = "JTAppleCalendar">
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/CalendarEnums.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/CalendarStructs.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/GlobalFunctionsAndExtensions.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/InternalActionFunctions.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/InternalQueryFunctions.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTAppleCalendarDelegateProtocol.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTAppleCalendarLayout.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTAppleCalendarLayoutProtocol.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTAppleCalendarVariables.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTAppleCalendarView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTAppleCell.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTAppleCollectionReusableView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/JTCalendarProtocols.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/UICollectionViewDelegates.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/UIScrollViewDelegates.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/JTAppleCalendar/Sources/UserInteractionFunctions.swift">
+         </FileRef>
+         <Group
+            location = "group:Pods/JTAppleCalendar/../Target Support Files/JTAppleCalendar"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/JTAppleCalendar/JTAppleCalendar.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/JTAppleCalendar/JTAppleCalendar-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/JTAppleCalendar/JTAppleCalendar-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/JTAppleCalendar/JTAppleCalendar-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/JTAppleCalendar/JTAppleCalendar-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/leveldb-library"
+         name = "leveldb-library">
+         <FileRef
+            location = "group:Pods/leveldb-library/util/arena.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/arena.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/port/atomic_pointer.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/block.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/block.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/block_builder.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/block_builder.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/bloom.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/builder.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/builder.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/c.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/c.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/cache.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/cache.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/coding.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/coding.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/comparator.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/comparator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/crc32c.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/crc32c.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/db.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/db_impl.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/db_impl.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/db_iter.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/db_iter.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/dbformat.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/dbformat.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/dumpfile.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/dumpfile.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/env.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/env.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/env_posix.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/env_posix_test_helper.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/filename.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/filename.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/filter_block.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/filter_block.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/filter_policy.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/filter_policy.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/format.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/format.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/hash.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/hash.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/histogram.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/histogram.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/iterator.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/iterator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/iterator_wrapper.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/log_format.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/log_reader.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/log_reader.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/log_writer.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/log_writer.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/logging.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/logging.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/memtable.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/memtable.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/merger.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/merger.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/mutexlock.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/options.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/options.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/port/port.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/port/port_example.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/port/port_posix.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/port/port_posix.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/port/port_posix_sse.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/posix_logger.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/random.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/repair.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/skiplist.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/slice.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/snapshot.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/status.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/status.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/table.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/table.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/table_builder.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/table_builder.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/table_cache.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/table_cache.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/testharness.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/testharness.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/testutil.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/util/testutil.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/port/thread_annotations.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/two_level_iterator.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/table/two_level_iterator.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/version_edit.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/version_edit.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/version_set.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/version_set.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/write_batch.cc">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/include/leveldb/write_batch.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/leveldb-library/db/write_batch_internal.h">
+         </FileRef>
+         <Group
+            location = "group:Pods/leveldb-library/../Target Support Files/leveldb-library"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/leveldb-library/leveldb-library.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/leveldb-library/leveldb-library.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/leveldb-library/leveldb-library-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/leveldb-library/leveldb-library-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/leveldb-library/leveldb-library-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/leveldb-library/leveldb-library-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/nanopb"
+         name = "nanopb">
+         <FileRef
+            location = "group:Pods/nanopb/pb.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/nanopb/pb_common.c">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/nanopb/pb_common.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/nanopb/pb_decode.c">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/nanopb/pb_decode.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/nanopb/pb_encode.c">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/nanopb/pb_encode.h">
+         </FileRef>
+         <Group
+            location = "group:Pods/nanopb"
+            name = "decode">
+         </Group>
+         <Group
+            location = "group:Pods/nanopb"
+            name = "encode">
+         </Group>
+         <Group
+            location = "group:Pods/nanopb/../Target Support Files/nanopb"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/nanopb/nanopb.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/nanopb/nanopb.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/nanopb/nanopb-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/nanopb/nanopb-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/nanopb/nanopb-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/nanopb/nanopb-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/Realm"
+         name = "Realm">
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/binding_callback_thread_observer.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/collection_change_builder.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/collection_notifications.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/collection_notifier.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/apple/external_commit_helper.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/util/fifo.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/index_set.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/apple/keychain_helper.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/list.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/list_notifier.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/impl/apple/network_reachability_observer.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/NSError+RLMSync.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/object.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/object_notifier.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/object_schema.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/object_store.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/partial_sync.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/placeholder.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/primitive_list_notifier.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/realm_coordinator.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/results.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/results_notifier.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMAccessor.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMAccessor.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMAnalytics.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMArray.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMArray_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMClassInfo.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMCollection.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMCollection_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMConstants.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMJSONModels.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMListBase.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMListBase.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMManagedArray.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMMigration.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMNetworkClient.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMObject.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMObject_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMObjectBase.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMObjectBase_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMObjectSchema.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMObjectSchema_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMObjectStore.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMObjectStore.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMObservation.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMOptionalBase.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMOptionalBase.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMPredicateUtil.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMProperty.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMProperty_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMQueryUtil.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMRealm.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMRealm+Sync.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMRealm_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMRealmConfiguration.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMRealmConfiguration+Sync.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMRealmConfiguration_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMRealmUtil.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMResults.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMResults_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSchema.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMSchema_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSwiftSupport.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncConfiguration.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMSyncConfiguration_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncCredentials.m">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncManager.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncPermission.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncPermissionResults.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncSession.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncSessionRefreshHandle.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncSubscription.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncUser.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMSyncUtil.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/include/RLMSyncUtil_Private.h">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMThreadSafeReference.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMUpdateChecker.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/RLMUtil.mm">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/schema.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/shared_realm.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/sync_config.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/impl/sync_file.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/sync_manager.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/impl/sync_metadata.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/sync_permission.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/sync_session.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/sync_user.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/impl/apple/system_configuration.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/thread_safe_reference.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/transact_log_handler.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/util/uuid.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/impl/weak_realm_notifier.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/Realm/Realm/ObjectStore/src/sync/impl/work_queue.cpp">
+         </FileRef>
+         <Group
+            location = "group:Pods/Realm"
+            name = "Frameworks">
+            <FileRef
+               location = "group:Pods/Realm/core/librealmcore-ios.a">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/Realm"
+            name = "Headers">
+            <FileRef
+               location = "group:Pods/Realm/include/NSError+RLMSync.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/Realm.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMArray.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMCollection.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMConstants.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMMigration.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMObject.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMObjectBase.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMObjectBase_Dynamic.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMObjectSchema.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMPlatform.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMRealm.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMRealm+Sync.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMRealm_Dynamic.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMRealmConfiguration.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMRealmConfiguration+Sync.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMResults.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSchema.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncConfiguration.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncCredentials.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncManager.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncPermission.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncSession.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncSubscription.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncUser.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMSyncUtil.h">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Realm/include/RLMThreadSafeReference.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Pods/Realm/../Target Support Files/Realm"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/Realm/Realm.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Realm/Realm.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Realm/Realm-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Realm/Realm-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/Realm/Realm-prefix.pch">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Pods/RealmSwift"
+         name = "RealmSwift">
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Aliases.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Error.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/LinkingObjects.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/List.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Migration.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Object.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/ObjectiveCSupport.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/ObjectSchema.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Optional.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Property.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Realm.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/RealmCollection.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/RealmConfiguration.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Results.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Schema.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/SortDescriptor.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/SwiftVersion.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Sync.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/ThreadSafeReference.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Pods/RealmSwift/RealmSwift/Util.swift">
+         </FileRef>
+         <Group
+            location = "group:Pods/RealmSwift/../Target Support Files/RealmSwift"
+            name = "Support Files">
+            <FileRef
+               location = "group:Pods/Target Support Files/RealmSwift/RealmSwift.modulemap">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/RealmSwift/RealmSwift.xcconfig">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/RealmSwift/RealmSwift-dummy.m">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/RealmSwift/RealmSwift-Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/RealmSwift/RealmSwift-prefix.pch">
+            </FileRef>
+            <FileRef
+               location = "group:Pods/Target Support Files/RealmSwift/RealmSwift-umbrella.h">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

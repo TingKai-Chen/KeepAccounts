@@ -70,7 +70,7 @@ extension DetailViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 220
+        return 190
         
     }
     
@@ -93,6 +93,12 @@ extension DetailViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetilCell
+        
+        cell.backgroundColor = UIColor(rgb: 0xC9FFFF)
+        
+        cell.layer.borderWidth = 1.0
+        
+        cell.layer.borderColor = UIColor.white.cgColor
         
         cell.projectLab.text = self.allDataArray[indexPath.row].projectName
         

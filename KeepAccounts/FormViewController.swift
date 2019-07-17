@@ -60,6 +60,8 @@ class FormViewController: UIViewController {
     
     @IBOutlet var cancelBtn: UIButton!
     
+    @IBOutlet var subView: UIView!
+    
     var categoryExpense = ["飲食","交通","通訊","服飾","居住","娛樂","日常","醫療","教育","保險","社交","健身美容","孝順養育","其他"]
     
     var categoryIncome = ["工資","獎金","外快","報銷","投資","其他"]
@@ -99,17 +101,19 @@ class FormViewController: UIViewController {
         self.layoutBtn()
         
         self.setCategoryPicker()
+        
+        self.navigationItem.title = "開始記帳"
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+
         super.viewWillAppear(animated)
         
-        self.createGradientLayer()
-        
+        self.subView.backgroundColor = UIColor(rgb: 0xC9FFFF)
+
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "MapSegue" {
@@ -221,19 +225,19 @@ class FormViewController: UIViewController {
         
     }
     
-    private func createGradientLayer() {
-        
-        let gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = self.view.bounds
-        
-        gradientLayer.colors = [UIColor(rgb:0xfad0c4).cgColor, UIColor(rgb:0xffd1ff).cgColor]
-        
-        self.view.layer.addSublayer(gradientLayer)
-        
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
-    }
+//    private func createGradientLayer() {
+//
+//        let gradientLayer = CAGradientLayer()
+//
+//        gradientLayer.frame = self.view.bounds
+//
+//        gradientLayer.colors = [UIColor(rgb:0xfad0c4).cgColor, UIColor(rgb:0xffd1ff).cgColor]
+//
+//        self.view.layer.addSublayer(gradientLayer)
+//
+//        self.view.layer.insertSublayer(gradientLayer, at: 0)
+//
+//    }
     
     private func setLayout() {
         
@@ -438,11 +442,11 @@ class FormViewController: UIViewController {
         
         self.cancelBtn.clipsToBounds = true
         
-        self.cancelBtn.layer.cornerRadius = 10
+        self.cancelBtn.layer.cornerRadius = self.cancelBtn.frame.height/2
         
         self.determineBtn.clipsToBounds = true
         
-        self.determineBtn.layer.cornerRadius = 10
+        self.determineBtn.layer.cornerRadius = self.determineBtn.frame.height/2
         
     }
     

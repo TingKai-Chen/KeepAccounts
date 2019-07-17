@@ -267,15 +267,17 @@ class ViewController: UIViewController {
     
     private func createGradientLayer() {
         
-        let gradientLayer = CAGradientLayer()
+//        let gradientLayer = CAGradientLayer()
+//
+//        gradientLayer.frame = self.view.bounds
+//
+//        gradientLayer.colors = [UIColor(rgb:0xfdfcfb).cgColor, UIColor(rgb:0xe2d1c3).cgColor]
+//
+//        self.view.layer.addSublayer(gradientLayer)
+//
+//        self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-        gradientLayer.frame = self.view.bounds
-        
-        gradientLayer.colors = [UIColor(rgb:0xfdfcfb).cgColor, UIColor(rgb:0xe2d1c3).cgColor]
-        
-        self.view.layer.addSublayer(gradientLayer)
-        
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        self.view.backgroundColor = UIColor.white
         
     }
     
@@ -287,9 +289,15 @@ class ViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = self.leftBarButton
        
-        self.navigationController?.navigationBar.barTintColor = UIColor(rgb: 0xffffff)
+        self.navigationController?.navigationBar.barTintColor = UIColor(rgb: 0x009494)
         
-        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = .white
+        
+        self.navigationItem.title = "DayBook"
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
 
         let image2 = UIImage(named: "plus")
         
@@ -336,7 +344,11 @@ class ViewController: UIViewController {
         items.append(setBtnItem)
         
         self.toolBar.items = items
-
+        
+        self.toolBar.barTintColor = UIColor(rgb: 0x009494)
+        
+        self.toolBar.tintColor = UIColor.white
+        
     }
     
     private func setPrortocol() {
@@ -361,7 +373,7 @@ class ViewController: UIViewController {
         
         self.calendarView.layer.borderWidth = 1
         
-        self.calendarView.layer.borderColor = UIColor(rgb: 0xff0000).cgColor
+        self.calendarView.layer.borderColor = UIColor(rgb: 0x00D6D6).cgColor
 
         self.calendarView.layer.shadowColor = UIColor.darkGray.cgColor
 
@@ -407,27 +419,20 @@ class ViewController: UIViewController {
 //
 //        self.totalPriceNameLab.sizeToFit()
     
-        let label = UILabel()
+       
 
-        label.text = "每日總額:"
+        self.totalPriceNameLab.text = "每日總額:"
 
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        self.totalPriceNameLab.font = UIFont.boldSystemFont(ofSize: 24)
 
-        label.sizeToFit()
-
-        let gradientLayerLab = CAGradientLayer()
-
-        gradientLayerLab.frame = self.totalPriceNameLab.bounds
-
-        gradientLayerLab.colors = [UIColor(rgb:0x00e3e3).cgColor, UIColor(rgb:0xff9224).cgColor]
+        self.totalPriceNameLab.sizeToFit()
 
         self.totalPriceNameLab.clipsToBounds = false
-
-        self.totalPriceNameLab.layer.addSublayer(gradientLayerLab)
-
-        self.totalPriceNameLab.mask = label
+        
+        self.totalPriceNameLab.textColor = UIColor(rgb: 0x009494)
         
     }
+
     
     func queryFromCoreData () {
         
@@ -493,7 +498,7 @@ class ViewController: UIViewController {
     
     @objc func setBtn() {
         
-        
+        self.performSegue(withIdentifier: "setSegue", sender: nil)
         
     }
     
@@ -685,7 +690,7 @@ extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        cell.backgroundColor = UIColor(rgb: 0xffffff)
+        cell.backgroundColor = UIColor(rgb: 0xC9FFFF)
         
     }
     
@@ -747,6 +752,10 @@ extension ViewController : UITableViewDataSource {
             cell.roundLab.text = "無填寫此筆資料"
             
         }
+        
+        cell.layer.borderWidth = 1.0
+    
+        cell.layer.borderColor = UIColor.white.cgColor
         
         return cell
 
