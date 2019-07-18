@@ -44,12 +44,20 @@ class MonthIncomeViewController: UIViewController {
         
         self.updateChartData()
         
-        self.yearLab.text = "\(self.year)年"
+        self.yearLab.text = "西元 \(self.year) 年"
         
         self.monthLab.text = "\(self.startMonth)月"
         
-        self.pieChart.backgroundColor = UIColor(rgb:0xBFFFFF)
+        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
+        
+        self.view.backgroundColor = UIColor(rgb:0xD4FFD4)
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        self.tabBarController?.navigationItem.title = "月收入"
+        
     }
     
     func updateChartData() {
@@ -144,7 +152,7 @@ class MonthIncomeViewController: UIViewController {
         
         self.year += 1
         
-        self.yearLab.text = "\(self.year)年"
+        self.yearLab.text = "西元 \(self.year) 年"
         
         self.numberOfDownloadsDataEntries = []
         
@@ -158,7 +166,7 @@ class MonthIncomeViewController: UIViewController {
         
         self.year -= 1
         
-        self.yearLab.text = "\(self.year)年"
+        self.yearLab.text = "西元 \(self.year) 年"
         
         self.numberOfDownloadsDataEntries = []
         

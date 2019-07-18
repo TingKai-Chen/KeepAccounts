@@ -46,10 +46,18 @@ class YearExpendViewController: UIViewController {
         
         self.updateChartData()
 
-        self.yearLab.text = "\(year)年"
+        self.yearLab.text = "西元       \(year) 年"
         
-        self.pieChart.backgroundColor = UIColor(rgb:0xBFFFFF)
+        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
         
+        self.view.backgroundColor = UIColor(rgb:0xD4FFD4) 
+        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        
+       self.tabBarController?.navigationItem.title = "年支出"
+    
     }
     
     func updateChartData() {
@@ -67,7 +75,7 @@ class YearExpendViewController: UIViewController {
         self.pieChart.data = chartData
         
     }
-    
+
     func queryFromCoreData () {
         
         self.startDate = self.formatter.date(from: "\(self.startYear)-01-01")!
@@ -180,7 +188,7 @@ class YearExpendViewController: UIViewController {
         
         self.endYear -= 1
         
-        self.yearLab.text = "\(self.year)年"
+        self.yearLab.text = "西元       \(year) 年"
         
         self.numberOfDownloadsDataEntries = []
         
@@ -200,7 +208,7 @@ class YearExpendViewController: UIViewController {
         
         self.numberOfDownloadsDataEntries = []
         
-        self.yearLab.text = "\(self.year)年"
+        self.yearLab.text = "西元       \(year) 年"
         
         self.queryFromCoreData()
         

@@ -45,10 +45,18 @@ class YearIncomeViewController: UIViewController {
         
         self.updateChartData()
         
-        self.yearLab.text = "\(year)年"
+        self.yearLab.text = "西元       \(year) 年"
         
-        self.pieChart.backgroundColor = UIColor(rgb:0xBFFFFF)
-
+        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
+        
+        self.view.backgroundColor = UIColor(rgb:0xD4FFD4)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        self.tabBarController?.navigationItem.title = "年收入"
+        
     }
     
     func updateChartData() {
@@ -149,7 +157,7 @@ class YearIncomeViewController: UIViewController {
         
         self.endYear -= 1
         
-        self.yearLab.text = "\(self.year)年"
+       self.yearLab.text = "西元       \(year) 年"
         
         self.numberOfDownloadsDataEntries = []
         
@@ -169,7 +177,7 @@ class YearIncomeViewController: UIViewController {
         
         self.numberOfDownloadsDataEntries = []
         
-        self.yearLab.text = "\(self.year)年"
+        self.yearLab.text = "西元       \(year) 年"
         
         self.queryFromCoreData()
         

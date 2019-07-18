@@ -103,6 +103,8 @@ class FormViewController: UIViewController {
         self.setCategoryPicker()
         
         self.navigationItem.title = "開始記帳"
+        
+        self.view.backgroundColor = UIColor(rgb:0xD4FFD4)
 
     }
     

@@ -10,4 +10,14 @@ class DateCell : JTAppleCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var pointLab: UILabel!
+    
+//    override func prepareForReuse() {
+//        
+//        super.prepareForReuse()
+//        
+//        self.pointLab.isHidden = true
+//        
+//    }
+//    
 }

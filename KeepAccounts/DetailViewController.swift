@@ -94,7 +94,7 @@ extension DetailViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetilCell
         
-        cell.backgroundColor = UIColor(rgb: 0xC9FFFF)
+        cell.backgroundColor = UIColor(rgb:0xD4FFD4)
         
         cell.layer.borderWidth = 1.0
         

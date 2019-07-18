@@ -138,6 +138,8 @@ class ViewController: UIViewController {
             
             FormVC.allData!.date = self.currentDate as NSDate
             
+            FormVC.homeView = self
+            
         }
             
         else if segue.identifier == "dataSegue" {
@@ -153,7 +155,6 @@ class ViewController: UIViewController {
                 formVC.delegate = self
                 
                 formVC.currentDate = self.currentDate
-                
                 
             }
             
@@ -632,6 +633,35 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         configureCell(view: cell, cellState: cellState)
         
+        let moc = CoreDataHelper.shared.managedObjectContext()
+        
+        let fetchRequest = NSFetchRequest<MyData>(entityName:"MyData")
+        
+        fetchRequest.predicate = NSPredicate(format: "date = %@", date as NSDate)
+        
+        moc.performAndWait {
+            
+            do {
+                
+                self.dataArray = try moc.fetch(fetchRequest) as [MyData]
+                
+            }
+                
+            catch {
+                
+                print("error\(error)")
+                
+            }
+            
+        }
+        
+        if self.dataArray.count > 0 {
+            
+            cell.pointLab.isHidden = false
+            
+        }
+            
+        
         return cell
         
     }
@@ -744,7 +774,7 @@ extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        cell.backgroundColor = UIColor(rgb: 0xC9FFFF)
+        cell.backgroundColor = UIColor(rgb:0xD4FFD4)
         
     }
     
