@@ -110,7 +110,7 @@ extension DetailViewController : UITableViewDataSource {
             
             cell.priceLab.textColor = UIColor.red
             
-            cell.priceLab.text = self.allDataArray[indexPath.row].price! + "$ "
+            cell.priceLab.text = self.allDataArray[indexPath.row].price! + "$"
             
         }
         
@@ -118,7 +118,7 @@ extension DetailViewController : UITableViewDataSource {
             
             cell.priceLab.textColor = UIColor(rgb: 0x009100)
             
-            cell.priceLab.text = "+" + self.allDataArray[indexPath.row].price! + "$ "
+            cell.priceLab.text = "+" + self.allDataArray[indexPath.row].price! + "$"
             
         }
         

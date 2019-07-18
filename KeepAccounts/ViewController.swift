@@ -231,7 +231,7 @@ class ViewController: UIViewController {
             
             self.totalPriceLab.textColor = UIColor.red
             
-            self.totalPriceLab.text = String(totalPrice)
+            self.totalPriceLab.text = String(totalPrice) + "$"
             
 //            self.totalPriceLab.shadowColor = UIColor.gray
 //
@@ -243,7 +243,7 @@ class ViewController: UIViewController {
             
             self.totalPriceLab.textColor = UIColor(rgb: 0xc6a300)
             
-            self.totalPriceLab.text = String(totalPrice)
+            self.totalPriceLab.text = String(totalPrice) + "$"
 //
 //            self.totalPriceLab.shadowColor = UIColor.gray
 //
@@ -255,7 +255,7 @@ class ViewController: UIViewController {
             
             self.totalPriceLab.textColor = UIColor(rgb: 0x009100)
             
-            self.totalPriceLab.text =  "+" + String(totalPrice)
+            self.totalPriceLab.text =  "+" + String(totalPrice) + "$"
             
 //            self.totalPriceLab.shadowColor = UIColor.gray
 //
@@ -321,15 +321,70 @@ class ViewController: UIViewController {
         
         let detailImage = UIImage(named: "seo")
         
-        self.detailBtnItem = UIBarButtonItem(image: detailImage, style: .plain, target: self, action: #selector(ViewController.detailBtn))
+        let detailBtn = UIButton(type: .system)
+        
+        detailBtn.setImage(detailImage, for: .normal)
+        
+        detailBtn.contentMode = .scaleAspectFit
+        
+        detailBtn.setTitle("資料表", for: .normal)
+        
+        detailBtn.imageEdgeInsets = UIEdgeInsets(top: -20, left: -10, bottom: -10, right:-10)
+        
+        detailBtn.titleEdgeInsets = UIEdgeInsets(top: -10, left:-80, bottom: -40, right:-10)
 
+        detailBtn.sizeToFit()
+        
+        detailBtn.addTarget(self, action: #selector(ViewController.detailBtn), for: .touchUpInside)
+        
+        self.detailBtnItem = UIBarButtonItem(customView: detailBtn)
+        
+//        self.detailBtnItem = UIBarButtonItem(image: detailImage, style: .plain, target: self, action: #selector(ViewController.detailBtn))
+        
         let statisticImage = UIImage(named: "pie-chart")
         
-        self.statisticBtnItem = UIBarButtonItem(image: statisticImage, style: .plain, target: self, action: #selector(ViewController.statisticBtn))
+        let statisticBtn = UIButton(type: .system)
+        
+        statisticBtn.setImage(statisticImage, for: .normal)
+        
+        statisticBtn.contentMode = .scaleAspectFit
+
+        statisticBtn.setTitle("統計", for: .normal)
+        
+        statisticBtn.imageEdgeInsets = UIEdgeInsets(top: -20, left: -10, bottom: -10, right:-43)
+        
+        statisticBtn.titleEdgeInsets = UIEdgeInsets(top: -10, left:-80, bottom: -40, right:-53)
+        
+        statisticBtn.sizeToFit()
+        
+        statisticBtn.addTarget(self, action: #selector(ViewController.statisticBtn), for: .touchUpInside)
+        
+        self.statisticBtnItem = UIBarButtonItem(customView: statisticBtn)
+        
+        
+//        self.statisticBtnItem = UIBarButtonItem(image: statisticImage, style: .plain, target: self, action: #selector(ViewController.statisticBtn))
         
         let setImage = UIImage(named: "settings")
         
-        self.setBtnItem = UIBarButtonItem(image: setImage, style: .plain, target: self, action: #selector(ViewController.setBtn))
+        let setBtn = UIButton(type: .system)
+        
+        setBtn.setImage(setImage, for: .normal)
+        
+        setBtn.contentMode = .scaleAspectFit
+        
+        setBtn.setTitle("設置", for: .normal)
+        
+        setBtn.imageEdgeInsets = UIEdgeInsets(top: -20, left: -10, bottom: -10, right:-80)
+        
+        setBtn.titleEdgeInsets = UIEdgeInsets(top: -10, left:-80, bottom: -40, right:-90)
+        
+        setBtn.sizeToFit()
+        
+        setBtn.addTarget(self, action: #selector(ViewController.setBtn), for: .touchUpInside)
+        
+        self.setBtnItem = UIBarButtonItem(customView: setBtn)
+        
+//        self.setBtnItem = UIBarButtonItem(image: setImage, style: .plain, target: self, action: #selector(ViewController.setBtn))
         
         var items = [UIBarButtonItem]()
         
@@ -432,7 +487,6 @@ class ViewController: UIViewController {
         self.totalPriceNameLab.textColor = UIColor(rgb: 0x009494)
         
     }
-
     
     func queryFromCoreData () {
         

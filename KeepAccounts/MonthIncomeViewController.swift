@@ -4,15 +4,13 @@ import Charts
 
 import CoreData
 
-class YearIncomeViewController: UIViewController {
+class MonthIncomeViewController: UIViewController {
     
     @IBOutlet var pieChart: PieChartView!
     
     @IBOutlet var yearLab: UILabel!
     
-    @IBOutlet weak var leftBtn: UIButton!
-    
-    @IBOutlet weak var rightBtn: UIButton!
+    @IBOutlet weak var monthLab: UILabel!
     
     var dataArray : [MyData]?
     
@@ -22,9 +20,9 @@ class YearIncomeViewController: UIViewController {
     
     var year = 2019
     
-    var startYear = 2019
+    var startMonth = 01
     
-    var endYear = 2020
+    var endMonth = 02
     
     var formatter: DateFormatter {
         
@@ -37,7 +35,8 @@ class YearIncomeViewController: UIViewController {
     }
     
     var numberOfDownloadsDataEntries = [PieChartDataEntry]()
-  
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +44,9 @@ class YearIncomeViewController: UIViewController {
         
         self.updateChartData()
         
-        self.yearLab.text = "\(year)年"
+        self.yearLab.text = "\(self.year)年"
+        
+        self.monthLab.text = "\(self.startMonth)月"
         
         self.pieChart.backgroundColor = UIColor(rgb:0xBFFFFF)
 
@@ -69,9 +70,9 @@ class YearIncomeViewController: UIViewController {
     
     func queryFromCoreData () {
         
-        self.startDate = self.formatter.date(from: "\(self.startYear)-01-01")!
+        self.startDate = self.formatter.date(from: "\(self.year)-\(self.startMonth)-01")!
         
-        self.endDate = self.formatter.date(from: "\(self.endYear)-01-01")!
+        self.endDate = self.formatter.date(from: "\(self.year)-\(self.endMonth)-01")!
         
         let moc = CoreDataHelper.shared.managedObjectContext()
         
@@ -119,8 +120,6 @@ class YearIncomeViewController: UIViewController {
                 
                 dict["其他"] = entertainmentCount
                 
-                
-                
                 let newdict = dict.filter({$1 > 0})
                 
                 for item in newdict {
@@ -141,35 +140,13 @@ class YearIncomeViewController: UIViewController {
         
     }
     
-    @IBAction func subtract(_ sender: Any) {
-        
-        self.year -= 1
-        
-        self.startYear -= 1
-        
-        self.endYear -= 1
-        
-        self.yearLab.text = "\(self.year)年"
-        
-        self.numberOfDownloadsDataEntries = []
-        
-        self.queryFromCoreData()
-        
-        self.updateChartData()
-        
-    }
-    
-    @IBAction func plus(_ sender: Any) {
+    @IBAction func addYear(_ sender: Any) {
         
         self.year += 1
         
-        self.startYear += 1
-        
-        self.endYear += 1
+        self.yearLab.text = "\(self.year)年"
         
         self.numberOfDownloadsDataEntries = []
-        
-        self.yearLab.text = "\(self.year)年"
         
         self.queryFromCoreData()
         
@@ -177,5 +154,78 @@ class YearIncomeViewController: UIViewController {
         
     }
     
-}
+    @IBAction func subtractYear(_ sender: Any) {
+        
+        self.year -= 1
+        
+        self.yearLab.text = "\(self.year)年"
+        
+        self.numberOfDownloadsDataEntries = []
+        
+        self.queryFromCoreData()
+        
+        self.updateChartData()
+        
+        
+    }
+    
+    @IBAction func addMonth(_ sender: Any) {
+        
+        self.startMonth += 1
+        
+        self.endMonth += 1
+        
+        if self.endMonth == 13 {
+            
+            self.endMonth = 01
+            
+        }
+        
+        if self.startMonth == 13 {
+            
+            self.startMonth = 01
+            
+        }
+        
+        self.monthLab.text = "\(self.startMonth)月"
+        
+        self.numberOfDownloadsDataEntries = []
+        
+        self.queryFromCoreData()
+        
+        self.updateChartData()
+        
+    }
+    
+    
+    
+    @IBAction func subtractMonth(_ sender: Any) {
+        
+        self.startMonth -= 1
+        
+        self.endMonth -= 1
+        
+        if self.endMonth == 0 {
+            
+            self.endMonth = 12
+            
+        }
+        
+        if self.startMonth == 0 {
+            
+            self.startMonth = 12
+            
+        }
+        
+        self.monthLab.text = "\(self.startMonth)月"
+        
+        self.numberOfDownloadsDataEntries = []
+        
+        self.queryFromCoreData()
+        
+        self.updateChartData()
+        
+    }
+    
 
+}

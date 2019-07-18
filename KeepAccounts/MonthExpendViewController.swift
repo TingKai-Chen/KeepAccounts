@@ -4,15 +4,13 @@ import Charts
 
 import CoreData
 
-class YearExpendViewController: UIViewController {
+class MonthExpendViewController: UIViewController {
     
     @IBOutlet var pieChart: PieChartView!
     
     @IBOutlet var yearLab: UILabel!
     
-    @IBOutlet weak var leftBtn: UIButton!
-    
-    @IBOutlet weak var rightBtn: UIButton!
+    @IBOutlet weak var monthLab: UILabel!
     
     var dataArray : [MyData]?
     
@@ -22,10 +20,10 @@ class YearExpendViewController: UIViewController {
     
     var year = 2019
     
-    var startYear = 2019
+    var startMonth = 01
     
-    var endYear = 2020
-  
+    var endMonth = 02
+    
     var formatter: DateFormatter {
         
         let formatter = DateFormatter()
@@ -35,21 +33,23 @@ class YearExpendViewController: UIViewController {
         return formatter
         
     }
-  
+    
     var numberOfDownloadsDataEntries = [PieChartDataEntry]()
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         self.queryFromCoreData()
         
         self.updateChartData()
-
-        self.yearLab.text = "\(year)年"
+        
+        self.yearLab.text = "\(self.year)年"
+        
+        self.monthLab.text = "\(self.startMonth)月"
         
         self.pieChart.backgroundColor = UIColor(rgb:0xBFFFFF)
-        
+    
     }
     
     func updateChartData() {
@@ -70,9 +70,9 @@ class YearExpendViewController: UIViewController {
     
     func queryFromCoreData () {
         
-        self.startDate = self.formatter.date(from: "\(self.startYear)-01-01")!
+        self.startDate = self.formatter.date(from: "\(self.year)-\(self.startMonth)-01")!
         
-        self.endDate = self.formatter.date(from: "\(self.endYear)-01-01")!
+        self.endDate = self.formatter.date(from: "\(self.year)-\(self.endMonth)-01")!
         
         let moc = CoreDataHelper.shared.managedObjectContext()
         
@@ -172,35 +172,13 @@ class YearExpendViewController: UIViewController {
         
     }
     
-    @IBAction func subtract(_ sender: Any) {
-        
-        self.year -= 1
-        
-        self.startYear -= 1
-        
-        self.endYear -= 1
-        
-        self.yearLab.text = "\(self.year)年"
-        
-        self.numberOfDownloadsDataEntries = []
-        
-        self.queryFromCoreData()
-        
-        self.updateChartData()
-        
-    }
-    
-    @IBAction func plus(_ sender: Any) {
+    @IBAction func addYear(_ sender: Any) {
         
         self.year += 1
         
-        self.startYear += 1
-        
-        self.endYear += 1
+        self.yearLab.text = "\(self.year)年"
         
         self.numberOfDownloadsDataEntries = []
-        
-        self.yearLab.text = "\(self.year)年"
         
         self.queryFromCoreData()
         
@@ -208,18 +186,77 @@ class YearExpendViewController: UIViewController {
         
     }
     
-}
-
-extension UIColor {
-    
-    static var random: UIColor {
+    @IBAction func subtractYear(_ sender: Any) {
         
-        return UIColor(red: .random(in: 0...1),
-                       
-                       green: .random(in: 0...1),
-                       
-                       blue: .random(in: 0...1),
-                       
-                       alpha: 1.0)
+        self.year -= 1
+        
+        self.yearLab.text = "\(self.year)年"
+        
+        self.numberOfDownloadsDataEntries = []
+        
+        self.queryFromCoreData()
+        
+        self.updateChartData()
+        
+        
     }
+    
+    @IBAction func addMonth(_ sender: Any) {
+        
+        self.startMonth += 1
+        
+        self.endMonth += 1
+        
+        if self.endMonth == 13 {
+            
+            self.endMonth = 01
+            
+        }
+        
+        if self.startMonth == 13 {
+            
+            self.startMonth = 01
+            
+        }
+        
+        self.monthLab.text = "\(self.startMonth)月"
+        
+        self.numberOfDownloadsDataEntries = []
+        
+        self.queryFromCoreData()
+        
+        self.updateChartData()
+        
+    }
+    
+    
+    
+    @IBAction func subtractMonth(_ sender: Any) {
+        
+        self.startMonth -= 1
+        
+        self.endMonth -= 1
+        
+        if self.endMonth == 0 {
+            
+            self.endMonth = 12
+            
+        }
+        
+        if self.startMonth == 0 {
+            
+            self.startMonth = 12
+            
+        }
+        
+        self.monthLab.text = "\(self.startMonth)月"
+        
+        self.numberOfDownloadsDataEntries = []
+        
+        self.queryFromCoreData()
+        
+        self.updateChartData()
+        
+    }
+    
 }

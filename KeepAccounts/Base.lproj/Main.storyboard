@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--年收入-->
         <scene sceneID="wl9-xN-3AJ">
             <objects>
                 <viewController id="Pn4-YW-dko" customClass="YearIncomeViewController" customModule="KeepAccounts" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,57 +18,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-C4-7Qc" userLabel="Ios Stepper">
-                                <rect key="frame" x="69" y="173" width="94" height="29"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJe-LG-kzr" userLabel="Pie Chart" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="changeiOS:" destination="Pn4-YW-dko" eventType="valueChanged" id="eQ9-Rd-WYk"/>
-                                    <action selector="changeiOS:" destination="hc3-YA-4hj" eventType="valueChanged" id="t2N-1P-eka"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MacOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrS-ov-fLS">
-                                <rect key="frame" x="262" y="133" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="UbT-C2-faf" userLabel="Mac Stepper">
-                                <rect key="frame" x="243" y="173" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="changeMac:" destination="hc3-YA-4hj" eventType="valueChanged" id="1lE-so-ncY"/>
-                                    <action selector="changeMac:" destination="Pn4-YW-dko" eventType="valueChanged" id="duk-k2-kN0"/>
-                                </connections>
-                            </stepper>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Op0-Oy-K3f" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="69" y="253" width="277" height="350"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.77319803639999996" green="0.77319803639999996" blue="0.77319803639999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIX-Gc-1IH">
+                                        <rect key="frame" x="139" y="8" width="137" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7X2-hb-A5T">
+                                        <rect key="frame" x="300" y="14" width="39" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="plus" image="right">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="plus:" destination="hc3-YA-4hj" eventType="touchUpInside" id="T6D-bu-QX0"/>
+                                            <action selector="plus:" destination="Pn4-YW-dko" eventType="touchUpInside" id="lVg-nz-qx7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNv-FX-F6k">
+                                        <rect key="frame" x="66" y="12" width="46" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="left">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="subtract:" destination="Pn4-YW-dko" eventType="touchUpInside" id="Pnh-31-5oG"/>
+                                            <action selector="subtract:" destination="hc3-YA-4hj" eventType="touchUpInside" id="ose-pG-prl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzy-oj-Rxz">
-                                <rect key="frame" x="102" y="133" width="28" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CDb-Kt-MaP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="s78-pD-Udg"/>
+                    <tabBarItem key="tabBarItem" title="年收入" id="s78-pD-Udg"/>
                     <connections>
-                        <outlet property="iosStepper" destination="BOe-C4-7Qc" id="XY7-wZ-dKA"/>
-                        <outlet property="macStepper" destination="UbT-C2-faf" id="Zko-q9-52p"/>
-                        <outlet property="pieChart" destination="Op0-Oy-K3f" id="GAK-Zt-IKs"/>
+                        <outlet property="leftBtn" destination="rNv-FX-F6k" id="7cJ-jI-ThA"/>
+                        <outlet property="pieChart" destination="DJe-LG-kzr" id="THJ-Ym-m4E"/>
+                        <outlet property="rightBtn" destination="7X2-hb-A5T" id="XLD-Br-2Vh"/>
+                        <outlet property="yearLab" destination="yIX-Gc-1IH" id="wGo-R1-q8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXX-SQ-fPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="-1436"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="-1367.1195652173915"/>
         </scene>
-        <!--Item 1-->
+        <!--年支出-->
         <scene sceneID="SOb-xT-vT5">
             <objects>
                 <viewController id="hc3-YA-4hj" customClass="YearExpendViewController" customModule="KeepAccounts" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,44 +78,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81t-SI-Zhm" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="69" y="253" width="277" height="350"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.77319803639999996" green="0.77319803639999996" blue="0.77319803639999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYU-qn-TtE">
+                                        <rect key="frame" x="65" y="17" width="46" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="left">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="subtract:" destination="hc3-YA-4hj" eventType="touchUpInside" id="n1d-gc-RnV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C13-Hv-eKA">
+                                        <rect key="frame" x="305" y="19" width="39" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="plus" image="right">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="plus:" destination="hc3-YA-4hj" eventType="touchUpInside" id="QTL-na-GNP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8h-Bn-qNH">
+                                        <rect key="frame" x="139" y="8" width="137" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8h-Bn-qNH">
-                                <rect key="frame" x="151" y="90" width="112" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYU-qn-TtE">
-                                <rect key="frame" x="83" y="95" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Subtract">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="subtract:" destination="hc3-YA-4hj" eventType="touchUpInside" id="n1d-gc-RnV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C13-Hv-eKA">
-                                <rect key="frame" x="275" y="95" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="plus">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="plus:" destination="hc3-YA-4hj" eventType="touchUpInside" id="QTL-na-GNP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CJF-un-GMR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="h6n-kZ-Yad"/>
+                    <tabBarItem key="tabBarItem" title="年支出" id="h6n-kZ-Yad"/>
                     <connections>
+                        <outlet property="leftBtn" destination="OYU-qn-TtE" id="oqS-Z0-fmo"/>
                         <outlet property="pieChart" destination="81t-SI-Zhm" id="3BE-r6-8RE"/>
+                        <outlet property="rightBtn" destination="C13-Hv-eKA" id="at7-g1-ap5"/>
                         <outlet property="yearLab" destination="n8h-Bn-qNH" id="cJI-Gx-oQP"/>
                     </connections>
                 </viewController>
@@ -262,7 +266,7 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.3121613835009579" green="0.71351173371647514" blue="0.71351173371647514" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.31602043043009431" green="0.71351173371647514" blue="0.70610070839087713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstItem="VI0-Yz-L32" firstAttribute="leading" secondItem="Ff7-CW-xDB" secondAttribute="leading" id="Dn4-rj-obb"/>
                                         <constraint firstItem="xWx-Pt-jh7" firstAttribute="top" secondItem="Ff7-CW-xDB" secondAttribute="top" id="SI2-jG-B3b"/>
@@ -766,37 +770,189 @@
             </objects>
             <point key="canvasLocation" x="308.69565217391306" y="-1586.413043478261"/>
         </scene>
-        <!--Item 2-->
+        <!--月收入-->
         <scene sceneID="Dwm-Aw-rkW">
             <objects>
-                <viewController id="csW-y7-Rgv" sceneMemberID="viewController">
+                <viewController id="csW-y7-Rgv" customClass="MonthIncomeViewController" customModule="KeepAccounts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="spr-2z-kS0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-Yj-NiK" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MII-EI-f8I">
+                                        <rect key="frame" x="139" y="8" width="137" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMG-IW-Aay">
+                                        <rect key="frame" x="85" y="12" width="46" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="left">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="subtract:" destination="Pn4-YW-dko" eventType="touchUpInside" id="atG-Yy-pfM"/>
+                                            <action selector="subtract:" destination="hc3-YA-4hj" eventType="touchUpInside" id="dsB-ju-LhD"/>
+                                            <action selector="subtractYear:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="CAx-I1-Ynm"/>
+                                            <action selector="subtractYear:" destination="csW-y7-Rgv" eventType="touchUpInside" id="W31-Ng-FFb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="339-nq-zuz">
+                                        <rect key="frame" x="284" y="14" width="39" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="plus" image="right">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addYear:" destination="csW-y7-Rgv" eventType="touchUpInside" id="4vj-gn-fO9"/>
+                                            <action selector="addYear:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="X6j-WZ-LSh"/>
+                                            <action selector="plus:" destination="hc3-YA-4hj" eventType="touchUpInside" id="Sr9-Z5-0LL"/>
+                                            <action selector="plus:" destination="Pn4-YW-dko" eventType="touchUpInside" id="xR4-Ic-cqK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSq-3U-qUp">
+                                        <rect key="frame" x="139" y="67" width="137" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMd-X6-Z22">
+                                        <rect key="frame" x="284" y="73" width="39" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="plus" image="right">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addMonth:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="VZr-xv-U5k"/>
+                                            <action selector="addMonth:" destination="csW-y7-Rgv" eventType="touchUpInside" id="YiP-gT-7BX"/>
+                                            <action selector="plus:" destination="Pn4-YW-dko" eventType="touchUpInside" id="Tcb-RP-PLn"/>
+                                            <action selector="plus:" destination="hc3-YA-4hj" eventType="touchUpInside" id="pLF-aG-EjK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-31-c96">
+                                        <rect key="frame" x="85" y="71" width="46" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="left">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="subtract:" destination="Pn4-YW-dko" eventType="touchUpInside" id="8cG-wz-lGj"/>
+                                            <action selector="subtract:" destination="hc3-YA-4hj" eventType="touchUpInside" id="cn6-jZ-QMc"/>
+                                            <action selector="subtractMonth:" destination="csW-y7-Rgv" eventType="touchUpInside" id="DGf-DK-sqv"/>
+                                            <action selector="subtractMonth:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="tcb-FL-JEa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="W8x-TG-5tZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="uga-RD-tyf"/>
+                    <tabBarItem key="tabBarItem" title="月收入" id="uga-RD-tyf"/>
+                    <connections>
+                        <outlet property="monthLab" destination="RSq-3U-qUp" id="4TA-0D-B9L"/>
+                        <outlet property="pieChart" destination="fsc-Yj-NiK" id="1rX-Sa-NLr"/>
+                        <outlet property="yearLab" destination="MII-EI-f8I" id="YIS-f5-4DS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4C3-vS-LIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4446" y="-640"/>
+            <point key="canvasLocation" x="4444.927536231884" y="-640.76086956521749"/>
         </scene>
-        <!--Item 1-->
+        <!--月支出-->
         <scene sceneID="qPm-vv-P6e">
             <objects>
-                <viewController id="Kga-Pu-2W8" sceneMemberID="viewController">
+                <viewController id="Kga-Pu-2W8" customClass="MonthExpendViewController" customModule="KeepAccounts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuM-v4-9Ls">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGP-Qt-Ic4" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg9-Mu-ANE">
+                                        <rect key="frame" x="139" y="12" width="137" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FP-Cy-5kX">
+                                        <rect key="frame" x="64" y="16" width="46" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="left">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="subtract:" destination="hc3-YA-4hj" eventType="touchUpInside" id="BUL-g5-xIN"/>
+                                            <action selector="subtract:" destination="Pn4-YW-dko" eventType="touchUpInside" id="fzS-rO-Ome"/>
+                                            <action selector="subtractYear:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="fGO-94-Zcy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDD-hx-Snm">
+                                        <rect key="frame" x="314" y="18" width="39" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="plus" image="right">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addYear:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="gOB-Yp-I7M"/>
+                                            <action selector="plus:" destination="Pn4-YW-dko" eventType="touchUpInside" id="K8B-t1-6dq"/>
+                                            <action selector="plus:" destination="hc3-YA-4hj" eventType="touchUpInside" id="tvH-hY-26n"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNs-65-qPM">
+                                        <rect key="frame" x="139" y="89" width="137" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgc-59-lIb">
+                                        <rect key="frame" x="64" y="93" width="46" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="left">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="subtract:" destination="hc3-YA-4hj" eventType="touchUpInside" id="jMy-MS-7YE"/>
+                                            <action selector="subtract:" destination="Pn4-YW-dko" eventType="touchUpInside" id="xVq-cg-Iuy"/>
+                                            <action selector="subtractMonth:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="JuA-iu-rZ8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkA-ON-e4y">
+                                        <rect key="frame" x="314" y="95" width="39" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="plus" image="right">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addMonth:" destination="Kga-Pu-2W8" eventType="touchUpInside" id="JSl-2E-kBB"/>
+                                            <action selector="plus:" destination="Pn4-YW-dko" eventType="touchUpInside" id="gUj-mx-ydb"/>
+                                            <action selector="plus:" destination="hc3-YA-4hj" eventType="touchUpInside" id="wTL-12-Rgf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OHA-ih-4RO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="BOa-fe-h6Q"/>
+                    <tabBarItem key="tabBarItem" title="月支出" id="BOa-fe-h6Q"/>
+                    <connections>
+                        <outlet property="monthLab" destination="jNs-65-qPM" id="ZI3-xO-bg4"/>
+                        <outlet property="pieChart" destination="xGP-Qt-Ic4" id="utU-Ws-77g"/>
+                        <outlet property="yearLab" destination="Zg9-Mu-ANE" id="EZh-vr-0tw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWD-w9-GaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4410" y="-1422"/>
+            <point key="canvasLocation" x="4408.695652173913" y="-1422.554347826087"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vg1-bn-zxO">
@@ -1111,10 +1267,12 @@
     <resources>
         <image name="calendar" width="512" height="512"/>
         <image name="coins" width="512" height="512"/>
+        <image name="left" width="512" height="512"/>
         <image name="profit" width="512" height="512"/>
+        <image name="right" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4fc-AM-LYO"/>
+        <segue reference="Odd-OA-O8i"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
