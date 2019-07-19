@@ -62,9 +62,19 @@ class YearExpendViewController: UIViewController {
     
     func updateChartData() {
         
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .percent
+        
+        formatter.maximumFractionDigits = 1
+        
+        formatter.multiplier = 1.0
+        
         let chartDataSet = PieChartDataSet(entries: self.numberOfDownloadsDataEntries, label: nil)
         
         let chartData = PieChartData(dataSet: chartDataSet)
+        
+        chartDataSet.valueFormatter = DefaultValueFormatter(formatter:formatter)
         
         for _ in 0 ..< self.numberOfDownloadsDataEntries.count {
             
@@ -160,11 +170,13 @@ class YearExpendViewController: UIViewController {
                 
                 dict["其他"] = otherCount
                 
-                let newdict = dict.filter({$1 > 0})
+                let newDict = dict.filter({$1 > 0})
                 
-                for item in newdict {
+                let sum = newDict.values.reduce(0, { $0 + $1 })
+                
+                for item in newDict {
                     
-                    self.numberOfDownloadsDataEntries.append(PieChartDataEntry(value: Double(item.value), label: item.key))
+                    self.numberOfDownloadsDataEntries.append(PieChartDataEntry(value: Double(item.value) * 100 / Double(sum), label: item.key))
                     
                 }
                 

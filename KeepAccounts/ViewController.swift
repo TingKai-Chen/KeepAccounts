@@ -122,7 +122,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "Segue" {
+        if segue.identifier == "AddNewOneRecord" {
             
             let FormVC = segue.destination as! FormViewController
             
@@ -209,10 +209,6 @@ class ViewController: UIViewController {
             cell.selectedView.isHidden = false
             
             cell.dateLabel.textColor = UIColor.white
-            
-            self.dataArray = []
-            
-            self.tableView.reloadData()
             
         }
         
@@ -496,22 +492,10 @@ class ViewController: UIViewController {
         let fetchRequest = NSFetchRequest<MyData>(entityName:"MyData")
         
         fetchRequest.predicate = NSPredicate(format: "date = %@",self.currentDate as NSDate)
+  
+        guard let dataArray = try? moc.fetch(fetchRequest) as [MyData] else { return }
         
-        moc.performAndWait {
-            
-            do {
-                
-                self.dataArray = try moc.fetch(fetchRequest) as [MyData]
-                
-            }
-                
-            catch {
-                
-                print("error\(error)")
-                
-            }
-            
-        }
+        self.dataArray = dataArray
         
         self.tableView.reloadData()
         
@@ -617,7 +601,16 @@ extension ViewController: JTAppleCalendarViewDataSource {
         
         self.endDate = Date()
         
-        self.calendarView.scrollToDate(self.endDate, animateScroll: false)
+        if isViewLoaded {
+            
+            self.calendarView.scrollToDate(self.currentDate, animateScroll: false)
+            
+        }
+        else {
+            
+            self.calendarView.scrollToDate(self.endDate, animateScroll: false)
+
+        }
         
         return ConfigurationParameters(startDate: self.startDate, endDate: self.endDate)
         
@@ -631,36 +624,17 @@ extension ViewController: JTAppleCalendarViewDelegate {
         
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath) as! DateCell
         
+        let moc = CoreDataHelper.shared.managedObjectContext()
+
+        let fetchRequest = NSFetchRequest<MyData>(entityName:"MyData")
+
+        fetchRequest.predicate = NSPredicate(format: "date = %@", date as NSDate)
+
         configureCell(view: cell, cellState: cellState)
         
-        let moc = CoreDataHelper.shared.managedObjectContext()
-        
-        let fetchRequest = NSFetchRequest<MyData>(entityName:"MyData")
-        
-        fetchRequest.predicate = NSPredicate(format: "date = %@", date as NSDate)
-        
-        moc.performAndWait {
-            
-            do {
-                
-                self.dataArray = try moc.fetch(fetchRequest) as [MyData]
-                
-            }
-                
-            catch {
-                
-                print("error\(error)")
-                
-            }
-            
-        }
-        
-        if self.dataArray.count > 0 {
-            
-            cell.pointLab.isHidden = false
-            
-        }
-            
+        guard let calanderCellDatas = try? moc.fetch(fetchRequest) as [MyData] else { return cell }
+
+        cell.pointLab.isHidden = calanderCellDatas.count > 0 ? false : true
         
         return cell
         
@@ -696,6 +670,8 @@ extension ViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         
+        self.dataArray = []
+        
         configureCell(view: cell, cellState: cellState)
         
         self.currentDate = date
@@ -721,6 +697,8 @@ extension ViewController: JTAppleCalendarViewDelegate {
         self.dateLab.attributedText = myAttrString
         
         self.dateLab.textColor = UIColor(rgb: 0xff0080)
+        
+        self.tableView.reloadData()
         
     }
     
@@ -859,10 +837,10 @@ extension ViewController : UITableViewDataSource {
             
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             
+            self.calendarView.reloadData()
+            
         }
-        
-        
-        
+   
     }
     
 }

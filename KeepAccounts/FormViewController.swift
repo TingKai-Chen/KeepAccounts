@@ -213,6 +213,8 @@ class FormViewController: UIViewController {
         
         self.delegate?.upDateData()
         
+        self.homeView?.calendarView.reloadData()
+
         self.navigationController?.popViewController(animated: true)
         
     }
@@ -487,6 +489,8 @@ class FormViewController: UIViewController {
     deinit {
         
         CoreDataHelper.shared.resetContext()
+        
+        self.homeView?.queryFromCoreData()
         
     }
     
