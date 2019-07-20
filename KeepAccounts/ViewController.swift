@@ -543,7 +543,7 @@ class ViewController: UIViewController {
     
     @objc func rightBtn() {
         
-        self.performSegue(withIdentifier: "Segue", sender: nil)
+        self.performSegue(withIdentifier: "AddNewOneRecord", sender: nil)
         
     }
     

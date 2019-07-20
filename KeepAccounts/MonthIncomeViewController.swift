@@ -44,13 +44,13 @@ class MonthIncomeViewController: UIViewController {
         
         self.updateChartData()
         
-        self.yearLab.text = "西元 \(self.year) 年"
+        self.yearLab.text = "\(self.year)年"
         
         self.monthLab.text = "\(self.startMonth)月"
         
-        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
+//        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
         
-        self.view.backgroundColor = UIColor(rgb:0xD4FFD4)
+        //self.view.backgroundColor = UIColor(rgb:0xD4FFD4)
 
     }
     
@@ -62,9 +62,19 @@ class MonthIncomeViewController: UIViewController {
     
     func updateChartData() {
         
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .percent
+        
+        formatter.maximumFractionDigits = 1
+        
+        formatter.multiplier = 1.0
+        
         let chartDataSet = PieChartDataSet(entries: self.numberOfDownloadsDataEntries, label: nil)
         
         let chartData = PieChartData(dataSet: chartDataSet)
+        
+        chartDataSet.valueFormatter = DefaultValueFormatter(formatter:formatter)
         
         for _ in 0 ..< self.numberOfDownloadsDataEntries.count {
             
@@ -128,11 +138,13 @@ class MonthIncomeViewController: UIViewController {
                 
                 dict["其他"] = entertainmentCount
                 
-                let newdict = dict.filter({$1 > 0})
+                let newDict = dict.filter({$1 > 0})
                 
-                for item in newdict {
+                let sum = newDict.values.reduce(0, { $0 + $1 })
+                
+                for item in newDict {
                     
-                    self.numberOfDownloadsDataEntries.append(PieChartDataEntry(value: Double(item.value), label: item.key))
+                    self.numberOfDownloadsDataEntries.append(PieChartDataEntry(value: Double(item.value) * 100 / Double(sum), label: item.key))
                     
                 }
                 
@@ -152,7 +164,7 @@ class MonthIncomeViewController: UIViewController {
         
         self.year += 1
         
-        self.yearLab.text = "西元 \(self.year) 年"
+        self.yearLab.text = "\(self.year)年"
         
         self.numberOfDownloadsDataEntries = []
         
@@ -166,7 +178,7 @@ class MonthIncomeViewController: UIViewController {
         
         self.year -= 1
         
-        self.yearLab.text = "西元 \(self.year) 年"
+        self.yearLab.text = "\(self.year)年"
         
         self.numberOfDownloadsDataEntries = []
         

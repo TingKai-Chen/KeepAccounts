@@ -2,6 +2,8 @@ import UIKit
 
 import CoreData
 
+import FirebaseDatabase
+
 protocol UIFormViewControllerDeletage : class{
     
     func upDateCalendar (datePicker:UIDatePicker)
@@ -11,7 +13,53 @@ protocol UIFormViewControllerDeletage : class{
 }
 
 class FormViewController: UIViewController {
+    
+    @IBOutlet var button0: UIButton!
+    
+    @IBOutlet var button1: UIButton!
+    
+    @IBOutlet var button2: UIButton!
+    
+    @IBOutlet var button3: UIButton!
+    
+    @IBOutlet var button4: UIButton!
+    
+    @IBOutlet var button5: UIButton!
+    
+    @IBOutlet var button6: UIButton!
 
+    @IBOutlet var button7: UIButton!
+    
+    @IBOutlet var button8: UIButton!
+    
+    @IBOutlet var button9: UIButton!
+    
+    @IBOutlet var buttonPeriod: UIButton!
+    
+    @IBOutlet var buttonPlusMinus: UIButton!
+    
+    @IBOutlet var buttonEqual: UIButton!
+    
+    @IBOutlet var buttonAddition: UIButton!
+    
+    @IBOutlet var buttonSubstraction: UIButton!
+    
+    @IBOutlet var buttonMultiplication: UIButton!
+    
+    @IBOutlet var buttonDivision: UIButton!
+    
+    @IBOutlet var buttonAllCancel: UIButton!
+    
+    @IBOutlet var calculatorView: UIView!
+    
+    var valueA: Double = 0
+    
+    var valueB: Double = 0
+    
+    var currentOperator: String = ""
+    
+    var refreshTextField: Bool = true
+    
     let imagePicker = UIImagePickerController()
     
     var n = 1
@@ -105,6 +153,10 @@ class FormViewController: UIViewController {
         self.navigationItem.title = "開始記帳"
         
         self.view.backgroundColor = UIColor(rgb:0xD4FFD4)
+        
+        self.setPriceInputView()
+        
+        self.setCalculatorBtnLayout()
 
     }
     
@@ -219,6 +271,8 @@ class FormViewController: UIViewController {
         
     }
     
+   
+    
     @IBAction func camera(_ sender: Any) {
         
         self.imagePicker.delegate = self
@@ -290,6 +344,102 @@ class FormViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         
         view.addGestureRecognizer(tap)
+        
+    }
+    
+    private func setPriceInputView() {
+        
+        let priceToolBar = UIToolbar()
+        
+        priceToolBar.barStyle = .default
+        
+        priceToolBar.sizeToFit()
+        
+        let priceFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let priceToolBarBtnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dissPicker))
+        
+        priceToolBar.items = [priceFlexSpace , priceToolBarBtnDone]
+        
+        self.priceTxt.inputView = self.calculatorView
+        
+        self.priceTxt.inputAccessoryView = priceToolBar
+        
+    }
+    
+    private func setCalculatorBtnLayout() {
+        
+        self.button0.layer.borderWidth = 1
+        
+        self.button0.layer.borderColor = UIColor.white.cgColor
+        
+        self.button1.layer.borderWidth = 1
+        
+        self.button1.layer.borderColor = UIColor.white.cgColor
+        
+        self.button2.layer.borderWidth = 1
+        
+        self.button2.layer.borderColor = UIColor.white.cgColor
+        
+        self.button3.layer.borderWidth = 1
+        
+        self.button3.layer.borderColor = UIColor.white.cgColor
+        
+        self.button4.layer.borderWidth = 1
+        
+        self.button4.layer.borderColor = UIColor.white.cgColor
+        
+        self.button5.layer.borderWidth = 1
+        
+        self.button5.layer.borderColor = UIColor.white.cgColor
+        
+        self.button6.layer.borderWidth = 1
+        
+        self.button6.layer.borderColor = UIColor.white.cgColor
+        
+        self.button7.layer.borderWidth = 1
+        
+        self.button7.layer.borderColor = UIColor.white.cgColor
+        
+        self.button8.layer.borderWidth = 1
+        
+        self.button8.layer.borderColor = UIColor.white.cgColor
+        
+        self.button9.layer.borderWidth = 1
+        
+        self.button9.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonPeriod.layer.borderWidth = 1
+        
+        self.buttonPeriod.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonPlusMinus.layer.borderWidth = 1
+        
+        self.buttonPlusMinus.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonEqual.layer.borderWidth = 1
+        
+        self.buttonEqual.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonAddition.layer.borderWidth = 1
+        
+        self.buttonAddition.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonSubstraction.layer.borderWidth = 1
+        
+        self.buttonSubstraction.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonMultiplication.layer.borderWidth = 1
+        
+        self.buttonMultiplication.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonDivision.layer.borderWidth = 1
+        
+        self.buttonDivision.layer.borderColor = UIColor.white.cgColor
+        
+        self.buttonAllCancel.layer.borderWidth = 1
+        
+        self.buttonAllCancel.layer.borderColor = UIColor.white.cgColor
         
     }
     
@@ -485,6 +635,122 @@ class FormViewController: UIViewController {
         CoreDataHelper.shared.saveContext()
         
     }
+    
+    @IBAction func allCancel(_ sender: UIButton) {
+        
+       
+        self.valueA = 0
+        
+        self.valueB = 0
+        
+        self.currentOperator = ""
+        
+        self.refreshTextField = true
+        
+        // update text field
+        self.priceTxt.text = "0"
+        
+    }
+    
+    
+    @IBAction func numberPress(_ sender: UIButton) {
+        // find text to be added
+        var value = sender.currentTitle!
+        // get current text
+        var currentText = ""
+        
+        // value shourld be refreshed?
+        if self.priceTxt.text != "0" && (!self.refreshTextField  || value == "±") {
+            currentText = self.priceTxt.text!
+        }
+        
+        // zero
+        if currentText == "0" && value == "0" {
+            value = ""
+        }
+        
+        // period
+        if value == "." {
+            if currentText == "" {
+                value = "0."
+            } else if currentText.range(of: ".") != nil {
+                value = ""
+            }
+        }
+        
+        // plus/minus
+        if value == "±" {
+            value = ""
+            if currentText != "" {
+                if currentText.hasPrefix("-") {
+                    let start = currentText.startIndex
+                    let end = currentText.index(after: start)
+                    currentText = currentText.replacingOccurrences(of: "-", with: "", range: start..<end)
+                } else {
+                    currentText = "-\(currentText)"
+                }
+            }
+        }
+        
+        // update text field
+        self.refreshTextField = false
+        
+        self.priceTxt.text = "\(currentText)\(value)"
+        
+    }
+    
+    
+    @IBAction func operatorPress(_ sender: UIButton) {
+        
+        // ignore if text field is empty
+        if self.priceTxt.text != "" {
+            // get new operator
+            let newOperator = sender.titleLabel?.text!
+            // refresh text field
+            self.refreshTextField = true
+            
+            if self.currentOperator == "" && newOperator != "=" {
+                // copy current value
+                self.valueA = Double(self.priceTxt.text!)!
+                
+                // update operator
+                self.currentOperator = newOperator!
+            } else {
+                // copy current value
+                self.valueB = Double(self.priceTxt.text!)!
+                
+                // perform operation
+                var result: Double = 0
+                switch self.currentOperator {
+                case "+":
+                    result = self.valueA + valueB
+                case "-":
+                    result = valueA - self.valueB
+                case "×":
+                    result = self.valueA * self.valueB
+                case "÷":
+                    result = self.valueA / self.valueB
+                default:
+                    result = self.valueB
+                }
+                
+                // update operator & values
+                self.currentOperator = ""
+                self.valueA = 0
+                self.valueB = 0
+                
+                if newOperator != "=" {
+                    self.valueA = result
+                    self.currentOperator = newOperator!
+                }
+                
+                // update text field
+                self.priceTxt.text = String(result)
+            }
+        }
+        
+    }
+    
     
     deinit {
         

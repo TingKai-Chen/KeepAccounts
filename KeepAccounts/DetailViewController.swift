@@ -2,6 +2,10 @@ import UIKit
 
 import CoreData
 
+import FirebaseDatabase
+
+import Firebase
+
 class DetailViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
@@ -102,6 +106,8 @@ extension DetailViewController : UITableViewDataSource {
         
         cell.projectLab.text = self.allDataArray[indexPath.row].projectName
         
+        cell.projectLab.textColor = UIColor.blue
+        
         let date = self.allDataArray[indexPath.row].date as! Date
         
         cell.dateLab.text = self.formatter.string(from: date)
@@ -110,6 +116,8 @@ extension DetailViewController : UITableViewDataSource {
             
             cell.priceLab.textColor = UIColor.red
             
+             cell.categoryLab.textColor = UIColor.red
+            
             cell.priceLab.text = self.allDataArray[indexPath.row].price! + "$"
             
         }
@@ -117,6 +125,8 @@ extension DetailViewController : UITableViewDataSource {
         if self.allDataArray[indexPath.row].incomeExpend == "收入" {
             
             cell.priceLab.textColor = UIColor(rgb: 0x009100)
+            
+            cell.categoryLab.textColor = UIColor(rgb: 0x009100)
             
             cell.priceLab.text = "+" + self.allDataArray[indexPath.row].price! + "$"
             

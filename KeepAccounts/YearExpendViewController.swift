@@ -46,11 +46,11 @@ class YearExpendViewController: UIViewController {
         
         self.updateChartData()
 
-        self.yearLab.text = "西元       \(year) 年"
+        self.yearLab.text = "\(year)/01/01~\(year)/12/31"
         
-        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
+//        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
         
-        self.view.backgroundColor = UIColor(rgb:0xD4FFD4) 
+        //self.view.backgroundColor = UIColor(rgb:0xD4FFD4) 
         
     }
 
@@ -200,7 +200,7 @@ class YearExpendViewController: UIViewController {
         
         self.endYear -= 1
         
-        self.yearLab.text = "西元       \(year) 年"
+        self.yearLab.text = "\(year)/01/01~\(year)/12/31"
         
         self.numberOfDownloadsDataEntries = []
         
@@ -220,7 +220,7 @@ class YearExpendViewController: UIViewController {
         
         self.numberOfDownloadsDataEntries = []
         
-        self.yearLab.text = "西元       \(year) 年"
+        self.yearLab.text = "\(year)/01/01~\(year)/12/31"
         
         self.queryFromCoreData()
         
