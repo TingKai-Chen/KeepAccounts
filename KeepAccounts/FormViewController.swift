@@ -52,9 +52,9 @@ class FormViewController: UIViewController {
     
     @IBOutlet var calculatorView: UIView!
     
-    var valueA: Double = 0
+    var valueA: Int = 0
     
-    var valueB: Double = 0
+    var valueB: Int = 0
     
     var currentOperator: String = ""
     
@@ -67,7 +67,7 @@ class FormViewController: UIViewController {
     var c = -1
     
     var homeView: ViewController?
-
+    
     var startDate: Date?
     
     var currentDate: Date!
@@ -108,6 +108,8 @@ class FormViewController: UIViewController {
     
     @IBOutlet var cancelBtn: UIButton!
     
+    @IBOutlet weak var textViewHistory: UITextView!
+    
     @IBOutlet var subView: UIView!
     
     var categoryExpense = ["飲食","交通","通訊","服飾","居住","娛樂","日常","醫療","教育","保險","社交","健身美容","孝順養育","其他"]
@@ -141,8 +143,6 @@ class FormViewController: UIViewController {
         self.setIncomeExpendPicker()
         
         self.setDatePickerTextField()
- 
-        self.locationTxt.addTarget(self, action: #selector(FormViewController.goToMap), for: .touchDown)
         
         self.initView()
         
@@ -157,7 +157,9 @@ class FormViewController: UIViewController {
         self.setPriceInputView()
         
         self.setCalculatorBtnLayout()
-
+        
+        self.setMapVC()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -166,6 +168,14 @@ class FormViewController: UIViewController {
         
         self.subView.backgroundColor = UIColor(rgb: 0xC9FFFF)
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        self.locationTxt.addTarget(self, action: #selector(FormViewController.goToMap), for: .touchDown)
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -235,6 +245,30 @@ class FormViewController: UIViewController {
             self.categoryPickerTxt.text = self.categoryIncome[selectedIndex]
             
         }
+        
+    }
+    
+    private func setMapVC () {
+        
+        let alert = UIAlertController(title: "開啟定位", message: "請前往設定開啟定位功能", preferredStyle: .alert)
+        
+        let action_OK = UIAlertAction(title: "前往", style: .default) { (UIAlertAction) in
+            
+            self.performSegue(withIdentifier: "isOpenMap", sender: nil)
+            
+        }
+        
+        let action_Cancel = UIAlertAction(title:"取消", style:.cancel) { (action) in
+            
+            self.locationTxt.isEnabled = false
+            
+        }
+        
+        alert.addAction(action_OK)
+        
+        alert.addAction(action_Cancel)
+        
+        self.present(alert,animated: true,completion: nil)
         
     }
     
@@ -711,16 +745,16 @@ class FormViewController: UIViewController {
             
             if self.currentOperator == "" && newOperator != "=" {
                 // copy current value
-                self.valueA = Double(self.priceTxt.text!)!
+                self.valueA = Int(self.priceTxt.text!)!
                 
                 // update operator
                 self.currentOperator = newOperator!
             } else {
                 // copy current value
-                self.valueB = Double(self.priceTxt.text!)!
+                self.valueB = Int(self.priceTxt.text!)!
                 
                 // perform operation
-                var result: Double = 0
+                var result: Int = 0
                 switch self.currentOperator {
                 case "+":
                     result = self.valueA + valueB
@@ -732,6 +766,13 @@ class FormViewController: UIViewController {
                     result = self.valueA / self.valueB
                 default:
                     result = self.valueB
+                }
+                
+                if currentOperator != "" {
+                    // construct history entry
+                    let historyEntry: String = "\(valueA) \(currentOperator) \(valueB) = \(result)\n"
+                    // update history
+                    self.textViewHistory.text! += historyEntry
                 }
                 
                 // update operator & values
@@ -892,3 +933,4 @@ extension UIImage {
         return image
     }
 }
+

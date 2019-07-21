@@ -1028,6 +1028,9 @@
                                 <state key="normal" title="記帳時紀錄GPS地點">
                                     <color key="titleColor" red="0.2740526902" green="0.65361086729999995" blue="0.66608502540000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="location:" destination="4Dm-yg-LeE" eventType="touchUpInside" id="A9q-3F-LfF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlO-Bv-xJn">
                                 <rect key="frame" x="0.0" y="550" width="414" height="38"/>
@@ -1037,6 +1040,9 @@
                                 <state key="normal" title="關於本軟體">
                                     <color key="titleColor" red="0.2740526902" green="0.65361086729999995" blue="0.66608502540000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="VAX-wj-X6o" kind="show" id="Opq-fO-lVo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZO-t4-hlo">
                                 <rect key="frame" x="0.0" y="589" width="414" height="38"/>
@@ -1084,7 +1090,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ5-Wa-PVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894.202898550725" y="191.57608695652175"/>
+            <point key="canvasLocation" x="2884" y="192"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aQL-o2-kaF">
+            <objects>
+                <viewController id="VAX-wj-X6o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bAC-dt-x3B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="感謝使用此App，做這個軟體的發想，主要是因為希望能讓App融入生活讓每個人都能很常去用到這個軟體，所以我才想到做記帳功能的App，讓大家都能每天開心的開啟我的App紀錄自己每天的多少花用。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gBr-He-dP8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="395"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.2740526902" green="0.65361086729999995" blue="0.66608502540000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ovb-hG-BqJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPJ-wi-ZeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3686.9565217391305" y="192.39130434782609"/>
         </scene>
         <!--Form View Controller-->
         <scene sceneID="WV0-eN-bmO">
@@ -1252,7 +1283,9 @@
                         <outlet property="projectTxt" destination="XcO-aI-8eq" id="3jY-Q7-uHw"/>
                         <outlet property="roundTxt" destination="xT1-mY-i72" id="hCM-Vt-GhI"/>
                         <outlet property="subView" destination="RcV-0L-hTV" id="Bh9-f4-2aE"/>
+                        <outlet property="textViewHistory" destination="EiW-xX-Y8z" id="RVS-Uc-66w"/>
                         <segue destination="CBu-lZ-0FS" kind="show" identifier="MapSegue" id="ZQo-dV-Ux4"/>
+                        <segue destination="4Dm-yg-LeE" kind="presentation" identifier="isOpenMap" id="I6e-qe-DW5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to9-Dd-1Iu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1301,6 +1334,9 @@
                                     <state key="normal" title="×">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorPress:" destination="rdE-HD-x30" eventType="touchUpInside" id="lCE-PD-u3T"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -1347,6 +1383,9 @@
                                     <state key="normal" title="-">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorPress:" destination="rdE-HD-x30" eventType="touchUpInside" id="7GY-SR-5sB"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -1393,6 +1432,9 @@
                                     <state key="normal" title="+">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="operatorPress:" destination="rdE-HD-x30" eventType="touchUpInside" id="yez-Ax-per"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <userDefinedRuntimeAttributes>
@@ -1457,6 +1499,9 @@
                             <state key="normal" title="=">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="operatorPress:" destination="rdE-HD-x30" eventType="touchUpInside" id="hGi-HO-nti"/>
+                            </connections>
                         </button>
                         <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fND-d0-vOD">
                             <rect key="frame" x="0.0" y="192" width="130" height="48"/>
@@ -1469,6 +1514,14 @@
                                 <action selector="numberPress:" destination="rdE-HD-x30" eventType="touchUpInside" id="HI6-Qe-nCI"/>
                             </connections>
                         </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EiW-xX-Y8z">
+                            <rect key="frame" x="1" y="1" width="1" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -1539,7 +1592,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbb-pb-I20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909" y="-60"/>
+            <point key="canvasLocation" x="2016" y="-320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WB7-7n-96s">
@@ -1572,7 +1625,8 @@
         <image name="up" width="32" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4fc-AM-LYO"/>
+        <segue reference="CwP-A4-PG8"/>
+        <segue reference="I6e-qe-DW5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
