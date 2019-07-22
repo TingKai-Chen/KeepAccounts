@@ -1049,9 +1049,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="給作者的意見">
+                                <state key="normal" title="寄封信給作者意見">
                                     <color key="titleColor" red="0.2740526902" green="0.65361086729999995" blue="0.66608502540000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendEmail:" destination="4Dm-yg-LeE" eventType="touchUpInside" id="jxw-Mp-IGQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最新功能" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2s-ua-4zE">
                                 <rect key="frame" x="20" y="71" width="106" height="37"/>
@@ -1087,6 +1090,9 @@
                         <color key="backgroundColor" red="0.32784344319999997" green="0.74935644160000003" blue="0.74935644160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="pTW-Rb-n1n"/>
                     </view>
+                    <connections>
+                        <segue destination="2Nw-LY-dKW" kind="presentation" identifier="SendEmail" id="a6Q-du-t6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ5-Wa-PVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1593,6 +1599,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbb-pb-I20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2016" y="-320"/>
+        </scene>
+        <!--Email View Controller-->
+        <scene sceneID="bqc-Qo-cUC">
+            <objects>
+                <viewController id="2Nw-LY-dKW" customClass="EmailViewController" customModule="KeepAccounts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5h-sr-8wV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IS2-wd-Bex"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esT-eH-j76" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892" y="-520"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WB7-7n-96s">

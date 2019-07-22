@@ -40,4 +40,11 @@ class SetViewController: UIViewController {
         
     }
     
+    @IBAction func sendEmail(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "SendEmail", sender: nil)
+        
+    }
+    
+    
 }

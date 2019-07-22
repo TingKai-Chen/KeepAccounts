@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C59C2A322E5A58400C80D0C /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59C2A222E5A58400C80D0C /* EmailViewController.swift */; };
 		0CF479E022E05F3E007FA2D0 /* MonthExpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF479DF22E05F3E007FA2D0 /* MonthExpendViewController.swift */; };
 		0CF479E222E05F58007FA2D0 /* MonthIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF479E122E05F58007FA2D0 /* MonthIncomeViewController.swift */; };
 		430CE6A122C45CC2006EB0CD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CE6A022C45CC2006EB0CD /* MapViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C59C2A222E5A58400C80D0C /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		0CF479DF22E05F3E007FA2D0 /* MonthExpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthExpendViewController.swift; sourceTree = "<group>"; };
 		0CF479E122E05F58007FA2D0 /* MonthIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthIncomeViewController.swift; sourceTree = "<group>"; };
 		430CE6A022C45CC2006EB0CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				8D6D1A6822DE218800238163 /* YearIncomeViewController.swift */,
 				0CF479DF22E05F3E007FA2D0 /* MonthExpendViewController.swift */,
 				0CF479E122E05F58007FA2D0 /* MonthIncomeViewController.swift */,
+				0C59C2A222E5A58400C80D0C /* EmailViewController.swift */,
 			);
 			path = KeepAccounts;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				8DD77F5222BDFD6D00768106 /* DateCell.swift in Sources */,
 				8D30728122D78172005FE191 /* DataModal.xcdatamodeld in Sources */,
 				8DD77F3D22BDFA9400768106 /* ViewController.swift in Sources */,
+				0C59C2A322E5A58400C80D0C /* EmailViewController.swift in Sources */,
 				8DBD560C22DCC75800E9EF4D /* DetailViewController.swift in Sources */,
 				8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */,
 				43FD17B522D5959A00E23978 /* SignUpViewController.swift in Sources */,
