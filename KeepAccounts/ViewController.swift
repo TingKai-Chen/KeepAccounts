@@ -475,7 +475,7 @@ class ViewController: UIViewController {
 
         self.totalPriceNameLab.text = "每日總額:"
 
-        self.totalPriceNameLab.font = UIFont.boldSystemFont(ofSize: 24)
+        self.totalPriceNameLab.font = UIFont.boldSystemFont(ofSize: 20)
 
         self.totalPriceNameLab.sizeToFit()
 
