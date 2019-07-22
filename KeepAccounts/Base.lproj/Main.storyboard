@@ -234,8 +234,8 @@
                                                 <constraint firstAttribute="height" constant="38.670000000000002" id="xfc-ut-fwK"/>
                                             </constraints>
                                         </view>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="VI0-Yz-L32">
-                                            <rect key="frame" x="0.0" y="38.666666666666664" width="414" height="20.333333333333336"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="VI0-Yz-L32">
+                                            <rect key="frame" x="5" y="38.666666666666664" width="404.66666666666669" height="20.333333333333336"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sj-Lq-olk">
                                                     <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="20.333333333333332"/>
@@ -244,37 +244,37 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-qx-Z03">
-                                                    <rect key="frame" x="63.333333333333343" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
+                                                    <rect key="frame" x="61.666666666666671" y="0.0" width="34.666666666666671" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週二" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwJ-Gq-uh7">
-                                                    <rect key="frame" x="126.33333333333333" y="0.0" width="34.666666666666671" height="20.333333333333332"/>
+                                                    <rect key="frame" x="123.33333333333336" y="0.0" width="34.666666666666671" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-pt-onx">
-                                                    <rect key="frame" x="189.66666666666666" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
+                                                    <rect key="frame" x="185" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週四" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65n-PE-XJv">
-                                                    <rect key="frame" x="252.99999999999997" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
+                                                    <rect key="frame" x="246.66666666666666" y="0.0" width="34.666666666666657" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週五" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz7-Ur-ZYR">
-                                                    <rect key="frame" x="316" y="0.0" width="34.666666666666686" height="20.333333333333332"/>
+                                                    <rect key="frame" x="308.33333333333331" y="0.0" width="34.666666666666686" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週六" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKl-Nc-Xuc">
-                                                    <rect key="frame" x="379.33333333333331" y="0.0" width="34.666666666666686" height="20.333333333333332"/>
+                                                    <rect key="frame" x="370" y="0.0" width="34.666666666666686" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
@@ -285,15 +285,13 @@
                                     <color key="backgroundColor" red="0.31602043043009431" green="0.71351173371647514" blue="0.70610070839087713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="xWx-Pt-jh7" secondAttribute="trailing" id="858-cm-Ufq"/>
-                                        <constraint firstItem="VI0-Yz-L32" firstAttribute="leading" secondItem="Ff7-CW-xDB" secondAttribute="leading" id="Dn4-rj-obb"/>
+                                        <constraint firstItem="VI0-Yz-L32" firstAttribute="leading" secondItem="Ff7-CW-xDB" secondAttribute="leading" constant="5" id="Dl5-n5-dBI"/>
                                         <constraint firstItem="xWx-Pt-jh7" firstAttribute="top" secondItem="Ff7-CW-xDB" secondAttribute="top" id="SI2-jG-B3b"/>
-                                        <constraint firstAttribute="bottom" secondItem="VI0-Yz-L32" secondAttribute="bottom" id="Wy5-wV-ehY"/>
                                         <constraint firstAttribute="trailing" secondItem="xWx-Pt-jh7" secondAttribute="trailing" id="ZRk-6Q-XfW"/>
                                         <constraint firstItem="xWx-Pt-jh7" firstAttribute="leading" secondItem="Ff7-CW-xDB" secondAttribute="leading" id="Znc-Da-pla"/>
-                                        <constraint firstItem="VI0-Yz-L32" firstAttribute="centerX" secondItem="Ff7-CW-xDB" secondAttribute="centerX" id="aZP-g1-liI"/>
                                         <constraint firstItem="xWx-Pt-jh7" firstAttribute="leading" secondItem="Ff7-CW-xDB" secondAttribute="leading" id="eBK-60-EEs"/>
-                                        <constraint firstItem="VI0-Yz-L32" firstAttribute="top" secondItem="xWx-Pt-jh7" secondAttribute="bottom" id="fZ2-sg-nw6"/>
-                                        <constraint firstAttribute="trailing" secondItem="VI0-Yz-L32" secondAttribute="trailing" id="mxI-Pq-3CY"/>
+                                        <constraint firstAttribute="bottom" secondItem="VI0-Yz-L32" secondAttribute="bottom" id="ljP-X2-LvF"/>
+                                        <constraint firstAttribute="trailing" secondItem="VI0-Yz-L32" secondAttribute="trailing" constant="4.3300000000000001" id="xV7-Z4-alp"/>
                                         <constraint firstItem="xWx-Pt-jh7" firstAttribute="top" secondItem="Ff7-CW-xDB" secondAttribute="top" id="ziZ-HC-1W4"/>
                                     </constraints>
                                     <connections>
