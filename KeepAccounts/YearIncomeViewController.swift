@@ -14,7 +14,19 @@ class YearIncomeViewController: UIViewController {
     
     @IBOutlet weak var rightBtn: UIButton!
     
-    var dataArray : [MyData]?
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var totalPrice: UILabel!
+    
+    var dataArray : [MyData] = [] {
+        
+        didSet {
+            
+            self.caculateSummary()
+            
+        }
+        
+    }
     
     var startDate = Date()
     
@@ -41,6 +53,10 @@ class YearIncomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.delegate = self
+        
+        self.tableView.dataSource = self
+
         self.queryFromCoreData()
         
         self.updateChartData()
@@ -49,13 +65,25 @@ class YearIncomeViewController: UIViewController {
         
 //        self.pieChart.backgroundColor = UIColor(rgb:0xD4FFD4)
         
-        //self.view.backgroundColor = UIColor(rgb:0xD4FFD4)
+        self.view.backgroundColor = UIColor(rgb:0xf0f0f0)
+        
+        self.tableView.backgroundColor = UIColor(rgb:0xf0f0f0)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         self.tabBarController?.navigationItem.title = "年收入"
+        
+    }
+    
+    func caculateSummary() {
+        
+        let totalPrice = self.dataArray.compactMap({Int($0.price!)}).reduce(0, {$0 + $1})
+        
+        self.totalPrice.text = "+" + String(totalPrice) + "$"
+        
+        self.totalPrice.textColor = UIColor(rgb: 0x009100)
         
     }
     
@@ -113,27 +141,27 @@ class YearIncomeViewController: UIViewController {
                 
                 self.dataArray = try moc.fetch(fetchRequest) as [MyData]
                 
-                let trafficsCount = self.dataArray?.filter({ $0.category == "工資" }).count
+                let trafficsCount = self.dataArray.filter({ $0.category == "工資" }).count
                 
                 dict["工資"] = trafficsCount
                 
-                let foodsCount = self.dataArray?.filter({ $0.category == "獎金" }).count
+                let foodsCount = self.dataArray.filter({ $0.category == "獎金" }).count
                 
                 dict["獎金"] = foodsCount
                 
-                let communicationCount = self.dataArray?.filter({ $0.category == "外快" }).count
+                let communicationCount = self.dataArray.filter({ $0.category == "外快" }).count
                 
                 dict["外快"] = communicationCount
                 
-                let apparelCount = self.dataArray?.filter({ $0.category == "報銷" }).count
+                let apparelCount = self.dataArray.filter({ $0.category == "報銷" }).count
                 
                 dict["報銷"] = apparelCount
                 
-                let liveCount = self.dataArray?.filter({ $0.category == "投資" }).count
+                let liveCount = self.dataArray.filter({ $0.category == "投資" }).count
                 
                 dict["投資"] = liveCount
                 
-                let entertainmentCount = self.dataArray?.filter({ $0.category == "其他" }).count
+                let entertainmentCount = self.dataArray.filter({ $0.category == "其他" }).count
                 
                 dict["其他"] = entertainmentCount
                 
@@ -156,6 +184,8 @@ class YearIncomeViewController: UIViewController {
             }
             
         }
+        
+        self.tableView.reloadData()
         
     }
     
@@ -192,6 +222,71 @@ class YearIncomeViewController: UIViewController {
         self.queryFromCoreData()
         
         self.updateChartData()
+        
+    }
+    
+}
+
+extension YearIncomeViewController : UITableViewDelegate {
+    
+    
+    
+}
+
+extension YearIncomeViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return dataArray.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "YearIncomeCell", for: indexPath) as! YearIncomeCell
+        
+        cell.backgroundColor = UIColor(rgb:0xFFEE99)
+        
+        cell.layer.borderWidth = 1.0
+        
+        cell.layer.borderColor = UIColor.white.cgColor
+        
+        cell.categoryLab.text = dataArray[indexPath.row].category
+        
+        cell.projectLab.text = dataArray[indexPath.row].projectName
+        
+        cell.priceLab.text = "+" + dataArray[indexPath.row].price! + "$"
+        
+        cell.priceLab.textColor = UIColor(rgb: 0x009100)
+        
+        cell.categoryLab.textColor = UIColor(rgb: 0x009100)
+        
+        cell.addressLab.text = dataArray[indexPath.row].address
+        
+        if let thumbnailImage = self.dataArray[indexPath.row].thumbnailImage() {
+            
+            cell.photoImage.image = thumbnailImage
+            
+        }
+        else {
+            
+            cell.photoImage.image = UIImage(named: "account")
+            
+        }
+        
+        if self.dataArray[indexPath.row].address == "" {
+            
+            cell.addressLab.text = "無填寫此筆資料"
+            
+        }
+        
+        return cell
         
     }
     

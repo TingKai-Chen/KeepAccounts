@@ -1,0 +1,258 @@
+
+/* Class = "UILabel"; text = "週三"; ObjectID = "0fV-pt-onx"; */
+"0fV-pt-onx.text" = "週三";
+
+/* Class = "UIButton"; normalTitle = "plus"; ObjectID = "339-nq-zuz"; */
+"339-nq-zuz.normalTitle" = "plus";
+
+/* Class = "UILabel"; text = "PriceLab"; ObjectID = "4Ue-tF-ga8"; */
+"4Ue-tF-ga8.text" = "PriceLab";
+
+/* Class = "UIButton"; normalTitle = "記一筆"; ObjectID = "4Yh-FR-xlu"; */
+"4Yh-FR-xlu.normalTitle" = "記一筆";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "5Rc-w2-Cu6"; */
+"5Rc-w2-Cu6.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "週日"; ObjectID = "5sj-Lq-olk"; */
+"5sj-Lq-olk.text" = "週日";
+
+/* Class = "UILabel"; text = "週四"; ObjectID = "65n-PE-XJv"; */
+"65n-PE-XJv.text" = "週四";
+
+/* Class = "UILabel"; text = "CategoryLab"; ObjectID = "76b-nT-vi9"; */
+"76b-nT-vi9.text" = "CategoryLab";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7Uy-xn-Z8h"; */
+"7Uy-xn-Z8h.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "plus"; ObjectID = "7X2-hb-A5T"; */
+"7X2-hb-A5T.normalTitle" = "plus";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "7dt-sa-NEf"; */
+"7dt-sa-NEf.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "雲端資料上傳"; ObjectID = "84J-lz-Skj"; */
+"84J-lz-Skj.normalTitle" = "雲端資料上傳";
+
+/* Class = "UILabel"; text = "位置 :"; ObjectID = "9Wb-hK-PRb"; */
+"9Wb-hK-PRb.text" = "位置 :";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "A2t-tC-Sds"; */
+"A2t-tC-Sds.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "備註 :"; ObjectID = "ArW-2u-WpW"; */
+"ArW-2u-WpW.text" = "備註 :";
+
+/* Class = "UIButton"; normalTitle = "."; ObjectID = "BEQ-N8-Jn5"; */
+"BEQ-N8-Jn5.normalTitle" = ".";
+
+/* Class = "UITabBarItem"; title = "月支出"; ObjectID = "BOa-fe-h6Q"; */
+"BOa-fe-h6Q.title" = "月支出";
+
+/* Class = "UIButton"; normalTitle = "plus"; ObjectID = "C13-Hv-eKA"; */
+"C13-Hv-eKA.normalTitle" = "plus";
+
+/* Class = "UILabel"; text = "最新功能"; ObjectID = "D2s-ua-4zE"; */
+"D2s-ua-4zE.text" = "最新功能";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DAg-Re-zGy"; */
+"DAg-Re-zGy.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "±"; ObjectID = "E4I-fL-UHC"; */
+"E4I-fL-UHC.normalTitle" = "±";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "EiW-xX-Y8z"; */
+"EiW-xX-Y8z.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "確定"; ObjectID = "F5D-3S-0yT"; */
+"F5D-3S-0yT.normalTitle" = "確定";
+
+/* Class = "UILabel"; text = "MonthLabel"; ObjectID = "FH6-bq-PQ7"; */
+"FH6-bq-PQ7.text" = "MonthLabel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FL6-fl-add"; */
+"FL6-fl-add.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "GgQ-rI-WNf"; */
+"GgQ-rI-WNf.normalTitle" = "4";
+
+/* Class = "UILabel"; text = "請從日曆選擇日期"; ObjectID = "GzQ-TP-1QU"; */
+"GzQ-TP-1QU.text" = "請從日曆選擇日期";
+
+/* Class = "UILabel"; text = "系統設定"; ObjectID = "HOq-Ao-6G3"; */
+"HOq-Ao-6G3.text" = "系統設定";
+
+/* Class = "UIButton"; normalTitle = "plus"; ObjectID = "HkA-ON-e4y"; */
+"HkA-ON-e4y.normalTitle" = "plus";
+
+/* Class = "UILabel"; text = "週五"; ObjectID = "Hz7-Ur-ZYR"; */
+"Hz7-Ur-ZYR.text" = "週五";
+
+/* Class = "UILabel"; text = "AddressLab"; ObjectID = "I5H-e9-Yfp"; */
+"I5H-e9-Yfp.text" = "AddressLab";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "IU6-KY-vmM"; */
+"IU6-KY-vmM.normalTitle" = "3";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JsB-3d-cX7"; */
+"JsB-3d-cX7.text" = "Label";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "JtY-jb-AHD"; */
+"JtY-jb-AHD.text" = "Email:";
+
+/* Class = "UIButton"; normalTitle = "忘記密碼？"; ObjectID = "Jvh-Nw-YJm"; */
+"Jvh-Nw-YJm.normalTitle" = "忘記密碼？";
+
+/* Class = "UIButton"; normalTitle = "確定"; ObjectID = "KId-Pe-mtO"; */
+"KId-Pe-mtO.normalTitle" = "確定";
+
+/* Class = "UIButton"; normalTitle = "AC"; ObjectID = "KRL-5c-JBO"; */
+"KRL-5c-JBO.normalTitle" = "AC";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "Krn-kH-sC7"; */
+"Krn-kH-sC7.normalTitle" = "6";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MII-EI-f8I"; */
+"MII-EI-f8I.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "關於本軟體"; ObjectID = "MlO-Bv-xJn"; */
+"MlO-Bv-xJn.normalTitle" = "關於本軟體";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "NCy-PZ-EPD"; */
+"NCy-PZ-EPD.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NDw-IH-7Bq"; */
+"NDw-IH-7Bq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "固定收支提醒"; ObjectID = "NU2-6N-p8y"; */
+"NU2-6N-p8y.normalTitle" = "固定收支提醒";
+
+/* Class = "UILabel"; text = "週一"; ObjectID = "NhO-qx-Z03"; */
+"NhO-qx-Z03.text" = "週一";
+
+/* Class = "UIButton"; normalTitle = "plus"; ObjectID = "QDD-hx-Snm"; */
+"QDD-hx-Snm.normalTitle" = "plus";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RSq-3U-qUp"; */
+"RSq-3U-qUp.text" = "Label";
+
+/* Class = "UILabel"; text = "週六"; ObjectID = "YKl-Nc-Xuc"; */
+"YKl-Nc-Xuc.text" = "週六";
+
+/* Class = "UILabel"; text = "項目 :"; ObjectID = "Yvk-tl-zlS"; */
+"Yvk-tl-zlS.text" = "項目 :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Zg9-Mu-ANE"; */
+"Zg9-Mu-ANE.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "plus"; ObjectID = "aMd-X6-Z22"; */
+"aMd-X6-Z22.normalTitle" = "plus";
+
+/* Class = "UIButton"; normalTitle = "語言設定(Language Settings)"; ObjectID = "boV-RR-EQf"; */
+"boV-RR-EQf.normalTitle" = "語言設定(Language Settings)";
+
+/* Class = "UILabel"; text = "選擇支收 :"; ObjectID = "bp7-io-8PH"; */
+"bp7-io-8PH.text" = "選擇支收 :";
+
+/* Class = "UIButton"; normalTitle = "啟動時密碼保護"; ObjectID = "bv9-xB-TFg"; */
+"bv9-xB-TFg.normalTitle" = "啟動時密碼保護";
+
+/* Class = "UILabel"; text = "DateLab"; ObjectID = "ciz-jP-Gfu"; */
+"ciz-jP-Gfu.text" = "DateLab";
+
+/* Class = "UIButton"; normalTitle = "寄封信給作者意見"; ObjectID = "dZO-t4-hlo"; */
+"dZO-t4-hlo.normalTitle" = "寄封信給作者意見";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "e7l-W0-PId"; */
+"e7l-W0-PId.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "fND-d0-vOD"; */
+"fND-d0-vOD.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "fSn-BS-G9y"; */
+"fSn-BS-G9y.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "密碼重置表格"; ObjectID = "fnm-yr-xvz"; */
+"fnm-yr-xvz.text" = "密碼重置表格";
+
+/* Class = "UITextView"; text = "感謝使用此App，做這個軟體的發想，主要是因為希望能讓App融入生活讓每個人都能很常去用到這個軟體，所以我才想到做記帳功能的App，讓大家都能每天開心的開啟我的App紀錄自己每天的多少花用。"; ObjectID = "gBr-He-dP8"; */
+"gBr-He-dP8.text" = "感謝使用此App，做這個軟體的發想，主要是因為希望能讓App融入生活讓每個人都能很常去用到這個軟體，所以我才想到做記帳功能的App，讓大家都能每天開心的開啟我的App紀錄自己每天的多少花用。";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gbY-nZ-8a2"; */
+"gbY-nZ-8a2.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "年支出"; ObjectID = "h6n-kZ-Yad"; */
+"h6n-kZ-Yad.title" = "年支出";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "hqQ-qT-8eD"; */
+"hqQ-qT-8eD.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "沒有帳號？立即註冊！"; ObjectID = "iJ9-l6-eab"; */
+"iJ9-l6-eab.normalTitle" = "沒有帳號？立即註冊！";
+
+/* Class = "UIButton"; normalTitle = "記帳時紀錄GPS地點"; ObjectID = "ido-PR-uO7"; */
+"ido-PR-uO7.normalTitle" = "記帳時紀錄GPS地點";
+
+/* Class = "UIButton"; normalTitle = "÷"; ObjectID = "jKZ-od-dK1"; */
+"jKZ-od-dK1.normalTitle" = "÷";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jNs-65-qPM"; */
+"jNs-65-qPM.text" = "Label";
+
+/* Class = "UILabel"; text = "ProjectLab"; ObjectID = "jYN-N7-lE6"; */
+"jYN-N7-lE6.text" = "ProjectLab";
+
+/* Class = "UILabel"; text = "RoundLab"; ObjectID = "m88-cO-84r"; */
+"m88-cO-84r.text" = "RoundLab";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "n8h-Bn-qNH"; */
+"n8h-Bn-qNH.text" = "Label";
+
+/* Class = "UILabel"; text = "立即註冊"; ObjectID = "nQP-Jr-xZJ"; */
+"nQP-Jr-xZJ.text" = "立即註冊";
+
+/* Class = "UILabel"; text = "分類 :"; ObjectID = "pCR-N3-4F2"; */
+"pCR-N3-4F2.text" = "分類 :";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "pK9-O7-sdr"; */
+"pK9-O7-sdr.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "特殊設定"; ObjectID = "qUE-WX-3KC"; */
+"qUE-WX-3KC.text" = "特殊設定";
+
+/* Class = "UILabel"; text = "週二"; ObjectID = "qwJ-Gq-uh7"; */
+"qwJ-Gq-uh7.text" = "週二";
+
+/* Class = "UITabBarItem"; title = "年收入"; ObjectID = "s78-pD-Udg"; */
+"s78-pD-Udg.title" = "年收入";
+
+/* Class = "UIButton"; normalTitle = "確定"; ObjectID = "sVg-1M-Mgb"; */
+"sVg-1M-Mgb.normalTitle" = "確定";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "tRp-QT-Eeb"; */
+"tRp-QT-Eeb.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "uSn-k1-8VW"; */
+"uSn-k1-8VW.normalTitle" = "9";
+
+/* Class = "UITabBarItem"; title = "月收入"; ObjectID = "uga-RD-tyf"; */
+"uga-RD-tyf.title" = "月收入";
+
+/* Class = "UIButton"; normalTitle = "="; ObjectID = "v1d-jn-Ag6"; */
+"v1d-jn-Ag6.normalTitle" = "=";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vla-Yi-OpX"; */
+"vla-Yi-OpX.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "wqL-Jj-54G"; */
+"wqL-Jj-54G.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "wr1-nZ-qH3"; */
+"wr1-nZ-qH3.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "登入"; ObjectID = "xuP-zj-ua8"; */
+"xuP-zj-ua8.normalTitle" = "登入";
+
+/* Class = "UIButton"; normalTitle = "-"; ObjectID = "zLf-OT-AXW"; */
+"zLf-OT-AXW.normalTitle" = "-";

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C59C2A322E5A58400C80D0C /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59C2A222E5A58400C80D0C /* EmailViewController.swift */; };
+		0CAE403522E84DDF00D27C87 /* YearExpendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE403422E84DDF00D27C87 /* YearExpendCell.swift */; };
+		0CAE403722E8543900D27C87 /* YearIncomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE403622E8543900D27C87 /* YearIncomeCell.swift */; };
+		0CAE403922E860CB00D27C87 /* MonthExpendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE403822E860CB00D27C87 /* MonthExpendCell.swift */; };
+		0CAE403B22E860E200D27C87 /* MonthIncomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE403A22E860E200D27C87 /* MonthIncomeCell.swift */; };
 		0CF479E022E05F3E007FA2D0 /* MonthExpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF479DF22E05F3E007FA2D0 /* MonthExpendViewController.swift */; };
 		0CF479E222E05F58007FA2D0 /* MonthIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF479E122E05F58007FA2D0 /* MonthIncomeViewController.swift */; };
 		430CE6A122C45CC2006EB0CD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CE6A022C45CC2006EB0CD /* MapViewController.swift */; };
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		0C59C2A222E5A58400C80D0C /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		0CAE403422E84DDF00D27C87 /* YearExpendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearExpendCell.swift; sourceTree = "<group>"; };
+		0CAE403622E8543900D27C87 /* YearIncomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearIncomeCell.swift; sourceTree = "<group>"; };
+		0CAE403822E860CB00D27C87 /* MonthExpendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthExpendCell.swift; sourceTree = "<group>"; };
+		0CAE403A22E860E200D27C87 /* MonthIncomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthIncomeCell.swift; sourceTree = "<group>"; };
 		0CF479DF22E05F3E007FA2D0 /* MonthExpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthExpendViewController.swift; sourceTree = "<group>"; };
 		0CF479E122E05F58007FA2D0 /* MonthIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthIncomeViewController.swift; sourceTree = "<group>"; };
 		430CE6A022C45CC2006EB0CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +150,10 @@
 				0CF479DF22E05F3E007FA2D0 /* MonthExpendViewController.swift */,
 				0CF479E122E05F58007FA2D0 /* MonthIncomeViewController.swift */,
 				0C59C2A222E5A58400C80D0C /* EmailViewController.swift */,
+				0CAE403422E84DDF00D27C87 /* YearExpendCell.swift */,
+				0CAE403622E8543900D27C87 /* YearIncomeCell.swift */,
+				0CAE403822E860CB00D27C87 /* MonthExpendCell.swift */,
+				0CAE403A22E860E200D27C87 /* MonthIncomeCell.swift */,
 			);
 			path = KeepAccounts;
 			sourceTree = "<group>";
@@ -284,12 +296,16 @@
 				0C59C2A322E5A58400C80D0C /* EmailViewController.swift in Sources */,
 				8DBD560C22DCC75800E9EF4D /* DetailViewController.swift in Sources */,
 				8DD77F5122BDFD6D00768106 /* FormViewController.swift in Sources */,
+				0CAE403922E860CB00D27C87 /* MonthExpendCell.swift in Sources */,
 				43FD17B522D5959A00E23978 /* SignUpViewController.swift in Sources */,
 				8DD77F3B22BDFA9400768106 /* AppDelegate.swift in Sources */,
 				8D9F3EC022D5C80600536AEC /* LoginViewController.swift in Sources */,
 				0CF479E222E05F58007FA2D0 /* MonthIncomeViewController.swift in Sources */,
+				0CAE403B22E860E200D27C87 /* MonthIncomeCell.swift in Sources */,
 				0CF479E022E05F3E007FA2D0 /* MonthExpendViewController.swift in Sources */,
+				0CAE403722E8543900D27C87 /* YearIncomeCell.swift in Sources */,
 				8DBD560822DCC73000E9EF4D /* SetViewController.swift in Sources */,
+				0CAE403522E84DDF00D27C87 /* YearExpendCell.swift in Sources */,
 				8D6D1A6722DE1F8400238163 /* YearExpendViewController.swift in Sources */,
 				430CE6A122C45CC2006EB0CD /* MapViewController.swift in Sources */,
 				8D763F6222DB32EC00833A20 /* DetailCell.swift in Sources */,
@@ -306,6 +322,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		8DD77F4322BDFA9400768106 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
